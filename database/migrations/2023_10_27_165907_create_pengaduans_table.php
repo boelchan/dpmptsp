@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('pengaduan', function (Blueprint $table) {
             $table->id();
             $table->uuid();
-            $table->foreignId('instansi_id')->references('id')->on('instansi')->onDelete('cascade');
             $table->string('nama_pemohon', 100);
             $table->string('no_identitas', 100);
             $table->string('telepon', 20)->nullable();

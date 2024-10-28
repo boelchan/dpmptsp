@@ -73,18 +73,18 @@
                         </h3>
                     </div>
                     <div class="card-body">
-                        @role('instansi')
-                            @if ($pengaduan->status == 'valid')
-                                <x-form action="{{ route('pengaduan.tanggapan', [$pengaduan->id, 'uuid' => $pengaduan->uuid]) }}" method="post" id="form-x">
-                                    <textarea class="form-control" name="tanggapan" cols="30" rows="10" required></textarea>
-                                    <button type="submit" class="btn btn-primary w-100 mt-1 btn-send">Kirim Tanggapan</button>
-                                </x-form>
+                        @if ($pengaduan->status == 'valid')
+                            <x-form action="{{ route('pengaduan.tanggapan', [$pengaduan->id, 'uuid' => $pengaduan->uuid]) }}" method="post" id="form-x">
+                                <textarea class="form-control" name="tanggapan" cols="30" rows="10" required></textarea>
+                                <button type="submit" class="btn btn-primary w-100 mt-1 btn-send">Kirim Tanggapan</button>
+                            </x-form>
+                        @else
+                            @if ($pengaduan->status == 'baru')
+                                <div>Silahkan validasi terlebih dahulu pengaduan ini</div>
                             @else
                                 <div>{!! $pengaduan->tanggapan !!}</div>
                             @endif
-                        @elserole('instansi')
-                            <div>{!! $pengaduan->tanggapan !!}</div>
-                        @endrole
+                        @endif
                     </div>
                 </div>
             </div>

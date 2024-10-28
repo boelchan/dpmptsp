@@ -18,7 +18,7 @@ class UsersSeeder extends Seeder
     {
         $demoUser = User::create([
             'uuid' => $faker->uuid(),
-            'name' => $faker->firstName,
+            'name' => 'DPTMPTSP',
             'email' => 'superadmin@app.com',
             'password' => Hash::make('123'),
             'email_verified_at' => now(),
@@ -27,21 +27,12 @@ class UsersSeeder extends Seeder
 
         $demoUser = User::create([
             'uuid' => $faker->uuid(),
-            'name' => $faker->firstName,
+            'name' => 'operator',
             'email' => 'operator@app.com',
             'password' => Hash::make('123'),
             'email_verified_at' => now(),
         ]);
         $demoUser->assignRole('operator');
 
-        $demoUser = User::create([
-            'uuid' => $faker->uuid(),
-            'name' => $faker->firstName,
-            'email' => 'instansi@app.com',
-            'password' => Hash::make('123'),
-            'email_verified_at' => now(),
-            'instansi_id' => 1,
-        ]);
-        $demoUser->assignRole('instansi');
     }
 }

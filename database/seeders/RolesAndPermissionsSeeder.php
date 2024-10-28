@@ -33,8 +33,5 @@ class RolesAndPermissionsSeeder extends Seeder
 
         $role = Role::create(['name' => 'operator']);
         $role->givePermissionTo(Permission::all());
-
-        $role = Role::create(['name' => 'instansi']);
-        $role->givePermissionTo(Permission::all());
     }
 }

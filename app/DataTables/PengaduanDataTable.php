@@ -27,9 +27,6 @@ class PengaduanDataTable extends DataTable
         return $dataTable->editColumn('status', function ($query) {
             return StatusPengaduanEnum::label($query->status);
         })
-            ->editColumn('instansi_id', function ($query) {
-                return $query->instansi->nama;
-            })
             ->editColumn('created_at', function ($query) {
                 return tanggalJam($query->created_at);
             })
@@ -53,13 +50,7 @@ class PengaduanDataTable extends DataTable
 
     public function query(Pengaduan $model)
     {
-        $q = $model->newQuery();
-        if (auth()->user()->hasRole('instansi')) {
-            $q = $q->where('instansi_id', auth()->user()->instansi_id)
-                ->whereNot('status', StatusPengaduanEnum::BARU->value);
-        }
-
-        return $q;
+        return $model->newQuery();
     }
 
     public function html()
@@ -70,7 +61,6 @@ class PengaduanDataTable extends DataTable
             ->orderBy(4, 'desc')
             ->ajax([
                 'data' => 'function(d) { 
-                    d.instansi_id = $("#instansi_id").val();
                     d.status = $("#status").val();
                 }',
             ])
@@ -83,7 +73,6 @@ class PengaduanDataTable extends DataTable
     {
         return [
             Column::computed('id')->title('no')->data('DT_RowIndex'),
-            Column::make('instansi_id')->title('instansi'),
             Column::make('nama_pemohon'),
             Column::make('status'),
             Column::make('created_at')->title('tanggal pengaduan'),

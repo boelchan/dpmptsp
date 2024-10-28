@@ -15,15 +15,9 @@
                         <x-form :action="route('user.store')">
                             <h3 class="mb-0">Profil</h3>
                             <x-form-input name="name" label="Nama" floating />
-                            
+
                             <h3 class="mb-0 mt-3">Akun</h3>
                             <x-form-input name="email" label="Email" floating />
-                            <div x-data="{ selectedValue: '', showInstansi: false }">
-                                <x-form-select x-model="selectedValue" x-on:change="showInstansi = (selectedValue === '3')" name="role" :options="$roleOption" label="Role" placeholder="Pilih Role" floating />
-                                <div x-show="showInstansi">
-                                    <x-form-select name="instansi_id" :options="$instansiOption" label="Instansi"  floating />
-                                </div>
-                            </div>
 
                             <h3 class="mb-0 mt-3">Password</h3>
                             <x-form-input name="password" type="password" label="Password" floating />

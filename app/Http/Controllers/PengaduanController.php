@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\DataTables\PengaduanDataTable;
 use App\Enum\StatusPengaduanEnum;
-use App\Models\Instansi;
 use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -23,9 +22,8 @@ class PengaduanController extends Controller
         $title = $this->title;
         $breadcrumbs = [['url' => '', 'title' => $title]];
         $statusOption = ['' => 'Semua'] + StatusPengaduanEnum::choice();
-        $instansiOption = ['' => 'Semua'] + Instansi::where('publish', 'ya')->orderBy('nama', 'asc')->pluck('nama', 'id')->all();
 
-        return $pengaduanDataTable->render('pengaduan.index', compact('breadcrumbs', 'title', 'statusOption', 'instansiOption'));
+        return $pengaduanDataTable->render('pengaduan.index', compact('breadcrumbs', 'title', 'statusOption'));
     }
 
     public function show(Pengaduan $pengaduan): View

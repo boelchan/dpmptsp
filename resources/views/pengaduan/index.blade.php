@@ -7,11 +7,6 @@
         <div class="col-md-12">
 
             <x-datatable.filter target='pengaduan-table' collapsed="true">
-                @role('superadmin|operator')
-                    <div class="col-md-3">
-                        <x-form-select name="instansi_id" id="instansi_id" :options="$instansiOption" label="Instansi" placeholder="Pilih Instansi" floating />
-                    </div>
-                @endrole
                 <div class="col-md-3">
                     <x-form-select name="status" id="status" :options="$statusOption" label="Status" placeholder="Pilih Status" floating />
                 </div>

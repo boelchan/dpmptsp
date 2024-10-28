@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\DataTables\AuthenticationLogDataTable;
 use App\DataTables\UserDataTable;
-use App\Models\Instansi;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -25,28 +24,25 @@ class UserController extends Controller
         $breadcrumbs = [['url' => '#', 'title' => 'Setting'], ['url' => route('user.index'), 'title' => 'User'], ['title' => 'Tambah User']];
 
         $roleOption = Role::whereNotIn('id', [1])->orderBy('name')->pluck('name', 'id')->all();
-        $instansiOption = Instansi::orderBy('nama')->pluck('nama', 'id')->all();
 
-        return view('user.create', compact('roleOption', 'instansiOption', 'breadcrumbs'));
+        return view('user.create', compact('roleOption', 'breadcrumbs'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required|max:30',
-            'role' => 'required',
             'password' => 'required|confirmed',
             'email' => 'required|email|unique:users',
-            'instansi_id' => 'required_if:role,3',
         ]);
 
-        User::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'email_verified_at' => now(),
-            'instansi_id' => $request->instansi_id,
         ]);
+        $user->syncRoles(2);
 
         return redirect()->route('user.index');
     }
@@ -66,9 +62,8 @@ class UserController extends Controller
 
         $breadcrumbs = [['url' => '#', 'title' => 'Setting'], ['url' => route('user.index'), 'title' => 'User'], ['title' => 'Edit '.$user->name]];
         $roleOption = Role::whereNotIn('id', [1])->orderBy('name')->pluck('name', 'id')->all();
-        $instansiOption = Instansi::orderBy('nama')->pluck('nama', 'id')->all();
 
-        return view('user.edit', compact('user', 'roleOption', 'instansiOption', 'breadcrumbs'));
+        return view('user.edit', compact('user', 'roleOption', 'breadcrumbs'));
     }
 
     public function update(Request $request, User $user)
@@ -77,7 +72,6 @@ class UserController extends Controller
             'name' => 'required|max:30',
             'role' => 'required_if:id,1',
             'email' => 'required|email|unique:users,email,'.$user->id,
-            'instansi_id' => 'required_if:role,3',
         ]);
 
         $user->update($validated);

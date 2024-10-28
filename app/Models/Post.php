@@ -60,14 +60,4 @@ class Post extends Model implements Searchable
     {
         return Carbon::parse($this->publish_at)->diffForHumans();
     }
-
-    public function instansi()
-    {
-        return $this->belongsTo(Instansi::class);
-    }
-
-    public function getInstansiLabelAttribute()
-    {
-        return $this->instansi ? $this->instansi->nama : 'MPP';
-    }
 }

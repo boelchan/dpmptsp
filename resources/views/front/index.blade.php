@@ -48,19 +48,6 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach ($instansi as $i)
-                        <div class="col-6 col-lg-3 col-md-4 mb-4 wow fadeInUp">
-                            <div class="service-box text-center text-md-start orange-gradient p-4 pb-2 rounded-3 border">
-                                @if ($i->icon)
-                                    <img class="mb-2" src="{{ $i->icon_url }}" alt="" style="max-height: 70px">
-                                @else
-                                    <i class="fas fa-edit-2 fa-4x mb-2"></i>
-                                @endif
-                                <h4 class="fw-bold mb-0 mt-1" style="font-size: 0.9rem">{{ $i->nama }}</h4>
-                                <a class="readmore" href="{{ $i->url }}"><span>Detail layanan</span></a>
-                            </div>
-                        </div>
-                    @endforeach
                 </div>
             </div>
         </div>
@@ -150,24 +137,16 @@
                         <x-form action="{{ route('front.pengaduan') }}" id="form-x">
                             <h3 class="mb-4 text-center main-color">Kotak Pengaduan</h3>
                             <div class="mb-4">
-                                <x-form-input name="nama_pemohon" label="Nama Pemohon" required maxLength="50" floating/>
+                                <x-form-input name="nama_pemohon" label="Nama Pemohon" required maxLength="50" floating />
                             </div>
                             <div class="mb-4">
                                 <x-form-input type="text" name="no_identitas" label="No Identitas (No. KTP / No. SIM / No. Passport)" required maxlength="20" floating />
                             </div>
                             <div class="mb-4">
-                                <x-form-input type="text" name="telepon" label="Telepon" required maxlength="13" floating />
+                                <x-form-input type="number" name="telepon" label="Telepon" required maxlength="13" floating />
                             </div>
                             <div class="mb-4">
-                                <x-form-select name="instansi_id" label="Instansi" required floating>
-                                    <option value="">Pilih Instansi</option>
-                                    @foreach ($instansi as $i)
-                                        <option value="{{ $i->id }}">{{ $i->nama }}</option>
-                                    @endforeach
-                                </x-form-select>
-                            </div>
-                            <div class="mb-4">
-                                <x-form-textarea name="pengaduan" label="Pengaduan" class="h-auto" rows="5" required maxlength="1000" floating/>
+                                <x-form-textarea name="pengaduan" label="Pengaduan" class="h-auto" rows="5" required maxlength="1000" floating />
                             </div>
                             <button class="btn p-0 mt-20 w-100" type="submit">
                                 <span class="gradients-button grad-btn-6 btn-small w-100">Kirim</span>

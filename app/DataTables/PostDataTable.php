@@ -53,9 +53,6 @@ class PostDataTable extends DataTable
             ->editColumn('kategori', function ($query) {
                 return $query->kategori->nama;
             })
-            ->editColumn('instansi_id', function ($query) {
-                return $query->instansi_id ? $query->instansi->nama : 'MPP';
-            })
             ->editColumn('action', function ($query) {
                 return view('components.button.show', ['action' => route('post.show', [$query->id, 'uuid' => $query->uuid])]).
                     view('components.button.edit', ['action' => route('post.edit', [$query->id, 'uuid' => $query->uuid])]).
@@ -67,12 +64,7 @@ class PostDataTable extends DataTable
 
     public function query(Post $model)
     {
-        $q = $model->newQuery();
-        if (auth()->user()->hasRole('instansi')) {
-            $q->where('instansi_id', auth()->user()->instansi_id);
-        }
-
-        return $q;
+        return $model->newQuery();
     }
 
     public function html()
@@ -100,7 +92,6 @@ class PostDataTable extends DataTable
             Column::computed('kategori'),
             Column::make('judul'),
             Column::make('publish_at')->title('status'),
-            Column::make('instansi_id')->title('instansi'),
             Column::computed('action')->addClass('text-center'),
         ];
     }

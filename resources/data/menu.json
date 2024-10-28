@@ -47,36 +47,9 @@
         ]
     },
     {
-        "title": "Instansi",
-        "icon": "building-store",
-        "route": "instansi.index",
-        "role": [
-            "superadmin",
-            "instansi"
-        ]
-    },
-    {
-        "title": "Antrian & SKM",
-        "icon": "list",
-        "route": "instansi.antrian.rekap",
-        "role": [
-            "superadmin"
-        ]
-    },
-    {
         "title": "Pengaduan",
         "icon": "speakerphone",
         "route": "pengaduan.index",
-        "role": [
-            "superadmin",
-            "operator",
-            "instansi"
-        ]
-    },
-    {
-        "title": "SKM",
-        "icon": "thumb-up",
-        "route": "kepuasan.index",
         "role": [
             "superadmin",
             "operator",

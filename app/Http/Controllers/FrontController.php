@@ -5,15 +5,10 @@ namespace App\Http\Controllers;
 use App\Enum\CategoryEnum;
 use App\Models\AntrianDetail;
 use App\Models\Category;
-use App\Models\IndeksKepuasanMasyarakat;
-use App\Models\Instansi;
-use App\Models\InstansiLayanan;
-use App\Models\KepuasanMasyarakat;
 use App\Models\Pengaduan;
 use App\Models\Post;
 use App\Models\Profile;
 use App\Models\Service;
-use App\Models\SKMDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -44,7 +39,6 @@ class FrontController extends Controller
         $pamflet = Post::where('kategori_id', CategoryEnum::PAMFLET)->where('publish', 'ya')->orderBy('publish_at', 'desc')->orderBy('updated_at', 'desc')->get()->take(6);
         $tentangKami = Profile::find(1);
         $fasilitas = Service::where('publish', 'ya')->get();
-        $instansi = Instansi::where('publish', 'ya')->get();
 
         $meta = [
             'title' => 'Beranda',
@@ -54,7 +48,7 @@ class FrontController extends Controller
             'image' => setting('logo'),
         ];
 
-        return view('front.index', compact('navbarMenu', 'slider', 'tentangKami', 'pamflet', 'meta', 'fasilitas', 'lastestPost', 'instansi'));
+        return view('front.index', compact('navbarMenu', 'slider', 'tentangKami', 'pamflet', 'meta', 'fasilitas', 'lastestPost'));
     }
 
     public function post($slug = '')
@@ -140,7 +134,7 @@ class FrontController extends Controller
 
         $q = $request->search;
 
-        $searchResults = (new Search())
+        $searchResults = (new Search)
             ->registerModel(InstansiLayanan::class, 'nama', 'konten')
             ->registerModel(Instansi::class, 'nama', 'konten')
             // ->registerModel(Post::class, 'judul', 'konten')
@@ -184,7 +178,6 @@ class FrontController extends Controller
             'nama_pemohon' => 'required|max:50',
             'no_identitas' => 'required|max:20',
             'telepon' => 'required|max:13',
-            'instansi_id' => 'required',
             'pengaduan' => 'required',
         ];
         $validator = Validator::make($request->all(), $rules);

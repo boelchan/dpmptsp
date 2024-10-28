@@ -32,7 +32,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'email_verified_at',
         'banned_at',
-        'instansi_id',
     ];
 
     /**
@@ -70,12 +69,6 @@ class User extends Authenticatable implements MustVerifyEmail
         static::saving(function ($user) {
             $user->name = ucwords(strtolower($user->name));
         });
-
-        static::saved(function ($user) {
-            if ($role = request()->role) {
-                $user->syncRoles($role);
-            }
-        });
     }
 
     public function getAcronymAttribute()
@@ -88,11 +81,6 @@ class User extends Authenticatable implements MustVerifyEmail
         }
 
         return $acronym;
-    }
-
-    public function instansi()
-    {
-        return $this->belongsTo(Instansi::class);
     }
 
     public function lastLogin()
