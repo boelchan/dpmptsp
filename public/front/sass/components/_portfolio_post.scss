@@ -1,0 +1,59 @@
+/*-------------------------------------------------------------------------------------
+    Portfolio Post
+---------------------------------------------------------------------------------------*/
+
+.portfolio-post {
+    overflow: hidden;
+    background: #050310;
+    margin-bottom: 30px;
+
+    .title {
+        padding: 40px;
+        padding-bottom: 10px;
+    }
+
+    .thumb-img {
+        position: relative;
+        overflow: hidden;
+        background: #050310;
+        transition: .3s all ease-in-out;
+
+        img {
+            transition: .3s all ease-in-out;
+        }
+
+        &:before {
+            content: '';
+            background: #050310;
+            width: 600px;
+            height: 147px;
+            left: -57px;
+            top: -73px;
+            position: absolute;
+            transform: rotate(-13deg);
+            z-index: 2;
+
+            @media #{$md-layout} {
+                height: 94px;
+            }
+
+            @media #{$sm-layout} {
+                height: 105px;
+            }
+
+            @media #{$small-mobile} {
+                height: 105px;
+            }
+
+            @media #{$extra-small-mobile} {
+                height: 84px;
+            }
+        }
+    }
+
+    &:hover {
+        .thumb-img img {
+            transform: scale(1.1);
+        }
+    }
+}

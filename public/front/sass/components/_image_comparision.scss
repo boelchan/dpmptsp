@@ -1,0 +1,73 @@
+/*-------------------------------------------------------------------------------------
+    Image Comparision
+---------------------------------------------------------------------------------------*/
+
+.comparision-slider {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        display: block;
+        max-width: none;
+    }
+
+    .resize {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    .handle {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        margin-left: -2px;
+        background: $white;
+        cursor: ew-resize;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            width: 64px;
+            height: 64px;
+            margin: -32px 0 0 -30px;
+            font-family: 'Font Awesome 5 Free';
+            content: '\f053    \f054';
+            color: $theme-color;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            line-height: 64px;
+            background: $white;
+            border: 1px solid $white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+
+            @media #{$sm-layout} {
+                transform: scale(0.7);
+            }
+        }
+
+        &.bordered {
+            background: $theme-color;
+
+            &:after {
+                border: 1px solid $theme-color;
+            }
+        }
+    }
+
+    .draggable:after {
+        transform: scale(0.7);
+
+        @media #{$sm-layout} {
+            transform: scale(0.6);
+        }
+    }
+}

@@ -1,0 +1,320 @@
+/*-------------------------------------------------------------------------------------
+    Products
+---------------------------------------------------------------------------------------*/
+
+.product {
+    position: relative;
+
+    &.product-margin {
+        margin-bottom: 30px;
+    }
+
+    img {
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .product-contain h4 {
+        color: $black;
+        font-size: 18px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    &:hover {
+        .product-contain h4 {
+            color: $theme-color;
+        }
+
+        .product-img {
+            @extend .shadow-medium;
+            -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+
+            @media #{$sm-layout} {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            ul>li {
+                &:nth-child(2) {
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                }
+
+                &:nth-child(3) {
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                    -webkit-transition-delay: 0.2s;
+                    transition-delay: 0.2s;
+                }
+
+                &:nth-child(4) {
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                    -webkit-transition-delay: 0.4s;
+                    transition-delay: 0.4s;
+                }
+            }
+        }
+    }
+
+    .tringle-topleft {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:before {
+            content: "";
+            position: absolute;
+            border-top: 70px solid #6a4031;
+            border-right: 70px solid transparent;
+        }
+
+        h6 {
+            color: #fff;
+            font-family: "Poppins";
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            position: absolute;
+            left: 3px;
+            top: 15px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+
+    .product-img {
+        overflow: hidden;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+
+        .timer-box {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            width: 100%;
+
+            .timer {
+                background: rgba(106, 64, 49, 0.48);
+                padding: 10px 0;
+
+                p {
+                    color: #fff;
+                    margin-bottom: 0;
+                }
+
+                span {
+                    width: 70px;
+                    display: inline-block;
+
+                    .timer-cal {
+                        color: #fff;
+                        text-align: left;
+                        padding-left: 10px;
+                    }
+                }
+
+                .sec {
+                    padding-right: 30px;
+                }
+
+                .padding-l {
+                    padding-left: 22px;
+                    display: inline;
+                }
+            }
+        }
+
+        .product-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            i {
+                color: $theme-color;
+                border: none;
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                padding: 8px;
+                background: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @extend .shadow-medium;
+
+            }
+        }
+
+        ul>li+li {
+            padding-top: 5px;
+        }
+    }
+
+    ul>li {
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            opacity: 0;
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+        }
+    }
+}
+
+/* ==========================================
+    Wine Shop Product Start
+==============================================*/
+
+.wine-shop-all-products {
+
+    .circle {
+        position: absolute;
+        z-index: 1111;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            i {
+                color: #0888a3;
+                transition: .5s ease;
+            }
+        }
+
+        i {
+            font-size: $body-font-size + 26;
+            z-index: 1111;
+            color: #464646;
+            opacity: .7;
+            transition: .5s ease;
+        }
+    }
+
+    #wine-shop-circle-right {
+        top: 60%;
+        right: -8%;
+        transform: translateY(-50%);
+        transition: .5s ease;
+    }
+
+    #wine-shop-circle-left {
+        top: 60%;
+        left: -8%;
+        transform: translateY(-50%);
+        transition: .5s ease;
+    }
+
+    .owl-products {
+        .owl-item.center {
+            .item {
+                transform: scale(1.0);
+
+                .wine-shop-text {
+                    opacity: 1;
+                    transition: .5s ease;
+                }
+            }
+
+            .wine-shop-box {
+                .wine-shop-text {
+                    h5 {
+                        font-size: $h5 + 8;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio-painting {
+        -webkit-transform: scale(1) !important;
+        -ms-transform: scale(1) !important;
+        transform: scale(1) !important;
+
+    }
+
+    .wine-shop-box {
+        display: inline-block;
+        width: 100%;
+        padding: 5px;
+        background-color: transparent;
+        -webkit-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+        transition: 0.5s ease;
+        position: relative;
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+
+        .wine-shop-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wine-shop-text {
+            text-align: center;
+            font-size: $body-font-size - 2;
+            padding: 2rem 0 0 0;
+            opacity: 0;
+            transition: .25ms;
+
+            .btn-medium {
+                font-size: $body-font-size;
+                padding: 8px 36px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* ==========================================
+    Wine Shop Product End
+==============================================*/
+
+/* ==========================================
+    Eyeware Product Start
+==============================================*/
+.template-color-81 {
+    .arrivel-sec {
+        height: 500px;
+    }
+
+    .arrivel-box {
+        bottom: -50px;
+    }
+
+    .product {
+        background-color: $color-82;
+
+        h2 {
+            font-size: 22px;
+
+            @media #{$tab-layout} {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .offcanvas {
+        z-index: 10000;
+    }
+}
+
+/* ==========================================
+    Eyeware Product End
+==============================================*/

@@ -1,0 +1,78 @@
+/*-------------------------------------------------------------------------------------
+    Datepicker
+---------------------------------------------------------------------------------------*/
+
+.xdsoft_datetimepicker {
+    font-family: $font-1;
+    z-index: 99999;
+
+    .xdsoft_calendar td.xdsoft_default,
+    .xdsoft_calendar td.xdsoft_current,
+    .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current {
+        background: $black;
+        box-shadow: $theme-color 0 1px 3px 0 inset;
+        color: $white !important;
+        font-weight: 400;
+    }
+
+    .xdsoft_calendar td.xdsoft_today {
+        color: $theme-color !important;
+    }
+
+    .xdsoft_calendar td.xdsoft_current.xdsoft_today {
+        color: $white !important;
+    }
+
+    .xdsoft_calendar td:hover,
+    .xdsoft_calendar td.xdsoft_current.xdsoft_today:hover,
+    .xdsoft_timepicker .xdsoft_time_box>div>div:hover {
+        background: $theme-color !important;
+    }
+
+    .xdsoft_datetimepicker.xdsoft_dark .xdsoft_label>.xdsoft_select>div>.xdsoft_option.xdsoft_current {
+        background: $theme-color !important;
+        box-shadow: $theme-color 0 1px 3px 0 inset;
+        color: $white !important;
+    }
+
+    .xdsoft_label>.xdsoft_select>div>.xdsoft_option.xdsoft_current {
+        background: $theme-color !important;
+        box-shadow: $theme-color 0 1px 3px 0 inset;
+        color: $white !important;
+    }
+
+    .xdsoft_label {
+        font-weight: 400;
+    }
+
+    // Dark Style
+    &.xdsoft_dark {
+
+        .xdsoft_calendar td.xdsoft_default,
+        .xdsoft_calendar td.xdsoft_current,
+        .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current {
+            background: $theme-color;
+            box-shadow: $theme-color 0 1px 3px 0 inset;
+            color: $white !important;
+        }
+
+        box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.506);
+        border: 0;
+
+        .xdsoft_calendar td.xdsoft_today {
+            color: $theme-color;
+        }
+
+        .xdsoft_calendar td.xdsoft_current.xdsoft_today {
+            color: $white !important;
+        }
+
+
+        .xdsoft_calendar td:hover,
+        .xdsoft_calendar td.xdsoft_current.xdsoft_today:hover,
+        .xdsoft_timepicker .xdsoft_time_box>div>div:hover {
+            color: #fff !important;
+            background: $theme-color !important;
+        }
+    }
+}

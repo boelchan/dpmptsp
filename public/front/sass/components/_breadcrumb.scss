@@ -1,0 +1,182 @@
+/*-------------------------------------------------------------------------------------
+  Breadcrumb  
+---------------------------------------------------------------------------------------*/
+
+.breadcrumb-area {
+    position: relative;
+
+    // Breadcrumb Style One
+    &.breadcrumb-title-bar {
+        .breadcrumb-inner {
+            .heading {
+                font-weight: 600;
+                line-height: 1.41;
+                font-size: 32px;
+
+                &.heading-h1 {
+                    font-weight: 600;
+                    line-height: 1.41;
+                    font-size: 56px;
+
+                    @media #{$md-layout} {
+                        font-size: 40px;
+                    }
+
+                    @media #{$sm-layout} {
+                        font-size: 40px;
+                    }
+
+                    @media #{$large-mobile} {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            .post-meta {
+                >div {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .post-date {
+                    font-weight: 500;
+                    letter-spacing: 0em;
+                    line-height: 1.58;
+                    font-size: 14px;
+                    color: $body-color;
+                }
+
+                .post-category {
+                    padding-left: 15px;
+                    margin-left: 7px;
+                    font-weight: 500;
+                    letter-spacing: 0em;
+                    line-height: 1.58;
+                    font-size: 14px;
+
+                    a {
+                        color: $body-color !important;
+                    }
+
+                    &::before {
+                        content: "|";
+                        position: absolute;
+                        top: 0;
+                        left: 2px;
+                    }
+                }
+
+                &.text-white {
+                    .post-date {
+                        color: #ffffff;
+                    }
+
+                    .post-category {
+                        a {
+                            color: #ffffff !important;
+                        }
+                    }
+                }
+            }
+
+            .breadcrumb-insite {
+                ul {
+                    &.core-breadcrumb {
+                        padding: 0;
+                        margin: 0;
+                        margin-top: 29px;
+
+                        li {
+                            display: inline-block;
+                            position: relative;
+                            font-size: 14px;
+                            letter-spacing: .4px;
+
+                            a {
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 1.58;
+                                position: relative;
+                                overflow: hidden;
+                                z-index: 1;
+                                -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+                                transition: all .3s cubic-bezier(.645, .045, .355, 1);
+                                font-family: $body-font;
+
+                                &::after {
+                                    content: "";
+                                    width: 0;
+                                    height: 1px;
+                                    bottom: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    right: auto;
+                                    z-index: -1;
+                                    -webkit-transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+                                    transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+                                    background: currentColor;
+                                }
+
+                                &:hover {
+                                    &::after {
+                                        width: 100%;
+                                        right: 0;
+                                    }
+                                }
+                            }
+
+                            &+li {
+                                position: relative;
+                                padding-left: 22px;
+
+                                &::before {
+                                    content: "\f105";
+                                    font-size: 12px;
+                                    position: absolute;
+                                    left: 6px;
+                                    top: 50%;
+                                    -webkit-transform: translateY(-50%);
+                                    -ms-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    font-family: "Font Awesome 5 Free";
+                                    font-weight: 900;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Breadcrumb Title White
+    &.breadcrumb-title-white {
+        .breadcrumb-inner {
+            .heading {
+                color: #ffffff;
+            }
+
+            .breadcrumb-insite {
+                ul {
+                    &.core-breadcrumb {
+                        li {
+                            color: #ffffff;
+
+                            &::before {
+                                color: #ffffff
+                            }
+
+                            a {
+                                color: #ffffff;
+
+                                &::after {
+                                    background-color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+/*-------------------------------------------------------------------------------------
+    Preloader
+---------------------------------------------------------------------------------------*/
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    z-index: 100001;
+
+    .loading {
+        width: 200px;
+        height: 200px;
+        background-image: url(../img/loader.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: block;
+        position: relative;
+        white-space: nowrap;
+        user-select: none;
+    }
+}
+
+.preloader {
+    -webkit-transition: all 1s;
+    transition: all 1s
+}
+
+body.loaded .preloader {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+}

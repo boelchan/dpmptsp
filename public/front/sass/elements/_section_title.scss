@@ -1,0 +1,415 @@
+/*-------------------------------------------------------------------------------------
+    Section Title
+---------------------------------------------------------------------------------------*/
+.text-clip {
+    color: #fcff00;
+    background: linear-gradient(to right, #b10741 0, #740088 51%, #9C27B0 100%);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.section-title {
+    position: relative;
+
+    h3:not(.min-title) {
+        color: $color-7;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        line-height: 1.43;
+        font-family: $body-font;
+        margin-bottom: 10px;
+        display: inline-block;
+
+        @media #{$sm-layout} {
+            margin-bottom: 16px;
+        }
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 1.25;
+        margin: 0;
+        margin-bottom: 18px;
+        word-wrap: break-word;
+        max-width: 100%;
+        color: #222222;
+
+        @media #{$lg-layout} {
+            font-size: 38px;
+        }
+
+        @media #{$md-layout} {
+            font-size: 38px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @media #{$sm-layout} {
+            font-size: 26px;
+
+            br {
+                display: none;
+            }
+        }
+
+    }
+
+    h1,
+    h2.font-size-60 {
+
+        @media #{$tab-layout} {
+            font-size: 30px !important;
+        }
+
+        @media #{$lg-layout} {
+            font-size: 40px !important;
+        }
+
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .circle-shape::after {
+        content: '';
+        background-image: url(../img/shape/title-shape-1.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        margin-top: 6px;
+        margin-left: 15px;
+        position: absolute;
+
+        @media #{$sm-layout} {
+            display: none;
+        }
+    }
+
+    .line {
+        position: relative;
+        font-size: 18px;
+        color: #CACAE4;
+        font-weight: 400;
+        margin-left: 30px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            width: 20px;
+            height: 1px;
+            background: #CACAE4;
+
+            @media #{$sm-layout} {
+                display: none;
+            }
+        }
+
+        @media #{$sm-layout} {
+            margin-left: 0px;
+        }
+
+        &-vertical {
+            position: relative;
+            font-size: 28px;
+            color: #000;
+            font-weight: 500;
+            margin-left: 15px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: -16px;
+                width: 5px;
+                height: 64%;
+                background: $black;
+            }
+        }
+    }
+
+    .section-title-shadow {
+        color: #f0f0f0;
+        font-size: 72px;
+        font-weight: 900;
+        line-height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        right: 0;
+        text-transform: uppercase;
+        user-select: none;
+
+        @media #{$sm-layout} {
+            font-size: 56px;
+        }
+
+        @media #{$md-layout} {
+            font-size: 56px;
+        }
+
+        @media #{$lg-layout} {
+            font-size: 56px;
+        }
+
+        @media #{$large-mobile} {
+            font-size: 38px;
+        }
+    }
+
+    &.text-white {
+        h3 {
+            color: $white;
+        }
+
+        h2 {
+            color: $white;
+        }
+    }
+
+    &.normal-text {
+        & h2 {
+            font-weight: 400;
+        }
+    }
+
+    &.dark-version {
+        .line {
+            color: #CACAE4;
+
+            &-vertical:before {
+                background: $white;
+            }
+        }
+
+        .section-title-shadow {
+            color: #1e1b29;
+        }
+
+        h2 {
+            color: $white;
+        }
+
+        h3 {
+            color: #383838;
+        }
+
+        p {
+            color: #fff;
+            opacity: .8;
+        }
+    }
+}
+
+/*---------------
+Portfolio Tittle End
+---------------*/
+.template-color-65 {
+    .heading-area {
+        .title {
+            font-size: 40px;
+        }
+
+        .sub-title {
+            font-weight: 400;
+            color: $color-65;
+        }
+    }
+
+    .banner-heading {
+        font-weight: bold;
+        color: $color-66;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 400 !important;
+        }
+    }
+}
+
+/*---------------
+Portfolio Tittle End
+---------------*/
+/* ==========================================
+    Wine Shop Section Title Start
+==============================================*/
+
+.template-color-64 {
+    .wine-shop-call-to-action-section {
+        h2 {
+            font-size: $h2 + 12;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 1.021em;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0.05;
+        }
+    }
+
+    .wine-shop-main-heading {
+        h2 {
+            font-size: $h2 - 5;
+            font-weight: bold;
+
+            span {
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+/* ==========================================
+    Wine Shop Section Title End
+==============================================*/
+/* ==========================================
+    Eyeware Section Title Start
+==============================================*/
+.template-color-81 {
+    .section-heading {
+        h2 {
+            color: $color-82;
+        }
+
+        p {
+            color: $color-82;
+        }
+    }
+}
+
+/* ==========================================
+    Eyeware Section Title End
+==============================================*/
+
+/* ==========================================
+    Startup Business Section Title Start
+==============================================*/
+.template-color-88 {
+    .section-title {
+        max-width: 600px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 150px;
+            height: 5px;
+            left: 0;
+            bottom: 0;
+            background: $color-88 !important;
+            border-radius: 2px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 6px;
+            height: 5px;
+            bottom: 0px;
+            background: $white;
+            -webkit-animation: section-title-run 5s infinite linear;
+            animation: section-title-run 5s infinite linear;
+        }
+
+        h5 {
+            font-family: $font-4;
+        }
+
+        h2 {
+            color: $color-89 !important;
+            font-family: $font-4;
+        }
+    }
+
+    .section-title.text-center {
+        &::before {
+            left: 50%;
+            margin-left: -75px;
+        }
+
+        &::after {
+            animation: section-title-run-center 5s infinite linear;
+        }
+    }
+
+    .section-title.section-title-sm {
+        &::before {
+            width: 90px;
+            height: 3px;
+        }
+
+        &::after {
+            width: 4px;
+            height: 3px;
+            animation: section-title-run-sm 5s infinite linear;
+        }
+    }
+
+    @keyframes section-title-run {
+        0% {
+            left: 0;
+        }
+
+        50% {
+            left: 145px;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
+    @keyframes section-title-run-center {
+        0% {
+            left: 50%;
+            margin-left: -75px;
+        }
+
+        50% {
+            left: 50%;
+            margin-left: 45px;
+        }
+
+        100% {
+            left: 50%;
+            margin-left: -75px;
+        }
+    }
+
+    @keyframes section-title-run-sm {
+        0% {
+            left: 0;
+        }
+
+        50% {
+            left: 85px;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
+}
+
+/* ==========================================
+    Startup Business Section Title End
+==============================================*/

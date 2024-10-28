@@ -1,0 +1,66 @@
+/*-------------------------------------------------------------------------------------
+    Video Box  
+---------------------------------------------------------------------------------------*/
+
+.video-box {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+
+    .video-content {
+        position: absolute;
+        bottom: 0;
+        padding: 15px;
+        transform: translateY(100%);
+        transition: all 1s ease;
+
+        .place {
+            color: $white;
+            font-size: 18px;
+
+            .year {
+                color: $theme-color;
+            }
+        }
+
+        .name {
+            font-size: 24px;
+            color: $white;
+        }
+    }
+
+    .video-player {
+        width: 100%;
+        height: 100%;
+        top: auto;
+        left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.7);
+        opacity: 0;
+        transition: all 1s ease;
+    }
+
+    &:hover {
+        .video-content {
+            transform: translateY(0);
+        }
+
+        .video-player {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    &.no-animate {
+        .video-content {
+            transform: none;
+        }
+
+        .video-player {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}

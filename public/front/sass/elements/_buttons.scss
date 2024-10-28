@@ -1,0 +1,1734 @@
+/*-------------------------------------------------------------------------------------
+    Buttons
+---------------------------------------------------------------------------------------*/
+
+.btn {
+    -webkit-transition: all .3s ease;
+    text-transform: capitalize;
+
+    &:focus,
+    &:hover {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .sl-btn-ex-small {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 12px;
+        border: 2px solid $blue-1;
+        background-color: $white;
+        border-radius: 40px;
+        padding: 1em 1.8em;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+
+        &:hover {
+            font-weight: 600;
+            color: $white;
+            background-color: $blue-1;
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+    }
+
+    .btn-left-slide::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        width: 0;
+        height: 103%;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        opacity: 0;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .btn-left-slide:hover::after {
+        width: 100%;
+        opacity: 1;
+    }
+
+    .btn-top-bottom-slide:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        width: 101%;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        opacity: 0;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .btn-cross-slide:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        width: 100%;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        opacity: 0;
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    .btn-cross-slide:hover:after {
+        height: 260%;
+        opacity: 1;
+    }
+
+    .btn-top-bottom-slide:hover:after {
+        height: 100%;
+        opacity: 1;
+    }
+
+    .sl-btn-small {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 14px;
+        border: 2px solid $blue-1;
+        background-color: $white;
+        border-radius: 40em;
+        padding: 1em 2.8em;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+
+        &:hover,
+        &.active {
+            font-weight: 600;
+            color: $white;
+            background-color: $blue-1;
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+    }
+
+    .sl-btn-large {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 16px;
+        border: 2px solid $blue-1;
+        background-color: $white;
+        border-radius: 40em;
+        padding: 1.2em 2.8em;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+
+        &:hover {
+            font-weight: 600;
+            color: $white;
+            background-color: $blue-1;
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+    }
+
+    .sl-btn-ex-large {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 18px;
+        border: 2px solid $blue-1;
+        background-color: $white;
+        border-radius: 40em;
+        padding: 1.2em 3.2em;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+
+        &:hover {
+            font-weight: 600;
+            color: $white;
+            background-color: $blue-1;
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+    }
+
+
+    /*icon button*/
+
+    .icon-button-rl {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 16px;
+        border: 2px solid $red-color;
+        background-color: $white;
+        border-radius: 40em;
+        padding: 0.5em 1.4em;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        position: relative;
+
+        span {
+            left: 0;
+            display: inline-block;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            transition: opacity .45s cubic-bezier(0.25, 1, 0.33, 1), transform .45s cubic-bezier(0.25, 1, 0.33, 1);
+            -webkit-transition: opacity .45s cubic-bezier(0.25, 1, 0.33, 1), -webkit-transform .45s cubic-bezier(0.25, 1, 0.33, 1);
+            position: relative;
+        }
+
+        &:hover,
+        &.active {
+            color: $white;
+            background-color: $red-color;
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+
+        .fa-arrow-right {
+            right: 14px;
+            margin-top: 0;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            line-height: 32px;
+            height: 32px;
+            width: 32px;
+            border-radius: 40px;
+            margin-left: 10px;
+            color: $white;
+            background-color: $red-color;
+            box-shadow: rgba(255, 16, 83, 0.24) 0px 8px 15px;
+        }
+
+        &.btn-link {
+            border: none;
+            padding: 0em 0em;
+            color: $red-color;
+            background: transparent;
+            text-decoration: none;
+
+            .fa-arrow-right {
+                background: transparent;
+                border: 1px solid $red-color;
+                color: $red-color;
+                box-shadow: none;
+                transition: opacity .45s cubic-bezier(0.25, 1, 0.33, 1), transform .45s cubic-bezier(0.25, 1, 0.33, 1);
+            }
+
+            span {
+                font-weight: 600;
+                letter-spacing: .6px;
+            }
+
+            &:hover,
+            &.active {
+                color: $red-color;
+                background-color: transparent;
+                box-shadow: none;
+                text-decoration: none;
+                transform: none;
+                transition: opacity .45s cubic-bezier(0.25, 1, 0.33, 1), transform .45s cubic-bezier(0.25, 1, 0.33, 1);
+
+                .fa-arrow-right {
+                    background: transparent;
+                    border: 1px solid $red-color;
+                    color: $red-color;
+                    @include transform(translateX(4px));
+                    transition: opacity .45s cubic-bezier(0.25, 1, 0.33, 1), transform .45s cubic-bezier(0.25, 1, 0.33, 1);
+                }
+            }
+
+            &.white-hover {
+
+                &:hover,
+                &.active {
+                    color: $white !important;
+                    background-color: transparent;
+
+                    .fa-arrow-right {
+                        background: transparent;
+                        border: 1px solid $red-color;
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .icon-button-lr {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 16px;
+        border: 2px solid $red-color;
+        background-color: $white;
+        border-radius: 40em;
+        padding: 0.5em 1.4em;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        position: relative;
+
+        i,
+        svg {
+            right: 14px;
+            margin-top: 0;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            line-height: 32px;
+            display: inline-block;
+            height: 32px;
+            width: 32px;
+            border-radius: 40px;
+            margin-right: 10px;
+            color: $white;
+            background-color: $red-color;
+            box-shadow: rgba(255, 16, 83, 0.24) 0px 8px 15px;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $red-color;
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+    }
+
+    .icon-button-naked {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        background-color: $white;
+        border-radius: 40em;
+        padding: 0.5em 1.4em;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        position: relative;
+
+        i,
+        svg {
+            right: 14px;
+            margin-top: 0;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            line-height: 32px;
+            height: 32px;
+            width: 32px;
+            border-radius: 40px;
+            margin-right: 10px;
+            color: $white;
+            background-color: $red-color;
+            box-shadow: rgba(255, 16, 83, 0.24) 0px 8px 15px;
+
+            &.medium {
+                width: 40px;
+                height: 40px;
+                line-height: 38px;
+            }
+
+            &.large {
+                width: 50px;
+                height: 50px;
+                line-height: 48px;
+            }
+
+            &.ex-large {
+                width: 60px;
+                height: 60px;
+                line-height: 58px;
+            }
+        }
+
+    }
+
+    /* Wedding buttons */
+    .wedding-btn {
+        font-size: 16px;
+        color: #C40A1E;
+        border: none;
+        border-radius: 10px 0px 10px 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+
+        &:hover {
+            background: -webkit-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+            background: -moz-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+            background: -o-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+            background: -ms-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+            background: linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+            color: #ffffff;
+        }
+    }
+
+    .btn-ex-small {
+        font-size: 12px;
+        padding: 1em 1.8em !important;
+    }
+
+    .btn-small {
+        font-size: 14px;
+        padding: 1em 2.8em !important;
+    }
+
+    .btn-large {
+        font-size: 16px;
+        padding: 1.2em 2.8em !important;
+    }
+
+    .btn-ex-large {
+        font-size: 18px;
+        padding: 1.2em 3.2em !important;
+    }
+
+    /* Gradient Buttons */
+    .gradients-button {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: 0.5s;
+        font-weight: 600;
+        border-radius: 40em;
+        padding: 1em 2.8em;
+        background-size: 200% auto;
+        color: white;
+        text-transform: capitalize;
+
+        &:hover {
+            background-position: right center;
+            /* change the direction of the change here */
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+
+        &.btn-ex-small {
+            font-size: 12px;
+            padding: 1em 1.8em;
+        }
+
+        &.btn-small {
+            font-size: 14px;
+            padding: 1em 2.8em;
+
+            @media #{$tab-layout} {
+                &.btn-sm-ex-small {
+                    font-size: 12px;
+                    padding: 1em 1.8em !important;
+                }
+            }
+        }
+
+        &.btn-large {
+            font-size: 16px;
+            padding: 1.2em 2.8em;
+        }
+
+        &.btn-ex-large {
+            font-size: 18px;
+            padding: 1.2em 3.2em;
+        }
+
+        &.outline {
+            position: relative;
+            background: #ffffff;
+            transform: none;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                right: -1px;
+                bottom: -1px;
+                background-size: 200% auto;
+                border-radius: 40em;
+                z-index: -2;
+
+            }
+
+            &:hover {
+                color: $white !important;
+                background: #fff;
+            }
+
+            &.no-radius {
+                border-radius: 0px;
+
+                &:after {
+                    border-radius: 0px;
+                }
+            }
+
+            &.rounded {
+                border-radius: 4px !important;
+
+                &:after {
+                    border-radius: 5px !important;
+                }
+            }
+        }
+
+        &.hover-bg-white:hover {
+            background: $white !important;
+            color: $theme-color
+        }
+
+        &.bg-white {
+            background: $white !important;
+        }
+    }
+
+    .animated-gradient-button {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: 0.5s;
+        font-weight: 600;
+        border-radius: 40em;
+        padding: 1em 2.8em;
+        color: white;
+        text-transform: capitalize;
+        z-index: 3;
+        overflow: hidden;
+
+        span.animated {
+            position: absolute;
+            z-index: -1;
+
+            &.top-bottom-slide {
+                position: absolute;
+                z-index: -1;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                transition: all 0.3s;
+                width: 101%;
+                height: 0;
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -ms-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+
+        &:hover {
+            span.animated.top-bottom-slide {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+        }
+
+        &.btn-ex-small {
+            font-size: 12px;
+            padding: 1em 1.8em;
+        }
+
+        &.btn-small {
+            font-size: 14px;
+            padding: 1em 2.8em;
+
+            @media #{$tab-layout} {
+                &.btn-sm-ex-small {
+                    font-size: 12px;
+                    padding: 1em 1.8em !important;
+                }
+            }
+        }
+
+        &.btn-large {
+            font-size: 16px;
+            padding: 1.2em 2.8em;
+        }
+
+        &.btn-ex-large {
+            font-size: 18px;
+            padding: 1.2em 3.2em;
+        }
+    }
+
+    .grad-btn-1 {
+        background-image: linear-gradient(to right, #1CD8D2 0%, #93EDC7 51%, #1CD8D2 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, #1CD8D2 0%, #93EDC7 51%, #1CD8D2 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-2 {
+        background-image: linear-gradient(to right, #FF8008 0%, #FFC837 51%, #FF8008 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, #FF8008 0%, #FFC837 51%, #FF8008 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-3 {
+        background-image: linear-gradient(to right, #FF5F6D 0%, #FFC371 51%, #FF5F6D 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, #FF5F6D 0%, #FFC371 51%, #FF5F6D 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-4 {
+        background-image: linear-gradient(to right, $color-22 0%, $color-21 51%, $color-22 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-22 0%, $color-21 51%, $color-22 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-5 {
+        background-image: linear-gradient(to right, $color-7 0, $color-8 51%, $color-7 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-7 0, $color-8 51%, $color-7 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-6 {
+        background-image: linear-gradient(to right, $color-11 0, $color-12 51%, $color-11 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-11 0, $color-12 51%, $color-11 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-7 {
+        background-image: linear-gradient(to right, $color-13 0, $color-14 51%, $color-13 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-13 0, $color-14 51%, $color-13 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-8 {
+        background-image: linear-gradient(to right, $color-16 0, $color-17 51%, $color-16 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-16 0, $color-17 51%, $color-16 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-9 {
+        background-image: linear-gradient(to right, $color-19 0, $color-20 51%, $color-19 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-19 0, $color-20 51%, $color-19 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-10 {
+        background-image: linear-gradient(to right, $color-9 0, $color-10 51%, $color-9 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-9 0, $color-10 51%, $color-9 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-11 {
+        background-image: linear-gradient(to right, $color-23 0, $color-24 51%, $color-23 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-23 0, $color-24 51%, $color-23 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-12 {
+        background-image: linear-gradient(to right, $color-29 0, $color-30 51%, $color-29 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-29 0, $color-30 51%, $color-29 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-13 {
+        background-image: linear-gradient(to right, $color-33 0, $color-34 51%, $color-33 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-33 0, $color-34 51%, $color-33 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-14 {
+        background-image: linear-gradient(to right, #b10741 0, #740088 51%, #9C27B0 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, #b10741 0, #740088 51%, #9C27B0 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-15 {
+        background-image: linear-gradient(to right, #00d563 0%, #7fffc9 51%, #00d563 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, #00d563 0%, #7fffc9 51%, #00d563 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-16 {
+        background-image: linear-gradient(to right, $color-38 0%, $color-39 51%, $color-38 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(to right, $color-38 0%, $color-39 51%, $color-38 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-17 {
+        background-image: linear-gradient(270deg, $color-44 0%, $color-45 51%, $color-44 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(270deg, $color-44 0%, $color-45 51%, $color-44 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-18 {
+        background-image: linear-gradient(270deg, $color-48 0%, $color-49 51%, $color-48 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(270deg, $color-48 0%, $color-49 51%, $color-48 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    .grad-btn-19 {
+        background-image: linear-gradient(270deg, $color-51 0%, $color-52 51%, $color-51 100%);
+
+        &:after,
+        &.outline:hover,
+        &.outline.active {
+            background-image: linear-gradient(270deg, $color-51 0%, $color-52 51%, $color-51 100%);
+            background-size: 200% auto;
+        }
+    }
+
+    /* Gradient Buttons */
+    .light-color {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: 0.5s;
+        border: 1px solid #000;
+        border-radius: 40em;
+        padding: 1em 2.8em;
+        background-size: 200% auto;
+        color: #000;
+        background: rgba(0, 0, 0, .11);
+
+        &:hover {
+            background: rgba(0, 0, 0, .11);
+        }
+
+        &.btn-ex-small {
+            font-size: 12px;
+            padding: 1em 1.8em;
+        }
+
+        &.btn-small {
+            font-size: 14px;
+            padding: 1em 2.8em;
+        }
+
+        &.btn-large {
+            font-size: 16px;
+            padding: 1.2em 2.8em;
+        }
+
+        &.btn-ex-large {
+            font-size: 18px;
+            padding: 1.2em 3.2em;
+        }
+    }
+}
+
+.gradients-button.grad-btn-5.outline.active {
+    background-image: linear-gradient(to right, $color-7 0, $color-8 51%, $color-7 100%) !important;
+    background-size: 200% auto !important;
+    color: $white !important;
+}
+
+.btn-search {
+    background: #000;
+    border-radius: 50%;
+    padding: 16px 18px;
+}
+
+.input-group input[type=search] {
+    border-radius: 30px;
+}
+
+.ytp-play-button {
+    fill: #000;
+    opacity: 0.85;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+/* Stroke Button */
+
+.stroke-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+        height: 55px;
+        width: 150px;
+        fill: none;
+        stroke-width: 5;
+
+        .o1 {
+            stroke: rgba(#004e92, 0.7);
+            fill: rgba(#004e92, 0.3);
+            transition: all 1s ease-in-out;
+        }
+
+        .o2 {
+            stroke: white;
+            stroke-dasharray: 20 420;
+            stroke-dashoffset: 20;
+            transition: all 1s ease-in-out;
+        }
+    }
+
+    span {
+        position: absolute;
+        margin: auto 0;
+        text-transform: uppercase;
+        color: $white;
+        transition: all 1s ease-in-out;
+    }
+
+    &:hover {
+
+        .o1 {
+            fill: #004e92;
+        }
+
+        .o2 {
+            stroke-dashoffset: -420;
+        }
+    }
+
+    &.light {
+        span {
+            color: #004e92;
+        }
+
+        .o1 {
+            fill: rgba(#004e92, .1);
+        }
+
+        &:hover {
+            span {
+                color: $white;
+            }
+
+            .o1 {
+                fill: #004e92;
+            }
+        }
+    }
+
+    &.btn-restaurent {
+        svg {
+            stroke-width: 3;
+
+            .o1 {
+                stroke: rgba($color-18, 0.7);
+                fill: rgba($color-18, 0);
+            }
+        }
+
+        span {
+            text-transform: capitalize;
+        }
+
+        &:hover .o1 {
+            fill: $color-18;
+        }
+    }
+
+    &.white-style {
+        svg {
+            stroke-width: 3;
+
+            .o1 {
+                stroke: rgba($white, 0.7);
+                fill: rgba($white, 0);
+            }
+        }
+
+        span {
+            text-transform: capitalize;
+        }
+
+        &:hover {
+            .o1 {
+                fill: $white;
+            }
+
+            span {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+
+.video-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-button {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+
+
+// Video Button
+
+.video-btn {
+    text-align: center;
+
+    &.breadcrumb-video-position {
+        position: absolute;
+        left: 58%;
+        bottom: 0;
+
+        @media #{$sm-layout} {
+            position: static;
+        }
+    }
+
+    a {
+
+        &.video-icon,
+        .video-icon {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: $theme-color;
+            -webkit-transition: all 1s cubic-bezier(0, 0, .2, 1);
+            transition: all 1s cubic-bezier(0, 0, .2, 1);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, .2);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                -webkit-transform: translate(-6px, -9px);
+                -ms-transform: translate(-6px, -9px);
+                transform: translate(-6px, -9px);
+                border-top: 9px solid transparent;
+                border-bottom: 9px solid transparent;
+                border-left: 15px solid #fff;
+            }
+
+
+            &.second-icon {
+                width: 90px;
+                height: 90px;
+
+                &::before {
+                    border-top-width: 11px;
+                    border-bottom-width: 11px;
+                    border-left-width: 19px;
+                    transform: translate(-6px, -12px);
+                }
+            }
+
+            &.third-icon {
+                width: 110px;
+                height: 110px;
+
+                &::before {
+                    border-top-width: 14px;
+                    border-bottom-width: 14px;
+                    border-left-width: 24px;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            &.four-icon {
+                width: 130px;
+                height: 130px;
+
+                &::before {
+                    border-top-width: 16px;
+                    border-bottom-width: 16px;
+                    border-left-width: 28px;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            &.third-icon {
+                &.brown-color {
+                    background: #fff;
+
+                    &::before {
+                        border-left: 24px solid currentColor;
+                    }
+                }
+            }
+
+            &:hover {
+                -webkit-transform: scale3d(1.15, 1.15, 1.15);
+                transform: scale3d(1.15, 1.15, 1.15);
+            }
+        }
+
+    }
+}
+
+
+.border-btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    line-height: 24px;
+    transition: all 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: $theme-color;
+    z-index: 3;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        transition: all 0.3s;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &.white {
+        color: $white !important;
+
+        &.btn-hover {
+            &::before {
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            &::after {
+                border: 2px solid rgba(255, 255, 255, 0.5);
+            }
+
+        }
+    }
+}
+
+.btn-hover {
+    &::before {
+        left: 4px;
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(0.1, 1);
+
+    }
+
+    &.beauty-style:hover {
+        color: #fff !important;
+
+        &::before {
+            background-image: linear-gradient(to left, $color-53 60%, $color-54 100%);
+        }
+    }
+
+    &::after {
+        transition: all 0.3s;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover::before {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+
+    &:hover::after {
+        transform: scale(1, .1);
+        opacity: 0;
+    }
+}
+
+/* Portfolio Page buttons */
+
+.portfolio-blue-btn {
+    background-color: #6479bf;
+    border-radius: 0px !important;
+    color: #fff !important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid transparent;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    border: none;
+    transition: all .5s ease !important;
+}
+
+.portfolio-blue-btn:before {
+    position: absolute;
+    content: "";
+    right: 0;
+    left: -101%;
+    width: 101%;
+    height: 100%;
+    background: #333333;
+    z-index: -1;
+    top: 0;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+    overflow: hidden;
+}
+
+.portfolio-blue-btn:hover:before {
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.portfolio-btn-dark {
+    background-color: #333333;
+    border-radius: 0px !important;
+    color: #fff;
+    border: none !important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid transparent;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease !important;
+}
+
+.portfolio-btn-dark:before {
+    position: absolute;
+    content: "";
+    right: 0;
+    left: -101%;
+    width: 101%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    top: 0;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+    overflow: hidden;
+}
+
+.portfolio-btn-dark:hover:before {
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+/*=================================
+   Grocery About Button CSS Start
+=====================================*/
+
+body.template-color-56 {
+    .grocery-about {
+        .stroke-button {
+            span {
+                color: $black;
+                font-weight: 600;
+            }
+
+            &:hover {
+                span {
+                    color: $white;
+                }
+            }
+
+            svg {
+                .o1 {
+                    stroke: rgb(254 152 25);
+                    fill: rgba(196, 149, 107, 0);
+                }
+            }
+
+            &:hover {
+                .o1 {
+                    fill: $color-56;
+                }
+            }
+        }
+    }
+}
+
+/*=================================
+   Grocery About Button CSS End
+=====================================*/
+
+/*=================================
+IT Company Button Part Start 
+/*=================================*/
+
+@-webkit-keyframes shy-eff {
+    0% {
+        -webkit-transform: translateX(-60px) translateY(-50%) rotate(45deg);
+        transform: translateX(-60px) translateY(-50%) rotate(45deg);
+        transition: all 2s;
+    }
+
+    to {
+        -webkit-transform: translateX(400px) translateY(-50%) rotate(45deg);
+        transform: translateX(400px) translateY(-50%) rotate(45deg);
+        transition: all 2s;
+    }
+}
+
+.btn.btn-square-1 {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    overflow: hidden;
+    background-color: $color-58;
+    border-radius: 5px;
+    color: $white;
+    transition: color 0.42s ease-in-out;
+    padding: 1em 1.8em !important;
+    border: 2px solid $color-58;
+
+    @media #{$tab-layout} {
+        padding: 14px 10px !important;
+        font-size: 12px;
+    }
+
+    @media #{$lg-layout} {
+        padding: 13px 10px !important;
+        font-size: 12px;
+    }
+
+
+    &:hover {
+        color: $color-59 !important;
+    }
+}
+
+.btn.btn-square-1-effect {
+    &:hover {
+        background: linear-gradient(264deg, #fff, #f2f2f2);
+
+        &::after {
+            -webkit-animation: shy-eff .54s ease-in-out;
+            animation: shy-eff .54s ease-in-out;
+            background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 148, 233, 0)), color-stop(50%, rgba(0, 148, 233, .4)), to(rgba(0, 148, 233, 0)));
+            background: linear-gradient(90deg, rgba(0, 148, 233, 0), rgba(0, 148, 233, .4) 50%, rgba(0, 148, 233, 0));
+            content: "";
+            display: block;
+            height: 400%;
+            left: 0;
+            opacity: .5;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateX(-80px) translateY(-50%) rotate(45deg);
+            transform: translateX(-80px) translateY(-50%) rotate(45deg);
+            width: 30px;
+        }
+    }
+}
+
+
+/*=================================
+IT Company Button Part End
+/*=================================*/
+
+/*=================================
+IT Company Blue Border Botton Part Start 
+=================================*/
+
+.btn-square-2 {
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: $color-58 !important;
+    border-radius: 5px !important;
+    padding: 7px 18px !important;
+    border: 1px solid $color-58 !important;
+
+    &:hover {
+        border: 1px solid $white !important;
+
+        i {
+            color: $white !important;
+        }
+    }
+
+    i {
+        color: $color-58 !important;
+
+        &:hover {
+            color: $white !important;
+            transition: all 1s;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $color-59;
+        transition: all 0.3s;
+        border-radius: 5px;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        z-index: -2;
+    }
+
+    &:hover {
+        color: $white !important;
+
+        &::before {
+            width: 100%;
+            transition: all 1s;
+        }
+    }
+}
+
+.btn-square-round {
+    background-color: $color-78 !important;
+    color: $white;
+
+    &:hover {
+        background-color: $color-77 !important;
+        color: $white;
+    }
+}
+
+/*=================================
+IT Company Blue Border Botton Part End 
+=================================*/
+
+/*------------------------------------------
+Marketing Button Effect Start 
+--------------------------------------------*/
+
+.template-color-60 {
+    .btn {
+        &:hover {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:active {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    button {
+        cursor: pointer;
+
+        &:hover {
+            outline: none;
+        }
+
+        &:active {
+            outline: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .btn-setting {
+        padding: 8px 34px;
+        width: auto;
+        display: inline-block;
+        font-weight: 400;
+        line-height: 25px;
+        font-size: 15px;
+        text-transform: capitalize;
+        text-align: center;
+        border-radius: 8px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border: 1px solid transparent;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease !important;
+        white-space: nowrap;
+
+        @media #{$sm-layout} {
+            padding: 8px 12px;
+        }
+    }
+
+    nav {
+        .btn-setting {
+            font-size: $h6;
+            font-weight: 600;
+            padding: 5px 20px;
+            text-transform: uppercase;
+            width: 180px;
+        }
+    }
+
+    .btn-hvr-up {
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 0;
+            width: 100%;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+            z-index: -1;
+        }
+
+        &:hover {
+            &:after {
+                height: 100%;
+            }
+        }
+
+        &:active {
+            &:after {
+                height: 100%;
+            }
+        }
+
+        &:focus {
+            &:after {
+                height: 100%;
+            }
+        }
+    }
+
+    .btn-hvr-yellow {
+        &:after {
+            background-color: $color-60;
+        }
+
+        &:hover {
+            border-color: $color-60;
+            color: $white;
+        }
+
+        &:focus {
+            border-color: $color-60;
+            color: $white;
+        }
+    }
+
+    .btn-hvr-pink {
+        &:focus {
+            color: $white;
+            border-color: $color-60;
+        }
+
+        &:after {
+            background-color: $color-60;
+        }
+
+        &:hover {
+            border-color: $color-60;
+            color: $white;
+        }
+    }
+
+    .btn-hvr-blue {
+        &:focus {
+            color: $white;
+        }
+    }
+
+    .btn-hvr-whatsapp {
+        &:focus {
+            color: $white;
+        }
+    }
+}
+
+/*------------------------------------------
+Marketing Button Effect End
+--------------------------------------------*/
+
+/*=================================
+   Wine Shop About Button Start
+=====================================*/
+
+body.template-color-64 {
+    .stroke-button.wine-shop-button {
+        svg {
+            .o1 {
+                stroke: rgba(241, 35, 91, 0.7);
+                fill: rgba(196, 149, 107, 0);
+            }
+        }
+
+        &:hover {
+            .o1 {
+                fill: $color-64;
+            }
+        }
+    }
+}
+
+/*=================================
+   Wine Shop About Button End
+=====================================*/
+
+/*=================================
+  Real Estate Button Start
+=====================================*/
+
+.template-color-79 {
+    .icon-menu-part {
+
+        .border-top-gray {
+            border-top: 2px solid $gray-dark-1;
+        }
+
+        .border-left-gray {
+            border-left: 2px solid $gray-dark-1;
+        }
+
+        .border-right-gray {
+            border-right: 2px solid $gray-dark-1;
+        }
+
+    }
+
+    .btn-square-round-3 {
+        background-color: $color-80 !important;
+        color: $white;
+
+        &:hover {
+            background-color: $color-79 !important;
+            color: $white;
+        }
+    }
+
+    .border-radius-50 {
+        border-radius: 50px;
+    }
+
+    .btn-round-orange-boder {
+        border: 2px solid $color-79;
+
+        &:hover {
+            border: 2px solid $color-80;
+        }
+    }
+
+    .btn-round-orange-boder-white {
+        border: 2px solid $white;
+        color: $white !important;
+
+        &:hover {
+            border: 2px solid $color-80;
+        }
+    }
+
+    .orage-subscribe-bnt {
+        right: 6px;
+        top: 4px;
+    }
+
+}
+
+/*=================================
+  Real Estate Button End
+=====================================*/
+
+/*=================================
+  Eyeware Button Start
+=====================================*/
+.template-color-81 {
+    .btn-eyeware {
+        background-color: $color-82;
+        color: $white;
+        font-size: 14px;
+        padding: 9px 34px;
+        line-height: 1.8em;
+        border-radius: 50px;
+        background-image: none;
+        letter-spacing: 2px;
+
+        &:hover {
+            letter-spacing: 3.5px;
+        }
+
+        @media #{$sm-layout} {
+            padding: 8px 12px;
+        }
+    }
+
+    .product {
+        .btn-eyeware {
+            &:hover {
+                letter-spacing: 3.5px;
+            }
+        }
+    }
+
+    .welcome-area {
+        .btn-eyeware {
+            background-color: $color-82;
+
+            &:hover {
+                letter-spacing: 3.5px;
+            }
+        }
+    }
+}
+
+/*=================================
+  Startup Business Button Start
+=====================================*/
+.template-color-88 {
+    .btn-primary {
+        font-family: $font-4;
+        transition: .5s;
+        box-shadow: inset 0 0 0 50px transparent;
+    }
+
+    .btn-primary:hover {
+        box-shadow: inset 0 0 0 0 $white !important;
+    }
+
+    .btn-square {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/*=================================
+  Startup Business Button End
+=====================================*/

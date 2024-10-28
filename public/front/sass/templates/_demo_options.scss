@@ -1,0 +1,87 @@
+/*-------------------------------------------------------------------------------------
+    Demo Options
+---------------------------------------------------------------------------------------*/
+
+.demo-option-container {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    height: 100%;
+    width: 350px;
+    max-width: calc(100% - 45px);
+    z-index: 100000;
+    -webkit-transition: all .5s;
+    -webkit-transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s, -webkit-box-shadow 0.3s 0.3s;
+    transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s, -webkit-box-shadow 0.3s 0.3s;
+    transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s, box-shadow 0.3s 0.3s;
+    transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s, box-shadow 0.3s 0.3s, -webkit-box-shadow 0.3s 0.3s;
+
+    .btn-purchase {
+        display: none !important;
+    }
+
+    &.open {
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+        box-shadow: -3px 0 50px -2px rgba(0, 0, 0, .14);
+    }
+}
+
+
+// Demo Option Wrapper
+.demo-option-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 55px;
+
+    .demo-panel-header {
+        padding: 40px 30px 30px;
+        text-align: center;
+
+        .panel-btn {
+            margin-bottom: 30px;
+
+            a {
+                i {
+                    line-height: 0;
+                    font-size: 20px;
+                    margin-right: 10px;
+                    color: #fff;
+                }
+            }
+        }
+
+        .title {
+            .heading-h5 {
+                margin: 0 0 18px;
+            }
+
+        }
+    }
+
+    .demo-quick-option-list {
+        padding: 27px;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-gap: 20px;
+        grid-gap: 20px;
+
+        a {
+            width: 100%;
+            position: relative;
+            display: inline-flex;
+            border: 1px solid #f5f5f5;
+            
+            &.link {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}

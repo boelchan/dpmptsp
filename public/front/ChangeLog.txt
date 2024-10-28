@@ -1,0 +1,83 @@
+=======================
+    Change Log
+=======================
+
+----------------------
+    Version -  8.0
+----------------------
+
+    1. Added : New 5 Home pages ( Ad Agency, Starup Business, Luxury Handbags, Eyeware, Real Estate ).
+    2. Updated: Elements Styles.
+
+----------------------
+    Version -  7.0
+----------------------
+
+    1. Added : New Blog Versions ( Blog V1, Blog V2, Blog V3, Blog V4, Blog V5 ).
+    2. Added : New Blog Pages (Blog Finance, Blog Freelancing).
+    3. Added : New Portfolio Pages (Portfolio Modeling, Portfolio Painting, Portfolio NFT, Portfolio Running, Portfolio Cricket, Portfolio Shoes Gallery, Portfolio Travel).
+    4. Updated : Elements Styles
+    5. Updated : Homepage Layouts
+    
+----------------------
+    Version -  6.0
+----------------------
+
+    1. Added : New 6 Home pages ( Portfolio, Marketing, Wine Shop, SEO, IT Company, Grocery ).
+    2. Added : New 404 listing page and 10 new separate 404 pages.
+    3. Added : New Portfolio Styles (cube-portfolio-init-min.js).
+    4. Added : Separate Owl Carousel File (owl-carousel-init.min.js).
+    5. Updated: Gulp tasks.
+    6. Updated: Elements Styles.
+    7. Added : Line Awesome Icon.
+
+----------------------
+    Version -  5.0
+----------------------
+
+    1. Updated: Bootstrap 4.5 to V5.0
+    2. Updated: Package.json.
+    3. Updated: Gulp tasks.
+
+----------------------
+ Change Log - 4.0
+----------------------
+
+    1. Added : New 6 Home pages ( Creative Studio, Beauty, HealthCare, Finance, Creative agency [Dark and Light] ).
+    2. Updated : Preview landing page.
+    3. Updated : Gradient header .
+    4. Added : New header styles.
+    5. Added : Google Captcha.
+
+----------------------
+    Version -  3.0
+----------------------
+
+    1. Added   : New 6 Home pages ( Finance, Creative agency, Creative agency [Dark], Healthcare, Beauty, Creative Studio ).
+    2. Updated : Preview landing page.
+    3. Updated : Preview sidebar and header link in all pages.
+    4. Added   : New lib ( three.r119.min.js ,vanta.globe.min.js, parallaxie.min.js ).
+    5. Added   : New font ( Playfair Display ).
+    6. Added   : New two header styles
+
+----------------------
+    Version -  2.0
+----------------------
+
+    1. Added   : New 4 Home pages (Crypto, Product SAAS, Consulting, Product).
+    2. Updated : 4 Home pages (Dental, Job, Architecture, App Landing).
+    3. Updated : Preview landing page.
+    4. Updated : Preview sidebar and header link in all pages.
+    5. Updated : Typed-Js lib and Custom js.
+    6. Added   : New particles effect.
+    7. Fixed   : Parrallax scene multi call issue.
+    8. Added   : New header styles
+
+
+
+
+
+
+
+
+

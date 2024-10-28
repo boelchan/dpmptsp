@@ -1,0 +1,34 @@
+.special-offer-box {
+    background-image: url(https://codex-themes.com/thegem/sites/beauty-salon/wp-content/uploads/2017/10/beauty_salon_offer_2_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .main-title {
+        p {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #f96b6b;
+
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 18px;
+
+        li {
+            position: relative;
+            margin-bottom: .7em;
+        }
+    }
+}

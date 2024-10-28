@@ -1,0 +1,338 @@
+/*-------------------------------------------------------------------------------------
+    Counter
+---------------------------------------------------------------------------------------*/
+
+.liquid-counter {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+
+    &:hover .liquid-counter-element-hover {
+        opacity: 1;
+    }
+}
+
+.liquid-counter-element {
+    display: -webkit-box;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 700;
+    line-height: 1em;
+
+    >span {
+        display: -webkit-box;
+        display: flex;
+    }
+}
+
+.text-left .liquid-counter-element {
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+}
+
+.text-right .liquid-counter-element {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.text-center .liquid-counter-element {
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.liquid-counter-text {
+    line-height: 1.5em;
+}
+
+.social-icon {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1em;
+}
+
+.social-icon li {
+    display: inline-block;
+    margin-right: 1.2em;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.social-icon li:last-child {
+    margin-right: 0;
+}
+
+.single-cool-fact {
+    h2 {
+        font-size: 42px;
+    }
+}
+
+.liquid-counter-element-static,
+.liquid-counter-element-hover {
+    display: none;
+}
+
+.liquid-counter-element-static span,
+.liquid-counter-element-hover span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.counter-animated {
+
+    .liquid-counter-element-static,
+    .liquid-counter-element-hover {
+        display: -webkit-box;
+        display: flex;
+    }
+}
+
+.liquid-counter-element-static>span {
+    background: inherit;
+}
+
+.counter-animated .liquid-counter-element-static~span {
+    display: none;
+}
+
+.liquid-counter-element-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.liquid-counter-regular .liquid-counter-element {
+    font-weight: 400;
+}
+
+.liquid-counter-medium .liquid-counter-element {
+    font-weight: 500;
+}
+
+.liquid-counter-semibold .liquid-counter-element {
+    font-weight: 600;
+}
+
+.liquid-counter-bold .liquid-counter-element {
+    font-weight: 700;
+}
+
+.liquid-counter-sm .liquid-counter-element {
+    font-size: 36px;
+}
+
+.liquid-counter-md .liquid-counter-element {
+    font-size: 47px;
+}
+
+.liquid-counter-lg .liquid-counter-element {
+    font-size: 60px;
+}
+
+.liquid-counter-lg2 .liquid-counter-element {
+    font-size: 200px;
+}
+
+.liquid-counter-xl .liquid-counter-element {
+    font-size: 300px;
+}
+
+.liquid-counter-animator {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    background: inherit;
+}
+
+.liquid-animator-value {
+    display: inline-block;
+    visibility: hidden;
+}
+
+.liquid-animator-numbers {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    overflow: hidden;
+    visibility: visible;
+
+    ul {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        list-style: none;
+        background: inherit;
+    }
+
+    li {
+        margin: 0;
+        background: inherit;
+    }
+}
+
+.liquid-counter-huge {
+    .liquid-counter-element {
+        line-height: 0.8em;
+    }
+
+    .liquid-text-top {
+        display: block;
+        margin-bottom: 2em;
+        position: relative;
+        top: 2em;
+        font-size: 0.875em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .liquid-text-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        font-size: 1.125em;
+        line-height: 1.5em;
+        font-style: italic;
+    }
+}
+
+.liquid-counter-bordered {
+    width: 100%;
+    padding: 30px 5%;
+    border: 1px solid #d8dbe2;
+    text-align: center;
+
+    .liquid-counter-element {
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+
+    .liquid-counter-text {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #a7a9b8;
+    }
+}
+
+.backgroundcliptext .liquid-counter-has-gradient {
+
+    .liquid-counter-element-static,
+    .liquid-counter-element>span {
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+}
+
+.counter {
+    background-color: #E8ECF8;
+    width: 100%;
+    position: relative;
+
+    .wedding-pattern-count {
+        img {
+            position: absolute;
+            top: -56%;
+            right: -7%;
+        }
+
+    }
+
+    p {
+        color: #030B61;
+        font-size: 16px;
+        font-weight: 700;
+
+        & span {
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    h3 {
+        font-size: 60px;
+        color: #C40A1E;
+        font-weight: 500;
+    }
+}
+
+.counter_area {
+    width: 100%;
+    position: relative;
+
+    &.overlay:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        @include gradient(#FF5F6D, #FFC371);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .8;
+    }
+
+    &.overlay-2:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: $black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .9;
+    }
+
+}
+
+/*-------------------------------------------------------------------------------------
+    IT Company Counter Start
+---------------------------------------------------------------------------------------*/
+
+.counter-area-bg {
+    background-image: url(../img/bg/counter-area-bg.png);
+    background-color: $color-58;
+
+    .counter-bg {
+        box-shadow: 0 0px 60px 0 rgba(8, 58, 193, .5);
+    }
+
+    .counter-icon {
+        width: 70px;
+        height: 70px;
+        border: 1px solid $color-58;
+        box-shadow: 0 1px 15px rgba(67, 100, 209, 66%);
+    }
+
+    .border-1 {
+        border: 1px solid $color-58 !important;
+
+        &:hover {
+            border: 1px solid $white !important;
+        }
+    }
+
+}
+
+/*-------------------------------------------------------------------------------------
+    IT Company Counter End
+---------------------------------------------------------------------------------------*/

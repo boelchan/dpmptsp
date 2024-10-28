@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # block text, html and php files in the folder from being accessed directly
+    RewriteRule ^content/(.*)\.(txt|html|php)$ error [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteRule . index.php [L]
+</IfModule>
+
+# Prevent file browsing
+DirectoryIndex index.html
+Options -Indexes

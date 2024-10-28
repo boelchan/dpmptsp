@@ -1,0 +1,809 @@
+/*-------------------------------------------------------------------------------------
+    Welcome Slider
+---------------------------------------------------------------------------------------*/
+
+.welcome-area {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-slides {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .owl-prev,
+    .owl-next {
+        transition: 500ms;
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        margin-top: -33px;
+        z-index: 10;
+        text-align: center;
+        line-height: 70px;
+        color: $white;
+        font-size: 30px;
+        background: transparent !important;
+        border: 1px solid $color-18  !important;
+        color: $color-18  !important;
+        font-size: 25px !important;
+
+        &:hover,
+        &:focus {
+            background: $color-18;
+        }
+
+    }
+
+    .owl-next {
+        left: auto;
+        right: 70px;
+
+    }
+}
+
+.single-welcome-slide {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 660px;
+
+    .welcome-text {
+        position: relative;
+        z-index: 1;
+
+        h2 {
+            font-weight: 700;
+            font-size: 82px;
+            line-height: 1;
+            display: block;
+            margin-bottom: 38px;
+            color: $white;
+        }
+
+        p {
+            color: $white;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        .hero-mail-contact {
+            color: $white;
+            font-style: italic;
+            text-decoration: underline;
+
+            &:hover,
+            &:focus {
+                color: $color-18;
+            }
+        }
+    }
+}
+
+.beauty-slide {
+    position: relative;
+    transition: 1s;
+    height: 550px;
+
+    @media #{$extra-large} {
+        height: 700px;
+    }
+
+    @media #{$custom-lg-layout} {
+        height: 600px;
+    }
+
+    .slide__img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .full-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1 !important;
+            animation-duration: 3s;
+            transition: all 1s ease;
+        }
+    }
+
+    .slide__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &.slide__content__left {
+            left: 15%;
+            transform: translate(-15%, -50%);
+
+            @media #{$custom-lg-layout} {
+                left: 17%;
+            }
+
+            @media #{$tab-layout} {
+                left: 17%;
+            }
+        }
+
+        &.slide__content__right {
+            right: 15%;
+            left: auto;
+            transform: translate(5%, -50%);
+        }
+
+        .border-layer {
+            display: block;
+            border: 5px solid $theme-color;
+            width: 100%;
+            padding: 20px;
+
+            &.border-1 {
+                border: 5px solid #dc4c4c !important;
+            }
+
+            &.border-2 {
+                border: 5px solid #f59028 !important;
+            }
+
+            &.border-3 {
+                border: 5px solid #d2661a !important;
+            }
+        }
+
+        &--headings {
+            color: #000;
+
+            h2 {
+                font-size: 4rem;
+                margin: 0;
+                color: #000;
+            }
+
+            .animated {
+                transition: all .5s ease;
+            }
+
+            .top-title {
+                font-family: $poppins;
+                font-size: 1.5rem;
+                color: #000;
+
+                @media #{$tab-layout} {
+                    font-size: 1rem;
+                }
+            }
+
+            .title {
+                font-size: 3.5rem;
+
+                @media #{$tab-layout} {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .button-custom {
+                text-decoration: none;
+                color: #333;
+                padding: 0.5rem 1.8rem;
+                font-size: 1rem;
+                margin-top: 15px;
+
+                @media #{$tab-layout} {
+                    font-size: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
+.slick-slide .slide__content {
+    display: none;
+}
+
+.slick-slide.slick-current.slick-active .slide__content {
+    display: block;
+}
+
+// Change animation presets
+.slider [data-animation-in] {
+    opacity: 0;
+    animation-duration: 1.5s;
+    transition: opacity 0.5s ease 0.3s;
+    transition: 1s;
+}
+
+// Dots
+.slick-dotted .slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+
+        button {
+            border: 0;
+            display: block;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover,
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.simple-dots {
+    .slick-dots {
+        li {
+            width: $slick-dot-width;
+            height: $slick-dot-height;
+
+            button {
+                border-radius: 50%;
+                background-color: $slick-dot-color;
+                opacity: $slick-opacity-not-active;
+                width: $slick-dot-width;
+                height: $slick-dot-height;
+
+                &:hover,
+                &:focus {
+                    opacity: $slick-opacity-on-hover;
+                }
+            }
+
+            &.slick-active button {
+                color: $slick-dot-color-active;
+                opacity: $slick-opacity-default;
+            }
+        }
+    }
+}
+
+.stick-dots {
+    .slick-dots {
+        li {
+            height: 3px;
+            width: 50px;
+
+            button {
+                position: relative;
+                background-color: $slick-dot-color;
+                opacity: $slick-opacity-not-active;
+                width: 50px;
+                height: 3px;
+                padding: 0;
+
+                &:hover,
+                &:focus {
+                    opacity: $slick-opacity-on-hover;
+                }
+            }
+
+            &.slick-active button {
+                color: $slick-dot-color-active;
+                opacity: $slick-opacity-default;
+
+                &:hover,
+                &:focus {
+                    opacity: $slick-opacity-on-hover;
+                }
+            }
+        }
+    }
+}
+
+.zoomInImage {
+    animation-name: zoomInImage;
+}
+
+.zoomOutImage {
+    animation-name: zoomOutImage;
+    transition: 1s;
+}
+
+
+.slick-nav {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    cursor: pointer;
+    top: calc(50% - 44px);
+
+    &.prev-arrow {
+        left: 3%;
+        transform: scaleX(-1);
+        z-index: 999;
+    }
+
+    &.next-arrow {
+        left: auto;
+        right: 3%;
+    }
+
+    i {
+        display: block;
+        position: absolute;
+        margin: -10px 0 0 -10px;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        top: 50%;
+
+        &:before,
+        &:after {
+            content: '';
+            width: 10px;
+            height: 2px;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: #000;
+            margin: -1px 0 0 -5px;
+            display: block;
+            transform-origin: 9px 50%;
+        }
+
+        &:before {
+            transform: rotate(-40deg);
+        }
+
+        &:after {
+            transform: rotate(40deg);
+        }
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 1px;
+        right: 1px;
+        top: 1px;
+        bottom: 1px;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, .12);
+    }
+
+    svg {
+        width: 44px;
+        height: 44px;
+        display: block;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        stroke-width: 2px;
+        stroke-dashoffset: 126;
+        stroke-dasharray: 126 126 0;
+        transform: rotate(0deg);
+    }
+
+    &.animate {
+        svg {
+            animation: stroke 1s ease forwards .3s;
+        }
+
+        i {
+            animation: arrow 1.6s ease forwards;
+
+            &:before {
+                animation: arrowUp 1.6s ease forwards;
+            }
+
+            &:after {
+                animation: arrowDown 1.6s ease forwards;
+            }
+        }
+    }
+}
+
+/* /////////// IMAGE ZOOM /////////// */
+
+// architecture latest project slider
+
+.slider-intro {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
+
+/* =================================
+    Grocery Banner Slider Start 
+==================================*/
+
+body.template-color-56 {
+    .grocery-banner {
+        .welcome-text {
+            h2 {
+                font-size: $h2 + 20 !important;
+                line-height: 65px;
+
+                @media #{$sm-layout} {
+                    font-size: $h2  !important;
+                    line-height: 40px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                @media #{$md-layout} {
+                    font-size: $h2 + 10 !important;
+                    line-height: 50px;
+                }
+            }
+
+            .stroke-button {
+                span {
+                    font-weight: 600;
+                }
+
+                svg {
+                    .o1 {
+                        stroke: rgb(254 152 25);
+                        fill: rgba(196, 149, 107, 0);
+                    }
+                }
+
+                &:hover {
+                    .o1 {
+                        fill: $color-56;
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+            button {
+                top: initial;
+                bottom: 30px;
+                left: initial;
+                right: 30px;
+                border-radius: 0;
+                width: 50px;
+                height: 50px;
+                border: 1px solid $white  !important;
+                color: $white  !important;
+
+                &:hover {
+                    background: $color-56  !important;
+                    border: 1px solid $color-56  !important;
+                    color: $white  !important;
+                }
+            }
+
+            .owl-prev {
+                right: 100px;
+            }
+        }
+    }
+}
+
+/* =================================
+    Grocery Banner Slider End 
+==================================*/
+
+/* ========================================
+    Grocery Category Slider Arrow Start 
+==========================================*/
+
+.grocery-category-carousel {
+    .owl-nav {
+        text-align: right;
+        margin-top: 15px;
+
+        @media #{$sm-layout} {
+            text-align: center;
+        }
+
+        button.owl-prev {
+            padding: 10px !important;
+            border: 1px solid $black;
+            line-height: normal;
+            color: $black  !important;
+            border-radius: 0;
+        }
+
+        button.owl-next {
+            padding: 10px !important;
+            border: 1px solid $black;
+            line-height: normal;
+            color: $black  !important;
+            border-radius: 0;
+        }
+
+        button {
+            margin-right: 15px;
+
+            &:hover {
+                background: $color-56;
+                border-color: $color-56;
+                color: $white  !important;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+/* =======================================
+    Grocery Category Slider Arrow End 
+=========================================*/
+
+/* ============================================
+    Grocery Feature Product Slider Arrow Start 
+===============================================*/
+
+body.template-color-56 {
+    .grocery-product-carousel {
+        .owl-nav {
+            text-align: right;
+            margin-top: 15px;
+
+            @media #{$sm-layout} {
+                text-align: center;
+            }
+
+            button.owl-prev {
+                padding: 10px !important;
+                border: 1px solid $black;
+                line-height: normal;
+                color: $black  !important;
+                border-radius: 0;
+            }
+
+            button.owl-next {
+                padding: 10px !important;
+                border: 1px solid $black;
+                line-height: normal;
+                color: $black  !important;
+                border-radius: 0;
+            }
+
+            button {
+                margin-right: 15px;
+
+                &:hover {
+                    background: $color-56;
+                    border-color: $color-56;
+                    color: $white  !important;
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================
+    Grocery Product Category Slider Arrow End 
+==============================================*/
+
+/* ==========================================
+    Grocery Client Slider Arrow Start 
+==============================================*/
+
+body.template-color-56 {
+    .grocery-client-carousel {
+        .owl-nav {
+            text-align: right;
+            margin-top: 15px;
+
+            @media #{$sm-layout} {
+                text-align: center;
+            }
+
+            button.owl-prev {
+                padding: 10px !important;
+                border: 1px solid $black;
+                line-height: normal;
+                color: $black  !important;
+                border-radius: 0;
+            }
+
+            button.owl-next {
+                padding: 10px !important;
+                border: 1px solid $black;
+                line-height: normal;
+                color: $black  !important;
+                border-radius: 0;
+            }
+
+            button {
+                margin-right: 15px;
+
+                &:hover {
+                    background: $color-56;
+                    border-color: $color-56;
+                    color: $white  !important;
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================
+    Grocery Client Slider Arrow End 
+==============================================*/
+
+/* ==========================================
+    Wine Shop Slider Start
+==============================================*/
+
+.template-color-64 {
+    .wine-shop-banner {
+        .welcome-text {
+            h2 {
+                font-size: $h2 + 20 !important;
+            }
+        }
+
+        .stroke-button {
+            svg {
+                .o1 {
+                    stroke: rgba(241, 35, 91, 0.7);
+                    fill: rgba(196, 149, 107, 0);
+                }
+            }
+
+            &:hover {
+                .o1 {
+                    fill: $color-64;
+                }
+            }
+        }
+
+        .owl-nav {
+            button {
+                border: 1px solid $color-64  !important;
+                color: $color-64  !important;
+            }
+        }
+
+    }
+}
+
+/* ==========================================
+    Wine Shop Slider End
+==============================================*/
+
+/* ==========================================
+    Handbags Slider Start
+==============================================*/
+.handbag-slider {
+
+    .slick-track,
+    .slick-list {
+        height: 100vh;
+    }
+
+    .slick-dotted.slick-slider {
+        margin: 0;
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        text-align: left;
+
+        li {
+            display: block;
+        }
+    }
+
+    .slide1 {
+        .columned-slider-overlay {
+            background-color: #cbcbcb !important;
+        }
+    }
+
+    .slide2 {
+        .columned-slider-overlay {
+            background-color: #DF5435 !important;
+        }
+    }
+
+    .slide3 {
+        .columned-slider-overlay {
+            background-color: #56576B !important;
+        }
+    }
+
+    .slide4 {
+        .columned-slider-overlay {
+            background-color: #53b7c7 !important;
+        }
+    }
+
+    .slide5 {
+        .columned-slider-overlay {
+            background-color: #C6C2A7 !important;
+        }
+    }
+
+    .slide6 {
+        .columned-slider-overlay {
+            background-color: #e19e75 !important;
+        }
+    }
+
+    .slide7 {
+        .columned-slider-overlay {
+            background-color: #b3add4 !important;
+        }
+    }
+
+    .slide8 {
+        .columned-slider-overlay {
+            background-color: #db9731 !important;
+        }
+    }
+
+    .slide9 {
+        .columned-slider-overlay {
+            background-color: #cbb68e !important;
+        }
+    }
+
+    .slide10 {
+        .columned-slider-overlay {
+            background-color: #adbd18 !important;
+        }
+    }
+
+    .columned-slider-detail {
+        transition: transform 0.8s;
+
+        &:hover img {
+            transform: scale(1.3);
+        }
+    }
+
+}
+
+/* ==========================================
+    Handbags Slider End
+==============================================*/

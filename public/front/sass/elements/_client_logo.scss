@@ -1,0 +1,141 @@
+/*-------------------------------------------------------------------------------------
+    Client Logos
+---------------------------------------------------------------------------------------*/
+
+.brand-area {
+    &.grid-style .brand {
+        margin: 0 -1px -1px 0;
+        padding: 40px 20px;
+    }
+}
+
+.brand {
+    @media #{$tab-layout} {
+        padding: 20px;
+    }
+
+    &.hover-style {
+        a img {
+            filter: grayscale(1);
+            opacity: .5;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            a img {
+                opacity: 1;
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    &.with-border {
+        border: 1px solid #f1f1f1;
+    }
+
+    &.hue-style {
+        a img {
+            filter: grayscale(1);
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            a img {
+                filter: hue-rotate(0);
+            }
+        }
+    }
+}
+
+.brand-style-2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media #{$sm-layout} {
+        flex-direction: column;
+    }
+
+    li {
+        padding: 25px;
+        flex-basis: 20%;
+        text-align: center;
+    }
+
+    img {
+        opacity: .7;
+        -webkit-transition: .3s;
+        transition: .3s;
+        max-height: 110px;
+        max-width: 150px;
+        cursor: pointer;
+        filter: grayscale(1);
+
+        &:hover {
+            filter: grayscale(0);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+
+    &.dark-version {
+        img {
+            filter: brightness(0) invert(1);
+
+            &:hover {
+                filter: invert(0);
+            }
+        }
+    }
+
+    &.no-effects {
+        img {
+            opacity: 1;
+            -webkit-transition: .3s;
+            transition: .3s;
+            max-height: 110px;
+            max-width: 150px;
+            cursor: pointer;
+            filter: grayscale(0);
+
+            &:hover {
+                filter: grayscale(0);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        &.dark-version {
+            img {
+                opacity: 1;
+                filter: none;
+
+                &:hover {
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+
+/* =================================
+    Grocery Client Logo Box Start 
+==================================*/
+
+body.template-color-56 {
+    .grocery-client-carousel {
+        .item {
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+        }
+    }
+}
+
+/* =================================
+    Grocery Client Logo Box End 
+==================================*/

@@ -1,0 +1,226 @@
+/*-------------------------------------------------------------------------------------
+    Tabs
+---------------------------------------------------------------------------------------*/
+
+
+.tab,
+.scrollspy {
+    border: 2px solid #dadada;
+    padding: 30px;
+}
+
+.nav-pills .nav-link {
+    color: $heading-color;
+    letter-spacing: .8px;
+}
+
+.tab-content>.tab-pane {
+    font-size: 14px;
+    letter-spacing: .8px;
+}
+
+.tab .nav .nav-link {
+    color: $black;
+}
+
+.tab .nav .nav-link:hover {
+    color: $theme-color;
+    background: #fff;
+}
+
+.nav-item.active .nav-link,
+.tab .nav .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background: $theme-color;
+}
+
+.tab.gradient-style .nav-item.active .nav-link,
+.tab.gradient-style .nav .nav-link.active,
+.tab.gradient-style .nav-pills .show>.nav-link {
+    background-image: linear-gradient(to right, $color-7 0%, $color-8 100%);
+}
+
+.tab {
+    &.vertical {
+        .tab-nav {
+            flex-basis: 200px;
+
+            @media #{$sm-layout} {
+                flex-basis: 100%;
+            }
+        }
+
+        .tab-content {
+            flex-basis: calc(100% - 200px);
+            padding-left: 30px;
+            padding-right: 30px;
+
+            @media #{$sm-layout} {
+                flex-basis: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    &.tabs-links {
+        .nav .nav-link {
+            background: transparent;
+
+            a {
+                position: relative;
+                color: #000;
+                padding: 0 8px;
+
+                &:before {
+                    content: '';
+                    width: 4px;
+                    height: 100%;
+                    background: $black;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+
+            a.active {
+                color: $theme-color;
+            }
+
+            &:hover {
+                background: transparent;
+
+                a {
+                    color: $theme-color;
+
+                    &:before {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+
+        &-dark {
+            .nav .nav-link {
+                background: transparent;
+
+                a {
+                    color: #fff;
+                    position: relative;
+                    padding: 0 8px;
+
+                    &:before {
+                        content: '';
+                        width: 4px;
+                        height: 100%;
+                        background: $white;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+
+                a.active {
+                    color: $theme-color;
+                }
+
+                &:hover {
+                    background: transparent;
+
+                    a {
+                        color: $theme-color;
+
+                        &:before {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .flex-md-column {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+    }
+}
+
+
+/*---------------
+Tab Categories Start
+---------------*/
+.categories-box {
+	&::before {
+		content: '';
+		position: absolute;
+		width: 650px;
+		height: 650px;
+		right: 0;
+		top: 0;
+        left: -10%;
+        bottom: -150px;
+		background: radial-gradient(50% 50% at 50% 50%, #00A76B 0%, rgba(0, 167, 107, 0) 100%);
+		mix-blend-mode: normal;
+		opacity: 0.24;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		width: 650px;
+		height: 650px;
+		right: 0;
+		top: 0;
+		background: radial-gradient(50% 50% at 50% 50%, #00A76B 0%, rgba(0, 167, 107, 0) 100%);
+		mix-blend-mode: normal;
+		opacity: 0.24;
+	}
+    .nav {
+        .nav-link.active {
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid transparent;
+            border-bottom-color: $color-82;
+            font-size: 34px;
+            color: $color-82;
+        }
+        .nav-link {
+            border: none;
+            color: $color-82;
+            font-size: 22px;
+            background: transparent;
+            border: 1px solid transparent;
+            transition: 0.3s all ease;
+            &:hover {
+                background: transparent;
+                border: 1px solid transparent;
+                border-bottom-color: $color-82;
+                font-size: 34px !important;
+            }
+        }
+    }
+    .tab.vertical {
+        .tab-nav {
+            flex-basis: auto;
+            @media #{$sm-layout} {
+                width: 100% !important;
+            }
+        }
+        .tab-content {
+            flex-basis: auto;
+            @media #{$sm-layout} {
+                width: 100% !important;
+            }
+        }
+    }
+}
+/*---------------
+Tab Categories End
+---------------*/

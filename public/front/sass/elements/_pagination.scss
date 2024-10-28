@@ -1,0 +1,95 @@
+/*-------------------------------------------------------------------------------------
+    Paginations
+---------------------------------------------------------------------------------------*/
+
+.sl-pagination-wrapper {
+    .sl-pagination {
+        padding: 0;
+        margin: -5px;
+        font-size: 14px;
+        font-weight: 500;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+            padding: 5px;
+
+            a {
+                padding: 0 5px;
+                display: block;
+                text-align: center;
+                line-height: 39px;
+                min-width: 41px;
+                height: 41px;
+                border: 1px solid #eee;
+                background: #fff;
+                color: $body-color;
+                transition: 0.3s ease-in;
+            }
+
+            &.active,
+            &:hover {
+                a {
+                    background: $theme-color;
+                    color: #fff;
+                }
+            }
+        }
+
+        &.pagination-rounded {
+            li {
+                a {
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &.pagination-numbers {
+            li {
+                a {
+                    padding: 0 10px;
+                    min-width: auto;
+                    width: auto;
+                    height: auto;
+                    border: none;
+                    border-radius: 0;
+
+                    &:hover {
+                        background: transparent;
+                        color: $theme-color;
+                    }
+                }
+
+                &.active {
+                    a {
+                        background: transparent;
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+
+        &.pagination-rounded-box {
+            background: #efefef;
+            display: inline-block;
+            padding: 2px 5px;
+            border-radius: 40px;
+
+            li {
+                a {
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &.dark-style {
+            li {
+                a {
+                    background: transparent;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

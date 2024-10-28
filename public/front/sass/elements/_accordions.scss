@@ -1,0 +1,183 @@
+/*-------------------------------------------------------------------------------------
+    Accordian
+---------------------------------------------------------------------------------------*/
+
+.accordion {
+    .card {
+        border: 0 none;
+        margin-bottom: 30px;
+        -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+        transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    }
+
+    .card-header {
+        position: relative;
+        background: transparent;
+        padding: 0;
+        border: 0 none;
+
+        h5 {
+            a {
+                &.acc-btn {
+                    color: #111;
+                    font-size: 18px;
+                    line-height: 1.4;
+                    padding: 0;
+                    font-weight: 600;
+                    border: 0 none;
+                    font-family: $body-font;
+                    -webkit-appearance: none;
+                    display: block;
+                    background: #f7f7f7;
+                    padding: 20px 26px;
+                    margin: -1px -1px 0;
+                    border: 0 none;
+                    position: relative;
+                    border-radius: 5px 5px 0 0;
+
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        font-family: Font Awesome\ 5 Free;
+                        font-weight: 900;
+                        content: "\f105";
+                        right: 16px;
+                        font-size: 16px;
+                        transition: all .3s cubic-bezier(.645, .045, .355, 1);
+                    }
+
+                    &[aria-expanded="true"] {
+                        background: $theme-color;
+                        color: #ffffff;
+
+                        &::before {
+                            transform: translateY(-50%) rotate(-90deg);
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .card-body {
+        padding: 27px 25px 39px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        line-height: 1.8;
+        font-size: 14px;
+        font-family: $body-font;
+        border: 0 none;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .07);
+        -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+        transition: all .3s cubic-bezier(.645, .045, .355, 1);
+        border-radius: 0 0 5px 5px;
+    }
+
+    &.gradient-style {
+        .card-header {
+            position: relative;
+            background: transparent;
+            padding: 0;
+            border: 0 none;
+
+            h5 {
+                a {
+                    &.acc-btn {
+                        &[aria-expanded="true"] {
+                            background-image: linear-gradient(to right, $color-7 0%, $color-8 100%);
+                            color: #ffffff;
+
+                            &::before {
+                                transform: translateY(-50%) rotate(-90deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Accordion Style 02 */
+
+.accordion-style-2 {
+    .card {
+        border: 0 none;
+        margin-bottom: 7px;
+        -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+        transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    }
+
+    .card-header {
+        position: relative;
+        background: transparent;
+        padding: 0;
+        border: 0 none;
+
+        h5 {
+            a {
+                &.acc-btn {
+                    color: #111;
+                    padding: 0;
+                    font-weight: 600;
+                    border: 0 none;
+                    font-family: $body-font;
+                    -webkit-appearance: none;
+                    display: block;
+                    position: relative;
+                    font-size: 18px;
+                    line-height: 1.2;
+                    padding: 14px 0 14px 26px;
+
+                    &.black-bg {
+                        &::before {
+                            color: $white;
+                        }
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        font-family: themify;
+                        font-weight: 900;
+                        content: '\e61a';
+                        left: 0;
+                        font-size: 18px;
+                        color: #222222;
+                        font-weight: 700;
+                    }
+
+                    &[aria-expanded="true"] {
+                        background: transparent;
+                        color: $theme-color;
+
+                        &::before {
+                            content: '\e622';
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card-body {
+        padding: 5px 0 21px 26px;
+        font-weight: 400;
+        line-height: 1.8;
+        letter-spacing: 0.8px;
+        font-size: 14px;
+        font-family: $body-font;
+        border: 0 none;
+        box-shadow: inherit;
+        border-radius: inherit
+    }
+}

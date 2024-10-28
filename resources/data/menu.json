@@ -1,0 +1,109 @@
+[
+    {
+        "title": "Home",
+        "icon": "home",
+        "route": "home",
+        "role": [
+            "superadmin",
+            "operator",
+            "instansi"
+        ]
+    },
+    {
+        "title": "Post",
+        "icon": "pencil",
+        "role": [
+            "superadmin",
+            "operator",
+            "instansi"
+        ],
+        "sub": [
+            {
+                "title": "List",
+                "route": "post.index",
+                "role": [
+                    "superadmin",
+                    "operator",
+                    "instansi"
+                ]
+            },
+            {
+                "title": "Kategori",
+                "route": "category.index",
+                "role": [
+                    "superadmin",
+                    "operator"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Fasilitas",
+        "icon": "layout-2",
+        "route": "service.index",
+        "role": [
+            "superadmin",
+            "operator"
+        ]
+    },
+    {
+        "title": "Instansi",
+        "icon": "building-store",
+        "route": "instansi.index",
+        "role": [
+            "superadmin",
+            "instansi"
+        ]
+    },
+    {
+        "title": "Antrian & SKM",
+        "icon": "list",
+        "route": "instansi.antrian.rekap",
+        "role": [
+            "superadmin"
+        ]
+    },
+    {
+        "title": "Pengaduan",
+        "icon": "speakerphone",
+        "route": "pengaduan.index",
+        "role": [
+            "superadmin",
+            "operator",
+            "instansi"
+        ]
+    },
+    {
+        "title": "SKM",
+        "icon": "thumb-up",
+        "route": "kepuasan.index",
+        "role": [
+            "superadmin",
+            "operator",
+            "instansi"
+        ]
+    },
+    {
+        "title": "Sistem",
+        "icon": "settings",
+        "role": [
+            "superadmin"
+        ],
+        "sub": [
+            {
+                "title": "Pengaturan",
+                "route": "identitas.index",
+                "role": [
+                    "superadmin"
+                ]
+            },
+            {
+                "title": "User",
+                "route": "user.index",
+                "role": [
+                    "superadmin"
+                ]
+            }
+        ]
+    }
+]

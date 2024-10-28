@@ -1,0 +1,41 @@
+/*-------------------------------------------------------------------------------------
+    Icons List
+---------------------------------------------------------------------------------------*/
+
+.icon-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+
+    @media #{$tab-layout} {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media #{$sm-layout} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$large-mobile} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$small-mobile} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .icon-container {
+        width: 100%;
+        padding: .7em 0;
+        position: relative;
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    .icon-name {
+        color: #666;
+        margin-left: 10px;
+        font-size: .8em;
+        transition: .3s;
+    }
+}

@@ -1,0 +1,77 @@
+/*-------------------------------------------------------------------------------------
+    Book Form
+---------------------------------------------------------------------------------------*/
+
+.book-appointment-part {
+    &.green-gradient-overlay::after {
+        content: '';
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @extend .gradient-bg-green-blue;
+        z-index: -1;
+    }
+}
+
+.booking_form {
+
+    .bordered-box {
+        position: relative;
+        background: $white;
+        border: 3px solid $white;
+
+        .img-sec {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            @media #{$sm-layout} {
+                align-items: unset;
+                background: $theme-color;
+            }
+
+            img {
+                position: absolute;
+                z-index: 1;
+
+                @media #{$sm-layout} {
+                    position: inherit;
+                }
+            }
+        }
+
+        .book_overlay_bg {
+            width: 70%;
+            height: 100%;
+            background: $theme-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+
+            @media #{$sm-layout} {
+                display: none;
+            }
+        }
+
+        .booking_content {
+            padding: 35px;
+
+            .nice-select {
+                border: 1px solid #DADCE0;
+                color: #8d8d8d;
+                line-height: 36px;
+
+                .current {
+                    color: #8d8d8d;
+                }
+            }
+        }
+    }
+}

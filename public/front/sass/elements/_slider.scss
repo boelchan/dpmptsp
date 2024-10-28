@@ -1,0 +1,356 @@
+/*-------------------------------------------------------------------------------------
+    Slider // Wedding
+---------------------------------------------------------------------------------------*/
+
+.site-blocks-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+
+    &.overlay {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    min-height: 600px;
+    height: calc(100vh);
+ 
+    @media #{$custom-lg-layout} {
+        min-height: 600px;
+        height: calc(50vh);
+    }
+    
+    @media #{$extra-small-mobile} {
+        min-height: 675px;
+    }
+
+    >.container>.row {
+        min-height: 600px;
+        height: calc(100vh);
+
+        @media #{$extra-small-mobile} {
+            height: calc(100vh);
+            min-height: 670px;
+        }
+
+        @media #{$custom-lg-layout} {
+            height: calc(50vh);
+            min-height: 670px;
+        }
+    }
+
+    &.inner-page {
+        min-height: 600px;
+        height: calc(80vh);
+
+        >.container>.row {
+            min-height: 600px;
+            height: calc(80vh);
+        }
+    }
+
+    h1 {
+        color: #030B61;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .sub-text {
+        font-size: 16px;
+        color: #030B61;
+        font-weight: 300;
+    }
+
+    .img-wrap {
+        position: absolute;
+        width: calc(100% - 50%);
+        top: 0;
+        height: 100%;
+        left: 50%;
+        min-height: 600px;
+        overflow: hidden;
+        border-bottom-left-radius: 450px;
+
+        .slide {
+            height: 100vh;
+            position: relative;
+            
+            @media #{$extra-small-mobile} {
+                height: 121vh;
+            }
+
+            .slide-img {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                @media #{$custom-lg-layout} {
+                    height: 78%;
+                }
+            }
+        }
+    }
+
+    .intro {
+        z-index: 3;
+        position: relative;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-blocks-cover h1 {
+        font-size: 6rem;
+        color: $white;
+    }
+}
+
+@media (max-width: 575px) {
+    .site-blocks-cover h1 {
+        font-size: 4rem;
+        color: $white;
+    }
+}
+
+// Buttons
+
+@media (max-width: 991.98px) {
+    .site-blocks-cover .sub-text {
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-blocks-cover .img-wrap {
+        width: 100%;
+        left: 0%;
+        top: 0;
+
+        .hero-slider:before {
+            position: absolute;
+            content: "";
+            background: #3c3c3c;
+            opacity: .5;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-blocks-cover .intro .heading {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-blocks-cover .intro .text {
+        padding-left: 0;
+    }
+}
+
+.site-menu-toggle .menu-text {
+    position: relative;
+    top: -6px;
+    text-transform: uppercase;
+}
+
+.hero-slider .owl-nav {
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+    z-index: 100;
+
+    @media #{$custom-lg-layout} {
+        position: absolute;
+        bottom: auto;
+        top: 480px;
+    }
+
+    @media #{$md-layout} {
+        bottom: 60px;
+    }
+
+    @media #{$small-mobile} {
+        position: absolute;
+        bottom: 90px;
+    }
+
+    .owl-prev,
+    .owl-next {
+        span {
+            width: 50px;
+            height: 50px;
+            margin: 10px 4px;
+            text-align: center;
+            padding: 10px;
+            line-height: 50px;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid $white;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            transition: all .3s ease-in-out;
+
+        }
+
+        &:hover span {
+            background: $theme-color;
+            border-color: $theme-color;
+            color: $white;
+        }
+    }
+}
+
+/* Start Video Play CSS
+============================================================================================ */
+
+.video-play-button {
+
+    &:before,
+    &:after {
+        background: -webkit-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+        background: -moz-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+        background: -o-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+        background: -ms-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+        background: linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+    }
+
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    width: 32px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 46px 8px 18px 28px;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    &:before {
+        z-index: 0;
+        -webkit-animation: pulse-border 2000ms ease-out infinite;
+        -moz-animation: pulse-border 2000ms ease-out infinite;
+        -o-animation: pulse-border 2000ms ease-out infinite;
+        animation: pulse-border 2000ms ease-out infinite;
+    }
+
+    &:after {
+        z-index: 1;
+        -webkit-transition: all 200ms ease;
+        -moz-transition: all 200ms ease;
+        -o-transition: all 200ms ease;
+        transition: all 200ms ease;
+    }
+
+    span {
+        display: block;
+        position: relative;
+        z-index: 3;
+        width: 0;
+        height: 0;
+        border-left: 16px solid #fff;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+
+    &:hover:after {
+        background-color: #1a86f7;
+    }
+}
+
+.wedding-pattern {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    img {
+        position: absolute;
+
+        &:nth-child(1) {
+            top: 35%;
+            left: -50px;
+            opacity: .4;
+        }
+
+        &:nth-child(2) {
+            width: 360px;
+            top: 70%;
+            left: 80%;
+            z-index: 2;
+        }
+
+        &:nth-child(3) {
+            width: 280px;
+            top: -25%;
+            z-index: 2;
+            left: 75%;
+        }
+    }
+}
+
+
+.carousle-slider {
+    .thumb {
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        padding: 0 30px 0 0;
+
+        .spacing {
+            height: 28px;
+        }
+
+        h5 {
+            font-size: 18px;
+            margin-bottom: 14px;
+            font-weight: 600;
+            font-family: $body-font;
+            line-height: 1.23;
+        }
+
+        p {
+            line-height: 1.58;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: $body-font;
+            color: $body-color;
+            margin: 0;
+        }
+    }
+}

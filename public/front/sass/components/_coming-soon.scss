@@ -1,0 +1,91 @@
+/*-------------------------------------------------------------------------------------
+    Coming-soon
+---------------------------------------------------------------------------------------*/
+
+.coming-soon {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .inner {
+        max-width: 100%;
+        width: 880px;
+        margin: auto;
+        border-radius: 18px;
+
+        @media (max-width: 576px) {
+            padding-top: 80px;
+        }
+
+        .bg-solid-grey {
+            .timer-grid {
+                .count-inner p {
+                    color: #fff !important;
+                }
+            }
+        }
+
+        .logo-img {
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            color: #999999;
+            line-height: 1.2;
+        }
+
+        .promise-content {
+            font-size: 14px;
+            color: #999999;
+            line-height: 1.5;
+
+            span {
+                border-bottom: 1px solid #999999;
+            }
+        }
+
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .sl-newsletter-input-box {
+            width: 450px;
+            max-width: calc(100% - 10px);
+            position: relative;
+            background-color: #e6e6e6;
+            height: 50px;
+            border: 0px solid transparent;
+            border-radius: 5px;
+
+            input {
+                height: 50px;
+            }
+
+            button {
+                width: 133px;
+                height: 40px;
+                font-weight: 400;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

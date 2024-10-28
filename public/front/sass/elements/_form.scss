@@ -1,0 +1,756 @@
+/*-------------------------------------------------------------------------------------
+    Form 
+---------------------------------------------------------------------------------------*/
+.form-on-map {
+    position: absolute;
+
+    @media #{$sm-layout} {
+        position: static;
+    }
+}
+
+.form-group {
+    input {
+        border: 1px solid #DADCE0;
+        padding: 15px;
+        border-radius: 4px;
+        width: 100%;
+        height: 50px;
+
+        @include placeholder {
+            font-size: 14px;
+        }
+    }
+
+    textarea {
+        border: 1px solid #DADCE0;
+        padding: 15px;
+        border-radius: 4px;
+
+        @include placeholder {
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    select {
+        border: 1px solid #DADCE0;
+        background: transparent;
+        padding: 15px;
+        border-radius: 4px;
+        color: $white;
+        height: 50px;
+
+        @include placeholder {
+            font-size: 14px;
+        }
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $theme-color;
+    }
+}
+
+.span_pseudo {
+    content: "";
+    display: inline-block;
+    background: #fff;
+    width: 0;
+    height: 0.2rem;
+    position: absolute;
+    transform-origin: 0% 0%;
+}
+
+/* ChackBox Design */
+
+.chackbox {
+    position: relative;
+    // height: 2rem;
+    display: flex;
+    align-items: center;
+
+    span {
+
+        &:before,
+        &:after {
+            content: "";
+            display: inline-block;
+            background: #fff;
+            width: 0;
+            height: 0.2rem;
+            position: absolute;
+            transform-origin: 0% 0%;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked~span {
+            background: $theme-color;
+            border-color: $theme-color;
+
+            &:before {
+                width: 1rem;
+                height: 0.15rem;
+                transition: width 0.1s;
+                transition-delay: 0.3s;
+            }
+
+            &:after {
+                width: 0.4rem;
+                height: 0.15rem;
+                transition: width 0.1s;
+                transition-delay: 0.2s;
+            }
+        }
+
+        &:disabled~ {
+            span {
+                background: #ececec;
+                border-color: #dcdcdc;
+            }
+
+            label {
+                color: #dcdcdc;
+
+                &:hover {
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    label {
+        padding-left: 2rem;
+        font-size: 14px;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
+    span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #DADCE0;
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+        z-index: 1;
+        box-sizing: content-box;
+
+        &:before {
+            transform: rotate(-55deg);
+            top: 1rem;
+            left: 0.37rem;
+        }
+
+        &:after {
+            transform: rotate(35deg);
+            bottom: 0.35rem;
+            left: 0.2rem;
+        }
+    }
+}
+
+/* Radio Design */
+/* The radio */
+
+.radio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    label {
+        font-size: 14px;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 1px solid #DADCE0;
+        border-radius: 50%;
+        transition: all 0.2s;
+    }
+
+    input:checked~span {
+        background-color: #fff;
+    }
+
+    span:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    input:checked~span:after {
+        transform: scale(1);
+        transition: all 0.1s;
+        transition-delay: 0.2s;
+    }
+
+    span:after {
+        display: block;
+        left: 3px;
+        top: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: $theme-color;
+        transform: scale(0);
+        transition: all 0.1s;
+        transition-delay: 0.2s;
+    }
+}
+
+/* Style the indicator (dot/circle) */
+
+.dark-style-1 {
+    input {
+        border: 1px solid #DADCE0;
+        padding: 15px;
+        border-radius: 4px;
+        background: transparent;
+        width: 100%;
+        height: 50px;
+        color: $white;
+
+        @include placeholder {
+            font-size: 14px;
+        }
+    }
+
+    textarea {
+        border: 1px solid #DADCE0;
+        background: transparent;
+        padding: 15px;
+        border-radius: 4px;
+        color: $white;
+
+        @include placeholder {
+            font-size: 14px;
+        }
+    }
+
+    select {
+        border: 1px solid #DADCE0;
+        background: transparent;
+        padding: 15px;
+        border-radius: 4px;
+        color: $white;
+        height: 50px;
+
+        @include placeholder {
+            font-size: 14px;
+        }
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        color: $white;
+        box-shadow: none;
+        outline: none;
+        background: transparent;
+    }
+}
+
+.border-style {
+    .form-group {
+        input {
+            border: none;
+            border-bottom: 1px solid #DADCE0;
+            padding: 15px;
+            border-radius: 0;
+            width: 100%;
+            height: 50px;
+        }
+
+        textarea {
+            border: none;
+            border-bottom: 1px solid #DADCE0;
+            padding: 15px;
+            border-radius: 0;
+        }
+    }
+}
+
+.field-wrapper {
+    position: relative;
+    z-index: 2;
+
+    input {
+        border: 1px solid #DADCE0;
+        padding: 15px;
+        border-radius: 4px;
+        width: 100%;
+        height: 50px;
+    }
+
+    textarea {
+        border: 1px solid #DADCE0;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    input:focus,
+    textarea:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $theme-color;
+    }
+
+    .field-placeholder {
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        top: 24px;
+        left: 1em;
+        background-color: #fff;
+        font-size: 16px;
+        color: #b3b3b3;
+        font-weight: 400;
+        cursor: text;
+        pointer-events: none;
+    }
+
+    input:not([disabled]):focus~.field-placeholder,
+    textarea:not([disabled]):focus~.field-placeholder {
+        z-index: 1;
+        top: 0;
+        font-size: 13px;
+        padding: 0 .3em;
+        color: $theme-color;
+    }
+
+    &.hasValue input:not([disabled])~.field-placeholder,
+    &.hasValue textarea:not([disabled])~.field-placeholder {
+        z-index: 1;
+        top: 0;
+        font-size: 13px;
+        padding: 0 .3em;
+    }
+}
+
+@for $i from 1 through length($colorList) {
+    body.template-color-#{1 * $i} {
+
+        input:not([disabled]):focus~.field-placeholder,
+        textarea:not([disabled]):focus~.field-placeholder,
+        .nice-select:focus,
+        select {
+            color: nth($colorList, $i) !important;
+        }
+
+        input:not([disabled]):focus,
+        textarea:not([disabled]):focus,
+        .nice-select:focus,
+        select:focus,
+        .nice-select.open {
+            border-color: nth($colorList, $i);
+        }
+
+        .form-style-1 {
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            textarea:-webkit-autofill,
+            textarea:-webkit-autofill:hover,
+            textarea:-webkit-autofill:focus,
+            select:-webkit-autofill,
+            select:-webkit-autofill:hover,
+            select:-webkit-autofill:focus {
+                border-color: nth($colorList, $i);
+            }
+        }
+    }
+}
+
+.form-style-1 {
+    padding: 20px;
+    background: #282828;
+    border-radius: 7px;
+
+    input,
+    textarea {
+        color: #fff;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: $white;
+        -webkit-box-shadow: 0 0 0px 1000px #282828 inset;
+    }
+
+    .field-placeholder span {
+        background: #282829;
+    }
+}
+
+.nice-select,
+select {
+    height: 50px;
+    color: #80868b;
+
+    &.w-100 .list {
+        right: 0;
+    }
+
+    .current {
+        color: $black;
+    }
+
+    .option,
+    &:focus .option {
+        color: #80868b;
+    }
+
+    &.dark-style {
+        background: transparent;
+
+        .current {
+            color: $white;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+/*------------------------------------------
+IT Company Contact Form Start
+--------------------------------------------*/
+
+.form-style-2 {
+
+    .input-group {
+
+        .contact-form-control-wrap {
+            flex: 1 1 auto;
+            width: 1%;
+            min-width: 0;
+        }
+    }
+
+    .input-group-prepend {
+        left: 10px;
+        top: 30px;
+        transform: translateY(-50%);
+        border-right: 1px solid #223a7b;
+
+        .input-group-text {
+            padding: 0;
+            width: 40px;
+            height: 20px;
+        }
+
+        + {
+            .contact-form-control-wrap {
+                .form-control {
+                    position: relative;
+                    height: 60px;
+                    transition: all .3s ease-in-out;
+                    padding: 10px 20px 10px 65px;
+                }
+            }
+        }
+    }
+
+    textarea.form-control {
+        height: auto;
+        min-height: 120px !important;
+    }
+}
+
+/*------------------------------------------
+IT Company Contact Form End
+--------------------------------------------*/
+
+/*------------------------------------------
+Marketing Contact Form Start
+--------------------------------------------*/
+.template-color-60 {
+    .contact_form {
+        .form-control {
+            border: none;
+            border-bottom: 1px solid $color-61;
+            border-radius: 0px;
+            box-shadow: none;
+            outline: none;
+            padding-left: 0px;
+
+            &:focus {
+                border-bottom: 1px solid $color-60;
+            }
+
+            &::placeholder {
+                color: $color-61;
+                letter-spacing: 1.2px;
+            }
+        }
+    }
+
+    .address-icon i {
+        font-size: 32px;
+    }
+
+    @media #{$sm-layout} {
+        .contact-section {
+            padding-top: 0px;
+        }
+    }
+}
+
+/*------------------------------------------
+Marketing Contact Form End
+--------------------------------------------*/
+
+/*---------------
+Portfoilo Contact Section Start
+---------------*/
+.template-color-65 {
+    .contact-sec {
+        .user-img {
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+
+            @media #{$sm-layout} {
+                margin-top: 25px !important;
+            }
+        }
+
+        .user-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .user-designation {
+            font-size: 18px;
+            font-weight: 300;
+            margin: 14px 0 10px 0;
+        }
+
+        .contact-form {
+            input {
+                color: $white;
+                font-size: 16px;
+                height: 40px;
+                padding: 34px 0;
+                background: transparent;
+
+                &::placeholder {
+                    color: $white;
+                    font-size: 14px;
+                }
+            }
+
+            .form-control {
+                border: none;
+                border-radius: 0;
+                padding-left: 0;
+                letter-spacing: 1px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+                &:focus {
+                    box-shadow: none;
+                    border-bottom: 1px solid #040608;
+                }
+            }
+
+            textarea {
+                &:focus {
+                    box-shadow: none;
+                    border-bottom: 1px solid #040608;
+                }
+
+                &::placeholder {
+                    color: $white;
+                    font-size: 14px;
+                }
+
+                padding-top: 30px;
+                height: 125px;
+                color: $white;
+                font-size: 16px;
+                resize: none;
+                background: transparent;
+                margin-bottom: 40px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .btn {
+                border-radius: 0px;
+            }
+        }
+    }
+
+    &::placeholder {
+        color: $white !important;
+    }
+
+    &:-ms-input-placeholder {
+        color: $white !important;
+    }
+
+    &::-ms-input-placeholder {
+        color: $white !important;
+    }
+
+}
+
+/*---------------
+Portfolio Contact Section End
+---------------*/
+
+/*---------------
+Travel Contact Section Start
+---------------*/
+
+.contact-sec {
+    .heading-area {
+        transform: translate(75%, 132%);
+        width: 100%;
+    }
+
+    .contact-inner {
+        border: solid 10px $border-color;
+    }
+
+    .contact-form-sec {
+        width: 50%;
+        margin: auto;
+    }
+
+    @media #{$large-mobile} {
+        .contact-form-sec {
+            width: 100% !important;
+            margin: auto;
+        }
+    }
+
+    .contact-form {
+
+        input {
+            border: none;
+            border-bottom: solid 1px $border-color;
+        }
+
+        textarea {
+            border: none;
+            border-bottom: solid 1px $border-color;
+        }
+    }
+
+    @media #{$lg-layout} {
+        .contact-sec {
+
+            .contact-form-sec {
+                width: 100%;
+                margin: auto;
+            }
+
+            .heading-area-big {
+                transform: translate(0);
+                margin: auto;
+                width: 60%;
+            }
+
+            .heading-area-big.long-area {
+                transform: translate(0);
+                width: 100%;
+            }
+
+            .main {
+                height: auto;
+            }
+
+        }
+
+    }
+
+    @media #{$tab-layout} {
+        .contact-sec {
+
+            .heading-area-big.long-area {
+                transform: translate(0);
+                width: 100%;
+                position: relative;
+
+            }
+
+            .main {
+                .img-area {
+                    height: auto;
+                }
+            }
+
+            .contact-form-sec {
+                width: 100%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+/*---------------
+Travel Contact Section End
+---------------*/
+
+/*---------------
+Startup Business Contact Section Start
+---------------*/
+.template-color-88 {
+    .call-icon-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .form-control,
+    .form-select {
+        height: 55px;
+    }
+}
+
+/*---------------
+Startup Business Contact Section End
+---------------*/

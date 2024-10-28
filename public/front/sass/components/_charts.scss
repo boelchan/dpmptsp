@@ -1,0 +1,57 @@
+.markets-chart>div {
+    width: 110%;
+    margin-left: -16px;
+    height: 100%;
+}
+
+.markets-container {
+    position: relative;
+    background: #fff;
+    height: 240px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.markets-chart {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+}
+
+.markets-content span.green,
+.markets-content span.red {
+    position: absolute;
+    right: 0;
+    background: #26a69a;
+    color: #fff;
+    top: 15px;
+    padding: 3px 12px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-weight: 600;
+}
+
+.markets-content span.red {
+    background: #ef5350;
+}
+
+.markets-content h3 {
+    font-size: 14px;
+    top: 14px;
+    position: absolute;
+    left: 15px;
+    color: #4a4a4a;
+}
+
+.markets-content p {
+    position: absolute;
+    top: 32px;
+    left: 15px;
+    font-size: 16px;
+}

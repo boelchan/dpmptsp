@@ -1,0 +1,157 @@
+/*-------------------------------------------------------------------------------------
+    Tooltip Box
+---------------------------------------------------------------------------------------*/
+
+.tooltip-box {
+    position: relative;
+    background-repeat: no-repeat;
+
+    .image {
+        text-align: center;
+    }
+
+    .tip {
+        width: 38px;
+        height: 38px;
+        position: relative;
+        background-color: #768bf9;
+        border-radius: 100%;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-animation: tip_jump 2s .5s linear infinite;
+        animation: tip_jump 2s 0.5s linear infinite;
+
+        &:hover {
+            z-index: 6;
+        }
+
+        &.box1 {
+            top: 25%;
+            left: 48.5%;
+        }
+
+        &.box2 {
+            top: 47%;
+            left: 39%;
+        }
+
+        &.box3 {
+            top: 69%;
+            left: 48.5%;
+        }
+
+        &.box4 {
+            top: 47%;
+            left: 58.5%;
+        }
+
+        @media only screen and (min-width: 570px) and (max-width: 1024px) {
+            &.box2 {
+                left: 35.5%;
+            }
+
+            &.box4 {
+                left: 61%;
+            }
+        }
+
+        @media only screen and (max-width: 778px) {
+
+            &.box1,
+            &.box3 {
+                left: 47.5%;
+            }
+
+            &.box2 {
+                left: 30.5%;
+            }
+
+            &.box4 {
+                left: 65%;
+            }
+        }
+
+        @media #{$large-mobile} {
+            &.box1 {
+                top: 24%;
+                left: 45.5%;
+            }
+
+            &.box3 {
+                top: 67%;
+                left: 45.5%;
+            }
+
+            &.box2 {
+                top: 45%;
+                left: 23.5%;
+            }
+
+            &.box4 {
+                top: 46%;
+                left: 67%;
+            }
+        }
+
+        @media #{$small-mobile} {
+            &.box1 {
+                top: 22%;
+                left: 44.5%;
+            }
+        }
+
+        .content {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            width: 400px;
+            padding: 30px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+            cursor: default;
+            visibility: hidden;
+            background-color: #fff;
+            opacity: 0;
+            -webkit-transition: .3s;
+            transition: 0.3s;
+        }
+
+        @media #{$large-mobile} {
+            .content {
+                width: 300px;
+            }
+
+            &.box1 .content {
+                left: -134px;
+            }
+
+            &.box3 .content {
+                left: -136px;
+            }
+
+            &.box2 .content {
+                left: -65px;
+            }
+
+            &.box4 .content {
+                left: -200px;
+            }
+        }
+
+        &:hover {
+            z-index: 3;
+
+            .content {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .content .title {
+            font-size: 22px;
+        }
+    }
+}

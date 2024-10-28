@@ -1,0 +1,253 @@
+//Variables
+
+//Google Font
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap');
+
+$theme-color: #0069FF;
+$theme-color-2: #0039e6;
+ 
+//===== Font Family =====//
+
+$body-font: 'Montserrat', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+$heading-font: 'Rubik', sans-serif;
+
+$montserrat: 'Montserrat', sans-serif;
+$miniver: 'Miniver', cursive;
+$rubik: 'Rubik', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$playfair: 'Playfair Display', serif;
+$font-1: 'Montserrat', sans-serif; 
+$font-2: 'Rubik', sans-serif;
+$font-3: 'Miniver', cursive;
+$font-4: 'Nunito',sans-serif;
+
+//==== Colors =====//
+
+$white: #ffffff;
+$black: #000000;
+$light-black: #282828;
+$light-black-2: #1d1d1d;
+$gray:  #f5f5f5;
+$gray-1:#535353;
+$gray-dark:#5e5e5e;
+$gray-dark-1:#f2f2f2;
+$red-color: #ff1053;
+$red: #ff0000;
+$red-color-2: #F23E20;
+$red-color-3: #F55D4E;
+$red-color-4: #FB6031;
+$red-color-5: #d0021b;
+$yellow-color: #FCB72B;
+$yellow-color-2: #F8A440;
+$yellow-color-3: #F5A623;
+$yellow-color-4:#d79719;
+$vivali-red-color: #ec3737;
+$pink: #F12C6E;
+$brown: #CE8F4F;
+$brown-2: #F1C078;
+$brown-3: #CAC0B3;
+$blue-1: #3353FC;
+$third-color: #99E5E8;
+$red-color: #F0263F;
+$tarkis-color: #19D2A8;
+$purple-color: #B013FE;
+$purple-color: #AC61EE;
+$body-color: #333333;
+$heading-color: #222222;
+$bg-grey: #f5f5f5;
+$border-color: #eee;
+$port-gore: #1E1A3F;
+$cornflower-blue: #615CFD;
+$green-cyan-light:#0fbc80;
+$blue-cyan-light:#068ba1;
+$light-red:#e56072;
+$light-pink:#ffe3e2;
+$gray-light:#f9f9f9;
+$dark-blue:#2E303C;
+
+
+
+$color-1:  $theme-color;
+$color-2:  #FE378C;
+$color-3:  #F0263F;
+$color-4:  #FCB72B;
+$color-5:  #F8A440;
+$color-6:  #F05874;
+
+$color-7:  #1040C6;
+$color-8:  #09AEFF;
+
+$color-9:  #7478fa;
+$color-10: #6DD456;
+
+$color-11: #FF9456;
+$color-12: #FE2B60;
+
+$color-13: #4776E6;
+$color-14: #8E54E9;
+
+$color-15: #C4956B;
+
+$color-16: #02C873;
+$color-17: #00CBFF;
+
+$color-18: #C4956B;
+
+$color-19: #06C6DC;
+$color-20: #04F1EF;
+
+$color-21: #004e92;
+$color-22: #000428;
+
+$color-23: #FC0044;
+$color-24: #4D2BFE;
+
+$color-25: #FF5F6D;
+$color-26: #FFC371;
+
+$color-27: #FFAF23;
+
+$color-28: #9B24E9;
+
+$color-29: #FE5532;
+$color-30: #FE0633;
+
+$color-31: #C40A1E;
+$color-32: #FE0633;
+
+$color-33: #3C53D7;
+$color-34: #1A1B6E;
+
+$color-35: #2F3C9E;
+$color-36: #0A113B;
+
+$color-37: #00d563;
+
+$color-38: #fe8c00;
+$color-39: #f83600;
+
+$color-40: #39ec73;
+$color-41: #0086f8;
+
+$color-42: #031034;
+$color-43: #28dbe9;
+
+$color-44: #FF8008;
+$color-45: #FFC837;
+
+$color-46: #FF8008;
+$color-47: #FFC837;
+
+$color-48: #f889ab;
+$color-49: #a400d1;
+
+$color-50: #db6260;
+
+$color-51: #3264f5;
+$color-52: #7202bb;
+
+$color-53: #f12711; 
+$color-54: #f5af19;
+
+$color-55: #2BCB48;
+
+$color-56: #ff991a;
+$color-57: #f0f0f0;
+
+$color-58: #223a7b;
+$color-59: #34aeff;
+
+$color-60:#fda302;
+$color-61:#212529;
+
+$color-62:#55a8fd;
+$color-63:#00d58c;
+
+$color-64:#f1235b;
+
+$color-65:#6479bf;
+$color-66:#2b2b2b;
+
+$color-67:#3c3531;
+$color-68:#a47c68;
+
+$color-69:#5a1959;
+$color-70:#fc6880;
+
+$color-71:#fb8e52;
+$color-72:#8550fc;
+
+$color-73:#f94217;
+$color-74:#0e1f39;
+
+$color-75:#d2d400;
+
+$color-76:#93ce67;
+
+$color-77:#f71c52;
+$color-78:#39d47a;
+
+$color-79:#022135;
+$color-80:#fb6a19;
+
+$color-81:#63c0ee;
+$color-82:#161829;
+
+$color-83:#161829;
+
+$color-84:#F2EFE6;
+$color-85:#32c267;
+
+$color-86:#00CCCC;
+$color-87:#343434;
+
+$color-88:#06A3DA;
+$color-89:#222222;
+
+
+$slick-dot-width: 20px;
+$slick-dot-height: 20px;
+$slick-dot-color: white;
+$slick-dot-color-active: $slick-dot-color;
+$slick-opacity-default: 0.75;
+$slick-opacity-on-hover: 1;
+$slick-opacity-not-active: 0.25;
+
+//==== Color List For loops =====//
+
+$colorList: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $color-8 ,$color-9, $color-10, $color-11,  $color-12,  $color-13 , $color-14, $color-15, $color-16, $color-17, $color-18, $color-19, $color-20, $color-21, $color-22, $color-23, $color-24, $color-25, $color-26, $color-27, $color-28, $color-29, $color-30, $color-31, $color-32, $color-33, $color-34, $color-35, $color-36, $color-37, $color-38, $color-39, $color-40, $color-41, $color-42, $color-43, $color-44, $color-45, $color-46, $color-47, $color-48, $color-49, $color-50, $color-51, $color-52, $color-53, $color-54, $color-55, $color-56, $color-57, $color-58, $color-59, $color-60, $color-61, $color-62, $color-63, $color-64, $color-65, $color-66, $color-67, $color-68, $color-69, $color-70, $color-71, $color-72, $color-73, $color-74, $color-75, $color-76, $color-77, $color-78, $color-79, $color-80, $color-81, $color-82, $color-83, $color-84, $color-85, $color-86, $color-87, $color-88, $color-89;
+
+//===== Line Height =====//
+
+$body-line-height: 1.8;
+$placeholder-color: #333;
+
+//==== Font size =====//
+
+$body-font-size: 16px;
+$h1: 42px;
+$h2: 30px;
+$h3: 26px;
+$h4: 22px;
+$h5: 18px;
+$h6: 14px;
+
+//===== Screen Layouts =====// 
+$extra-large: 'only screen and (min-width: 1600px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$sm-laptop-device: 'only screen and (min-width: 1300px) and (max-width: 1599px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$custom-lg-layout: 'only screen and (min-width: 1021px) and (max-width: 1090px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$tab-layout:'(max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+$extra-small-mobile: 'only screen and (max-width: 320px)';

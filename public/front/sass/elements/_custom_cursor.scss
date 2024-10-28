@@ -1,0 +1,93 @@
+/*-------------------------------------------------------------------------------------
+    Custom Cursor
+---------------------------------------------------------------------------------------*/
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: block;
+    transition: opacity 300ms linear;
+    opacity: 0;
+    width: 6px;
+    height: 6px;
+
+    &.moving {
+        opacity: 1;
+    }
+
+    &::before {
+        content: ' ';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: $black;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity 300ms linear;
+    }
+
+    &.expand::before {
+        opacity: 0;
+    }
+
+    &.active {
+        transform: scale(1.2);
+    }
+}
+
+/* ----------------------------
+  node styles
+--------------------------- */
+
+.node {
+    pointer-events: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: block;
+    transition: opacity 300ms linear;
+    opacity: 0;
+    width: 32px;
+    height: 32px;
+
+    &.moving {
+        opacity: 1;
+    }
+
+    &::before {
+        content: ' ';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: transparent;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        border: 1px solid $black;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 1;
+        transition: opacity 300ms linear, transform 300ms linear, border 300ms linear, background-color 300ms linear;
+    }
+
+    &.expand::before {
+        transform: scale(3);
+        background-color: $black;
+        opacity: 0.2;
+    }
+
+    &.reduce {
+        transform: scale(1);
+        background-color: $black;
+    }
+}
+
+/* expand is the class you assigned with the plugin to cursor when a selected element is hovered*/
+
+/*.node*/

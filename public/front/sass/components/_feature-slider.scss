@@ -1,0 +1,255 @@
+/*-------------------------------------------------------------------------------------
+    Features Sliders  
+---------------------------------------------------------------------------------------*/
+
+.feature-slider {
+    position: relative;
+
+    &.owl-carousel .owl-nav {
+        position: absolute;
+        top: 155px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    &.owl-carousel .owl-nav button.owl-next,
+    &.owl-carousel .owl-nav button.owl-prev {
+        color: #000;
+        background: #fff;
+        font-size: 23px;
+        padding: 8px 14px !important;
+
+        &:hover {
+            background: $theme-color;
+            color: $white;
+        }
+    }
+
+    &.owl-carousel .owl-nav button {
+        position: absolute;
+    }
+
+    &.owl-carousel .owl-nav button.owl-prev {
+        left: 0;
+
+        @media #{$sm-layout} {
+            left: 20px;
+        }
+    }
+
+    &.owl-carousel .owl-nav button.owl-next {
+        right: 0;
+
+        @media #{$sm-layout} {
+            right: 20px;
+        }
+    }
+}
+
+.properties {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    overflow: hidden;
+
+    .fancy-box-contents {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        color: $white;
+    }
+
+    .price {
+        font-size: 24px;
+        font-weight: 600;
+        display: block;
+        color: $white;
+    }
+
+    .features {
+        font-size: 14px;
+        display: block;
+        color: $white;
+    }
+
+    .fancy-box-header {
+        padding: 0 20px;
+        transition: all .3s ease-in-out 0s;
+    }
+
+    .fancy-box-info {
+        padding: 0 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        transition: all .3s ease-in-out 0s;
+    }
+
+    &:hover .fancy-box-info {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+    Grocery Featured Product Slider Start 
+==========================================*/
+.grocery-product-carousel {
+    .grocery-product-item {
+        box-shadow: 0 10px 22px rgb(0 0 0 / 6%);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        overflow: hidden;
+        transition: .5s;
+
+        &:hover {
+            .grocery-product-img {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    .grocery-product-img-action {
+        position: relative;
+        overflow: hidden;
+
+        .grocery-product-img {
+            transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), filter 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+            transform: scale(1);
+
+            img {
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .grocery-product-badges {
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        span.badge-text {
+            background: $color-57;
+            line-height: normal;
+            padding: 5px 10px;
+            color: $black;
+            font-weight: 500;
+        }
+
+        span.onsale {
+            line-height: normal;
+            padding: 5px 10px;
+            color: $white;
+            font-weight: 500;
+        }
+    }
+
+    .grocery-product-content {
+        h4 {
+            font-size: $h4 - 7;
+            color: $black;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: $h2 - 12;
+            font-weight: 600;
+
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+
+        .grocery-product-rating {
+            line-height: normal;
+        }
+
+        .grocery-product-action {
+            border-top: 1px solid $color-57;
+
+            a {
+                display: inline-block;
+                font-size: $body-font-size;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+            }
+        }
+    }
+
+    .grocery-product-price {
+        ins {
+            background: transparent;
+            font-weight: 600;
+            font-size: $body-font-size + 4;
+        }
+
+        del {
+            font-size: $body-font-size + 4;
+        }
+    }
+
+    .owl-nav {
+        text-align: right;
+        margin-top: 15px;
+
+        @media #{$sm-layout} {
+            text-align: center;
+        }
+
+        button.owl-prev {
+            padding: 10px !important;
+            border: 1px solid $black;
+            line-height: normal;
+            color: $black !important;
+            border-radius: 0;
+        }
+
+        button.owl-next {
+            padding: 10px !important;
+            border: 1px solid $black;
+            line-height: normal;
+            color: $black !important;
+            border-radius: 0;
+        }
+
+        button {
+            margin-right: 15px;
+
+            &:hover {
+                background: $color-56;
+                border-color: $color-56;
+                color: $white !important;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+/* ========================================
+    Grocery Featured Product Slider End 
+==========================================*/

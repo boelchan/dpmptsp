@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<title>SNAIL - Creative Agency & Portfolio Templates</title>
+	<meta name="description" content="">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<!-- Syntax Highlighter -->
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Normalize/Reset CSS-->
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<!-- Main CSS-->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="welcome">
+	<aside class="left-sidebar">
+		<a href="javascript:void(0)" class="toggle-button" id="toggle-sidebar">
+			<span class="fa fa-bars"></span>
+		</a>
+		<div class="logo">
+			<a href="#welcome">
+				<img src="img/logo.svg" alt="logo">
+			</a>
+		</div>
+		<nav class="left-nav">
+			<ul id="nav">
+				<li class="current">
+					<a href="#welcome"> <i class="fa fa-bullhorn"></i> Welcome</a>
+				</li>
+				<li>
+					<a href="#installation"> <i class="fa fa-book"></i> Installation</a>
+				</li>
+				<li>
+					<a href="#tmpl-structure"> <i class="fa fa-stack-overflow"></i> Structure</a>
+				</li>
+				<li>
+					<a href="#css-structure"> <i class="fa fa-css3"></i> CSS Files</a>
+				</li>
+				<li>
+					<a href="#javascript"> <i class="fa fa-jsfiddle"></i> JavaScript Libraries</a>
+				</li>
+				<li>
+					<a href="#customization"> <i class="fa fa-pencil-square-o"></i> Customization</a>
+				</li>
+				<li>
+					<a href="#credit"> <i class="fa fa-folder"></i> Source and Credit</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<div id="main-wrapper">
+		<div class="main-content">
+			<section id="welcome">
+				<div class="content-header">
+					<h1>SNAIL - Creative Agency & Portfolio Templates</h1>
+				</div>
+				<div class="welcome">
+					<p>Firstly, a huge thanks for purchasing this theme, your support is truly appreciated!</p>
+					<p>This document covers the installation and use of this theme and often reveals answers to common problems and issues
+						- read this document thoroughly if you are experiencing any difficulties. If you have any questions that are beyond
+						the scope of this document, feel free to email at
+						<code>
+							<a href="mailto:support@chetsapp.com">support@chetsapp.com</a>
+						</code><br>Thank you so much!</p>
+				</div>
+				<div class="features">
+					<h2 class="twenty">Template Features</h2>
+					<ul>
+						<li>Clean &amp; Simple Design</li>
+						<li>Built in Bootstrap 5</li>
+						<li>HTML5 &amp; CSS3</li>
+						<li>Fully Responsive Design</li>
+						<li>All files are well commented</li>
+						<li>Cross Browser Compatible with Edge, Firefox, Safari, Opera, Chrome</li>
+						<li>Extensive Documentation</li>
+					</ul>
+				</div>
+			</section>
+			<section id="installation">
+				<div class="content-header">
+					<h1>SNAIL - SNAIL - Creative Agency & Portfolio Templates</h1>
+				</div>
+				<h2 class="title">Installing Template.</h2>
+				<div class="section-content">
+					<ol>
+						<li>After unzip the download pack, you'll found a Template Folder with all the files.</li>
+						<li>You can view this Template in any browser, you can display or edit the Template without an internet connection.(May
+							not wotrk fonts and google map).</li>
+						<li>Now go to your cpanel or open your FTP Client (like
+							<a target="_blank" href="https://filezilla-project.org/download.php">Filezilla</a>) and upload the content of the Template on your server root.</li>
+						<li>Once the files are done uploading go to www.yourdomainname.com/index.html</li>
+					</ol>
+				</div>
+			</section>
+			<section id="tmpl-structure">
+				<h2 class="title">Template Structure</h2>
+				<p class="fifteen">All information within the main content area is nested within a body tag. The general template structure is pretty the
+					same throughout the template. Here is the general structure of main page (index.html).</p>
+				<pre class="brush: html">
+						<header class="header-menu">
+							
+						</header>
+
+						<main class="page-content">
+							<section class="section">
+								
+							</section>
+							<section class="section">
+								
+							</section>
+							<section class="section">
+								
+							</section>
+						</main>
+
+						<footer class="footer-part">
+							
+						</footer>
+					</pre>
+			</section>
+			<section id="css-structure">
+				<h2 class="title">CSS Files and Structure</h2>
+				<code>There are two type of stylesheets <b> 1.) style.css <- Beautified Version </b> and <b>2.) style.min.css <- Minified Version</b></code>
+				<p class="fifteen">These are the css files that are loaded into templates in
+					<strong>Head Section</strong>.</p>
+				<pre class="brush: html">
+						<!--
+						CSS
+						============================================= -->
+						 <!-- Bootstrap css -->
+						 <link rel="stylesheet" href="css/bootstrap.min.css">
+						 <!-- Plugins css -->
+						 <link rel="stylesheet" href="css/plugins.css">
+						 <!-- Beautify Style Css -->
+						 <link rel="stylesheet" href="css/style.css">
+						 <!-- Minified Style Css -->
+						 <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+						 <!-- Custom styles -->
+						 <link rel="stylesheet" href="css/custom.css">
+				</pre>
+				<h2 class="title">Google Web Fonts</h2>
+				<p>By default, the template loads this font from Google Web Font Services, you can change the font with the one that suits
+					you best.</p>
+				<pre class="brush:html">
+						<!--
+						Google Font
+						=========================== -->
+						<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600" rel="stylesheet"> 
+					</pre>
+				<p class="twenty">Remember to change the font into
+					<strong>main.css</strong>
+				</p>
+			</section>
+			<section id="javascript">
+				<h2 class="title">Javascript Files and Structure</h2>
+				  <code>There are two type of javascripts <b> 1.) custom.js | plugin.js <- Beautified Version </b> and <b>2.) custom-min.js | plugin-min.js <- Minified Version</b></code>
+				<p class="fifteen">These are the list of Javascript files that are loaded into templates in end of the
+					<strong>Body Section</strong>.
+					<pre class="brush: html">
+						<!--
+						JavaScripts
+						========================== -->
+						 <!-- jquery -->
+							<script src="js/jquery.min.js"></script>
+							<!-- Plugins js -->
+							<script src="js/plugins.js"></script>
+							<!--Minified Plugins js -->
+							<!-- <script src="js/plugins-min.js"></script> -->
+							<!-- custom js -->
+							<script src="js/custom.js"></script>
+							<!-- Minified custom js -->
+							<!-- <script src="js/custom-min.js"></script> -->
+							<!-- script js -->
+							<script src="js/script.js"></script>
+					</pre>
+			</section>
+			<section id="customization">
+				<h2 class="title"> Customization</h2>
+				<div class="script-source">
+					<h4 class="title"><strong>How to change Font style and Color style and Smooth scroll animation for current page</strong></h4>
+					<img src="img/customization_one.png" style="width: 100%">
+				</div>
+
+				<div class="script-source">
+					<h4 class="title"><strong>How to change Logo for current page</strong></h4>
+					<img src="img/customization_two.png" style="width: 100%">
+					<h3 class="img_note">Note: Images seen in the live preview are only set for preview purposes.
+						They are not included in the download files.</h3>
+				</div>
+			</section>
+			<section id="credit">
+				<h2 class="title">Source and Credit</h2>
+				<div class="script-source">
+					<ul>
+						<li>
+							<a target="_blank" href="http://getbootstrap.com">Bootstrap 5 Framework</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://jquery.com/">jQuery</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://jqueryui.com/">jQuery ui</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://greensock.com/tweenmax/">TweenMax</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.owlgraphic.com/owlcarousel">Owl Carousel</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://fontawesome.io/">FontAwesome</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://wowjs.uk/">https://wowjs.uk/</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://vincentgarreau.com/particles.js/">Particles</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://scrollrevealjs.org/">Scroll Reveal</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://imakewebthings.com/waypoints/">Waypoint</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://masonry.desandro.com/">Masonry</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://jqueryui.com/easing/">jquery easing</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://miromannino.github.io/Justified-Gallery/">Justified Gallery</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/dimsemenov/Magnific-Popup">Magnific Popup</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://hernansartorio.com/jquery-nice-select/">Nice Select</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/alumbo/jquery.parallax-scroll">Parrallax scroll</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://osvaldas.info/audio-player-responsive-and-touch-friendly">Audio Player</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/hilios/jQuery.countdown">Countdown</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/rendro/easy-pie-chart">Pie Chart</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://gmap3.net/">Gmap3</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://wicky.nillia.ms/headroom.js/">headroom</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://imagesloaded.desandro.com/">imagesloaded</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://isotope.metafizzy.co/filtering.html">isotope</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/bfintal/Counter-Up">Jquery Counterup</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/xdan/datetimepicker">jquery Datetimepicker</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://ch-ny.com/content/themes/bridge-child/js/libs/maplace.js/">Maplace</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/hmongouachon/NodeCursor">Node Cursor</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://matthew.wagerfield.com/parallax/">Parallax scene</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/WeCodePixels/theia-sticky-sidebar">Theia sticky Sidebar</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://git.wimbarelds.nl/TimeCircles/">Time Circles</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://mattboldt.com/demos/typed-js/">Typed js</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://scriptpie.com/cubeportfolio/live-preview/">Cube Portfolio</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- Essential JavaScript Libraries
+		==============================================-->
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nav.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushXml.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushPhp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+/*-------------------------------------------------------------------------------------
+    Schedule areas
+---------------------------------------------------------------------------------------*/
+
+.schedule {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 2;
+
+    .nav-pills {
+        width: 100%;
+        display: block;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            padding: 28px !important;
+            border-radius: 0;
+            margin-bottom: 0;
+            color: $black;
+            font-size: 22px;
+            font-weight: 400;
+            position: relative;
+            display: inline-block;
+            border: 1px solid transparent;
+            background: $white;
+            width: 100%;
+            margin-bottom: 10px;
+            box-shadow: 0 7px 15px -5px rgba(0, 0, 0, .07);
+
+            &:after {
+                position: absolute;
+                top: 50%;
+                bottom: 10px;
+                right: -10px;
+                width: 0;
+                height: 0;
+                margin-top: -10px;
+                content: '';
+                border-style: solid;
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent darken(#FF5F6D, 5%);
+                opacity: 0;
+
+            }
+
+            border-radius: 0;
+
+            span {
+                display: block;
+                font-size: 14px;
+            }
+
+            &:hover {
+                background: darken(#FF5F6D, 5%);
+                color: $white;
+            }
+
+            &.active {
+                // color: rgba(0,0,0,.7);
+                color: $white;
+                @include transition(.3s);
+                border: 1px solid transparent;
+                // background: rgba(255,255,255,1);
+                background: darken(#FF5F6D, 5%);
+
+                &:after {
+                    opacity: 1;
+                }
+
+                @media #{$large-mobile} {
+                    &:after {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            @media #{$large-mobile} {
+                display: block;
+                // width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .tab-content {
+        // background: $white;
+        border-radius: 0;
+    }
+
+    &.style-2 {
+
+        .nav-pills .nav-link:hover,
+        .nav-pills .nav-link.active {
+            background: $color-21;
+
+            &::after {
+                border-color: transparent transparent transparent $color-21;
+            }
+        }
+
+        .trainer_wrap .text h3.trainer_name a {
+            color: $color-21;
+        }
+    }
+    .trainer_wrap {
+        .text {
+            .time,
+            .position {
+                color: #949494;
+                line-height: 1.8;
+            }
+        }
+    }
+    &.dark-version {
+        .nav-pills .nav-link {
+            color: #bfbfbf;
+            background: #100e17;
+            box-shadow: -1rem 0 3rem rgba(0, 0, 0, .7);
+
+            &::after {
+                border-color: transparent transparent transparent #100e17;
+            }
+
+            &:hover,
+            &.active {
+                background: $color-21;
+                color: #fff;
+
+                &::after {
+                    border-color: transparent transparent transparent $color-21;
+                }
+            }
+        }
+
+        .trainer_wrap {
+            background: #100e17;
+            box-shadow: -1rem 0 3rem rgba(0, 0, 0, .7);
+
+            .text {
+
+                h2 a,
+                h3 {
+                    color: $white;
+                }
+                p{
+                    color: #bfbfbf;
+                }
+                .time,
+                .position {
+                    color: #949494;
+                }
+
+                h3.trainer_name a {
+                    color: $color-21;
+                }
+            }
+        }
+    }
+
+}
+
+.trainer_wrap {
+    width: 100%;
+    background: $white;
+    padding: 40px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+    @include transition(.3s);
+
+    .trainer_img {
+        width: 120px;
+        height: 120px;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+
+        @media #{$large-mobile} {
+            margin-bottom: 10px;
+        }
+    }
+
+    .text {
+        width: calc(100% - 120px);
+
+        @media #{$large-mobile} {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 400;
+
+            a {
+                color: $black;
+            }
+        }
+
+        @media #{$large-mobile} {
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        h3.trainer_name {
+            font-size: 14px;
+
+            a {
+                color: #FF5F6D;
+            }
+        }
+
+        .position {
+            font-size: 14px;
+            color: rgba(0, 0, 0, .4);
+        }
+
+        .time {
+            font-size: 14px;
+            color: rgba(0, 0, 0, .5);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        -webkit-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+        -moz-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+        box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+    }
+}

@@ -1,0 +1,1112 @@
+/*-------------------------------------------------------------------------------------
+    Custom Colors  
+---------------------------------------------------------------------------------------*/
+
+.gray-bg {
+    background: $bg-grey;
+}
+
+.text-black {
+    color: $black !important;
+}
+
+.text-orange {
+    color: $color-60;
+}
+
+.text-white {
+    color: $white;
+}
+
+.white-text {
+    color: $white;
+}
+
+.text-dark-grey {
+    color: $gray-dark !important;
+}
+
+.text-light-blue {
+    color: $color-59;
+}
+
+.color-default {
+    color: $theme-color !important;
+}
+
+.text-green-cyan {
+    color: $color-63;
+}
+
+.text-green-cyan-light {
+    color: $green-cyan-light !important;
+}
+
+.text-blue-cyan-light {
+    color: $blue-cyan-light;
+}
+
+.text-purple {
+    color: $color-69;
+}
+
+.text-dark-lavender {
+    color: $color-72;
+}
+
+.text-light-red {
+    color: $light-red;
+}
+
+.text-dark-green {
+    color: $color-76;
+}
+
+.text-dark-orange-1 {
+    color: $color-80;
+}
+
+.bg-dark-orange-1 {
+    background-color:$color-80 !important;
+}
+
+.bg-dark-pink {
+    background-color:$color-77 !important;
+}
+.bg-dark-green {
+    background-color: $color-76;
+}
+
+.bg-green-cyan {
+    background: $color-63;
+}
+
+.bg-blue-cyan {
+    background: $color-62;
+}
+
+.bg-pink {
+    background: $light-pink;
+}
+
+.bg-gray-light {
+    background: $gray-light !important;
+}
+
+
+.bg-blueshade {
+    background: #F4F7FC !important;
+}
+
+.bg-default {
+    background: $theme-color !important;
+}
+
+.bg-shark {
+    background: #1B1E25 !important;
+}
+
+.bg-ebony-clay {
+    background: #202633 !important;
+}
+
+.bg-black {
+    background: $black !important;
+}
+
+.bg-portgore {
+    background: $port-gore !important;
+}
+
+.bg-darkblue {
+    background: #030B61;
+}
+
+.bg-orange {
+    background-color: #fda302;
+}
+
+.bg-darkblue-1 {
+    background: #090619 !important;
+}
+
+.bg-darkblue-2 {
+    background: #554c86 !important;
+}
+
+.bg-darkblue-3 {
+    background: #001026 !important;
+}
+
+.bg-bold-blue {
+    background: #0B1315 !important;
+}
+
+.bg-light-blue {
+    background: #0F1C22 !important;
+}
+
+.bg-dark-red {
+    background: #D32C3D;
+}
+
+.bg-lavender-blue {
+    background: #d4ccff;
+}
+
+.bg-light-gray {
+    background: #fcfcfc;
+}
+
+.body-dark {
+    background: #100e17 !important;
+}
+
+.crypto-green-text {
+    color: #84e4a4 !important;
+}
+
+.bg-youtube {
+    background: #E42D26 !important;
+}
+
+.bg-facebook {
+    background: #3B5998 !important;
+}
+
+.bg-twitter {
+    background: #1CCAFF !important;
+}
+
+.bg-instagram {
+    background: #EC103D !important;
+}
+
+.bg-light-salmon {
+    background: #f8eabd;
+}
+
+.bg-cornflower-blue {
+    background: #b6d0f8;
+}
+
+.bg-dark-blue {
+    background: $dark-blue;
+}
+
+.white-bg {
+    background: $white;
+}
+
+.bg-light-black {
+    background: $light-black !important;
+}
+
+.bg-light-black-2 {
+    background: $light-black-2 !important;
+}
+
+.active_box {
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, .1);
+}
+
+.gradient-bg-3 {
+    background-image: linear-gradient(to right, #FF5F6D 0%, #FFC371 100%);
+}
+
+.gradient-bg-4 {
+    background-image: linear-gradient(to right, $color-22 0%, $color-21 100%);
+}
+
+.gradient-bg-green {
+    background-image: linear-gradient(to right, $color-9 0%, $color-10 100%);
+}
+
+.gradient-bg-orange {
+    background-image: linear-gradient(244deg, $color-11 0%, $color-12 100%) !important;
+}
+
+.gradient-bg-darkorange {
+    background-image: linear-gradient(244deg, $color-29 0%, $color-30 100%) !important;
+}
+
+.gradient-bg-lightorange {
+    background-image: linear-gradient(244deg, $color-38 0%, $color-39 100%) !important;
+}
+
+.gradient-bg-green-blue {
+    background-image: linear-gradient(244deg, $color-16 0%, $color-17 100%) !important;
+}
+
+.gradient-bg-skyhblue {
+    background-image: linear-gradient(244deg, $color-40 0%, $color-41 100%) !important;
+}
+
+.gradient-midnightblue {
+    background-image: linear-gradient(244deg, $color-33 0%, $color-34 100%) !important;
+
+    &.to-right {
+        background-image: linear-gradient(244deg, $color-34 0%, $color-33 100%) !important;
+    }
+}
+
+.gradient-midnightblue-2 {
+    background-image: linear-gradient(244deg, $color-35 0%, $color-36 100%) !important;
+
+    &.to-right {
+        background-image: linear-gradient(244deg, $color-36 0%, $color-35 100%) !important;
+    }
+}
+
+.gradient-blue-purpul {
+    background: linear-gradient(to right, #b10741 0, #740088 51%, #9C27B0 100%) !important;
+}
+
+.gradient-blue-purpul-2 {
+    background: linear-gradient(to right, #ff0a5e 0, #740088 51%, #9C27B0 100%) !important;
+}
+
+.gradient-visible-village {
+    background: linear-gradient(to right, #031034 0%, #28dbe9 100%) !important;
+}
+
+.gradient-skyblue-shade {
+    background-image: linear-gradient(244deg, #2196F3 0%, #009688 100%) !important;
+}
+
+.gradcolor-orange-yellow {
+    background-image: linear-gradient(244deg, $color-44 0%, $color-45 100%) !important;
+}
+
+.bg-beauty-salon {
+    background-image: linear-gradient(to left, $color-53 20%, $color-54 100%) !important;
+}
+
+.gradient-green-shade {
+    background-image: linear-gradient(to right, #00d563 0%, #00b755 100%) !important;
+}
+
+.green-bg {
+    background: #00d563;
+}
+
+.gradient-pink {
+    background-image: linear-gradient(to right, #f889ab 0%, #a400d1 100%) !important;
+}
+
+.grad-bg-19 {
+    background-image: linear-gradient(to right, $color-51 0%, $color-52 100%) !important;
+
+    &.to-right {
+        background-image: linear-gradient(to right, $color-52 0%, $color-51 100%) !important;
+    }
+}
+
+[data-overlay]:after,
+[data-color-overlay]:after,
+[data-color-hover-overlay]:after {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+[data-color-hover-overlay]:after {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+[data-overlay="0"]:after,
+[data-color-overlay="0"]:after,
+[data-color-hover-overlay="0"]:hover:after {
+    opacity: 0;
+}
+
+[data-overlay="1"]:after,
+[data-color-overlay="1"]:after,
+[data-color-hover-overlay="1"]:hover:after {
+    opacity: 0.1;
+}
+
+[data-overlay="2"]:after,
+[data-color-overlay="2"]:after,
+[data-color-hover-overlay="2"]:hover:after {
+    opacity: 0.2;
+}
+
+[data-overlay="3"]:after,
+[data-color-overlay="3"]:after,
+[data-color-hover-overlay="3"]:hover:after {
+    opacity: 0.3;
+}
+
+[data-overlay="4"]:after,
+[data-color-overlay="4"]:after,
+[data-color-hover-overlay="4"]:hover:after {
+    opacity: 0.4;
+}
+
+[data-overlay="5"]:after,
+[data-color-overlay="5"]:after,
+[data-color-hover-overlay="5"]:hover:after {
+    opacity: 0.5;
+}
+
+[data-overlay="6"]:after,
+[data-color-overlay="6"]:after,
+[data-color-hover-overlay="6"]:hover:after {
+    opacity: 0.6;
+}
+
+[data-overlay="7"]:after,
+[data-color-overlay="7"]:after,
+[data-color-hover-overlay="7"]:hover:after {
+    opacity: 0.7;
+}
+
+[data-overlay="8"]:after,
+[data-color-overlay="8"]:after,
+[data-color-hover-overlay="8"]:hover:after {
+    opacity: 0.8;
+}
+
+[data-overlay="9"]:after,
+[data-color-overlay="9"]:after,
+[data-color-hover-overlay="9"]:hover:after {
+    opacity: 0.9;
+}
+
+[data-overlay="10"]:after,
+[data-color-overlay="10"]:after,
+[data-color-hover-overlay="10"]:hover:after {
+    opacity: 1;
+}
+
+.bg-color,
+.hover-bg-color:hover,
+[data-color-overlay]::after,
+[data-color-hover-overlay]:hover::after {
+    background: $theme-color !important;
+}
+
+@for $i from 1 through length($colorList) {
+    body.template-color-#{1 * $i} {
+        // Headers
+
+        .header-default.color-hover .mainmenu-wrapper .page_nav ul.mainmenu li:hover a,
+        .header-default.color-hover .mega-width-fullscreen .mega-list li a span:not(.badge):hover,
+        .header-default.color-hover .dropdown__menu li a span:hover,
+        .header-default.color-hover .header-right .mini-cart-button button:hover,
+        .header-default.color-hover .header-right .popup-search-wrap a.btn-search-click:hover,
+        .header__digital--broadcast .header-left .sl-menu li:hover a {
+            color: nth($colorList, $i) !important;
+        }
+
+        .header-full-menu .main-navigation nav .navbar-nav .nav-item .nav-link:hover,
+        .header-full-menu .main-navigation nav .navbar-nav .nav-item .nav-link.active {
+            color: nth($colorList, $i) !important;
+        }
+
+        .mega-width-fullscreen .mega-list li a span.badge:hover,
+        .dropdown__menu li a span.badge:hover {
+            color: #fff !important;
+        }
+
+        .mini-cart .shopping-cart,
+        .dropdown__menu,
+        .mega-width-fullscreen,
+        .dropdown__menu li.drop-lavel--2 .lavel--2 {
+            border-bottom-color: nth($colorList, $i) !important;
+        }
+
+        // Header Full Menu
+
+        .header-full-menu .upper-nav .top-personal-info li a i,
+        .header-full-menu .upper-nav .top-personal-info li a:hover,
+        .header-full-menu .social-icons-simple li a:hover,
+        .header-full-menu.header-light-style .header-full-active .main-navigation nav .navbar-nav .nav-item .nav-link:hover,
+        .header-full-menu.header-light-style .header-full-active .main-navigation nav .navbar-nav .nav-item .nav-link.active {
+            color: nth($colorList, $i);
+        }
+
+        #scroll-top {
+            background: nth($colorList, $i) !important;
+            border: 2px solid nth($colorList, $i);
+
+            i {
+                color: $white !important;
+            }
+
+            &:hover {
+                background: nth($colorList, $i);
+
+                i {
+                    color: $white;
+                }
+            }
+
+            &.with-hover {
+                border-color: nth($colorList, $i) !important;
+                background: $white !important;
+
+                i {
+                    color: nth($colorList, $i) !important;
+                }
+
+                &:hover {
+                    background: nth($colorList, $i) !important;
+
+                    i {
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+
+        .salon-prices {
+            .price-list {
+                border-bottom: 2px solid nth($colorList, $i);
+                background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(nth($colorList, $i), 0.8)), color-stop(50%, white));
+                background: -o-linear-gradient(left, rgba(nth($colorList, $i), 0.8) 50%, white 50%);
+                background: linear-gradient(to right, rgba(nth($colorList, $i), 0.8) 50%, white 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+
+                .info h6 {
+                    transition: all .4s ease-in-out;
+                }
+
+                p.rate {
+                    transition: all .4s ease-in-out;
+                }
+
+                &:hover {
+                    background-position: left bottom;
+
+                    .info h6 {
+                        color: #fff !important;
+                    }
+
+                    p.rate {
+                        color: #fff !important;
+
+                    }
+                }
+            }
+        }
+
+        .border-btn {
+            color: nth($colorList, $i);
+        }
+
+        .btn-hover {
+            &::after {
+                border: 2px solid rgba(nth($colorList, $i), 0.7);
+            }
+        }
+
+        .beauty-service {
+            &>[class*="col-"] {
+                .item span {
+                    color: nth($colorList, $i);
+                }
+
+                &:hover {
+                    background: rgba(nth($colorList, $i), 0.8);
+                    border-color: rgba(nth($colorList, $i), 0.8);
+
+                    .item {
+                        span {
+                            color: $white;
+                        }
+
+                        .item_content {
+                            .item_title {
+                                color: $white;
+
+                                a {
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                        .item_description p {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .real-estate-service {
+            &>[class*="col-"] {
+                .item span {
+                    color: nth($colorList, $i);
+                }
+
+                &:hover {
+                    background: rgba(nth($colorList, $i), 10);
+                    border-color: rgba(nth($colorList, $i), 10);
+
+                    .item {
+                        span {
+                            color: $white;
+                        }
+
+                        .item_content {
+                            .item_title {
+                                color: $white;
+
+                                a {
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                        .item_description p {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .box-team.with-bottom-line h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            border: 1px solid nth($colorList, $i);
+            width: 50%;
+        }
+
+        .bg-color,
+        .hover-bg-color:hover,
+        [data-color-overlay]::after,
+        [data-color-hover-overlay]:hover::after,
+        .sl-pagination-wrapper .sl-pagination li.active a,
+        .sl-pagination-wrapper .sl-pagination li:hover a,
+        .blog-post.blog-classic a.post-meta-comments:hover,
+        .widget-social-media .social-icon.icon-solid-rounded li a:hover,
+        .sidebar-wrapper .widget-tag-cloud a:hover,
+        .sidebar-wrapper .widget-search .submit-search:hover,
+        .post-nav-list .nav-item a:hover,
+        .social-icon.tooltip-layout.theme-color li a.tooltip-theme[aria-label]::after,
+        .isotope-nav ul:not(.gradient-style) li.active,
+        .animated-dot .middle-dot,
+        .animated-dot .signal,
+        .animated-dot .signal2,
+        .feature-slider.owl-carousel .owl-nav button.owl-next:hover,
+        .feature-slider.owl-carousel .owl-nav button.owl-prev:hover,
+        .circle-dots .owl-dots button.owl-dot.active,
+        .social-icon.liquid-animate.theme-color li a:before,
+        .pricing-box .header .feature-mark,
+        .sl-testimonial .pic:after,
+        .sl-testimonial .pic:before,
+        #common-footer:before,
+        #common-footer .footer_item:before,
+        #common-footer .footer_menu:before,
+        #common-footer .footer_contacts__item:before,
+        .section-title.under-line h2::after {
+            background: nth($colorList, $i) !important;
+        }
+
+        /* Creative studio */
+        .creative-st-header .side-menu {
+            background: nth($colorList, $i);
+        }
+
+        .scroll-top-arrow {
+            background: nth($colorList, $i);
+        }
+
+        .creative-st-header .social-icons-simple li a:hover {
+            background-color: #FFFFFF;
+            color: nth($colorList, $i);
+        }
+
+        .footer-social li a:hover {
+            background-color: nth($colorList, $i);
+            color: #ffffff;
+        }
+
+        .blog-post.blog-classic.with-overlay:hover .blog-img:after {
+            background: nth($colorList, $i) !important;
+        }
+
+        .pricing-box.hoverable:hover,
+        .pricing-box.hoverable.active {
+            background: nth($colorList, $i);
+        }
+
+        .restaurant-testimonial .owl-nav button.owl-next:hover,
+        .restaurant-testimonial .owl-nav button.owl-prev:hover {
+            background: nth($colorList, $i) !important;
+            color: #fff;
+        }
+
+        .sl-pagination-wrapper .sl-pagination.pagination-numbers li.active a,
+        .sl-pagination-wrapper .sl-pagination.pagination-numbers li:hover a {
+            background: transparent !important;
+            color: nth($colorList, $i) !important;
+        }
+
+        .progress-bar span.percent-label:after {
+            border-color: nth($colorList, $i) transparent transparent transparent !important;
+        }
+
+        .icon-box.style-5 {
+            .inner .inner-icon {
+                color: nth($colorList, $i);
+            }
+
+            &:hover {
+                .inner .inner-icon {
+                    color: #fff;
+                }
+
+                .gradients-button {
+                    color: nth($colorList, $i);
+                }
+            }
+        }
+
+        .icon-box.style-6 {
+            .inner .inner-icon {
+                color: nth($colorList, $i);
+            }
+
+            &:hover {
+                .inner .inner-icon {
+                    color: #fff;
+                }
+
+                .gradients-button {
+                    color: nth($colorList, $i);
+                }
+            }
+        }
+        
+        .team-part .single-blog-item .social-icon a:hover {
+            background-color: nth($colorList, $i);
+            color: #ffffff;
+            border-color: nth($colorList, $i);
+        }
+
+        // Chackbox-colors
+        .chackbox input:checked~span {
+            background: nth($colorList, $i) !important;
+            border-color: nth($colorList, $i) !important;
+        }
+
+        .radio span:after {
+            background: nth($colorList, $i) !important;
+        }
+
+        .booking_form .img-sec {
+            @media #{$sm-layout} {
+                background: nth($colorList, $i) !important;
+            }
+        }
+
+        .crypto-table .table {
+            border: 8px solid nth($colorList, $i);
+        }
+
+        .agn-testimonial {
+
+            .carousel-control-next:hover,
+            .carousel-control-prev:hover,
+            .carousel-control-next:focus,
+            .carousel-control-prev:focus {
+                background: nth($colorList, $i);
+                box-shadow: 0 10px 20px 0 rgba(59, 132, 241, 0.1);
+                color: $white;
+            }
+        }
+
+        .box-team .overlay {
+            background-color: rgba(nth($colorList, $i), 0.75);
+        }
+
+        .social-shere:hover {
+            border-color: nth($colorList, $i) !important;
+
+            .social-site {
+                p {
+                    color: nth($colorList, $i) !important;
+                }
+            }
+
+            .icon i {
+                color: nth($colorList, $i) !important;
+            }
+        }
+
+        .testimonial-slider .carousel-indicators li.active {
+            border-color: nth($colorList, $i);
+        }
+
+        .service-box {
+            i {
+                color: nth($colorList, $i);
+            }
+
+            h4 {
+                color: nth($colorList, $i);
+            }
+
+            .readmore {
+                color: nth($colorList, $i);
+
+                &:before {
+                    background-color: nth($colorList, $i);
+                }
+            }
+
+            &:hover {
+                background: nth($colorList, $i);
+
+                .readmore {
+                    color: $white;
+
+                    &:before {
+                        background: $white;
+                    }
+                }
+
+                i,
+                h4,
+                p {
+                    color: $white;
+                }
+            }
+        }
+
+        .icon-border-shadow {
+            background: nth($colorList, $i) !important;
+
+            &:before {
+                background: rgba(nth($colorList, $i), 0.3) !important;
+            }
+
+            &:after {
+                background: rgba(nth($colorList, $i), 0.5) !important;
+            }
+        }
+
+        .icon-box.effect-1 {
+            .inner:hover {
+                cursor: pointer;
+                background-color: nth($colorList, $i);
+
+                .icon-border-shadow {
+                    background-color: $white !important;
+
+                    i {
+                        color: nth($colorList, $i) !important;
+                    }
+
+                    &:before {
+                        background-color: rgba($white, 0.5) !important;
+                    }
+
+                    &:after {
+                        background-color: rgba($white, 0.5) !important;
+                    }
+                }
+
+                .content {
+                    h5.heading {
+                        color: $white;
+                    }
+
+                    p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .icon-box .inner .icon-3.style-2 {
+            background: rgba(nth($colorList, $i), 0.1) !important;
+        }
+
+        .icon-box .inner .icon-3.style-3 {
+            background: nth($colorList, $i);
+        }
+
+        .sidebar-wrapper .letest-project .project-widget-item .mini-overlay {
+            background-color: rgba(nth($colorList, $i), .75) !important;
+        }
+
+        .text-color,
+        .hover-text-color:hover,
+        .snail_toolbar .inner a:hover,
+        .sidebar-wrapper .widget-tag-links a:hover,
+        .accordion-style-2 .card-header h5 a.acc-btn[aria-expanded=true],
+        .accordion-style-2 .card-header h5 a.acc-btn[aria-expanded=true]::before,
+        .commnent-list-wrap .comment .content .comment-footer span.reply-btn a:hover,
+        .blog-post.blog-classic .blog-inner .blog-title:hover a,
+        .blog-modern-pagination .modern-pagination a:hover,
+        .blog-tag-list a:hover,
+        .sl-quote::before,
+        .blog-post-return-button a:hover,
+        .portfolio-details-list .details-list span a:hover,
+        .portfolio-details-list-2 .details-list span a:hover,
+        .portfolio-nav-list .portfolio-page .inner a:hover h3,
+        .portfolio-nav-list .portfolio-page .inner a:hover p,
+        .product:hover .product-contain h4,
+        .mini-cart .shopping-cart .shop-inner ul.product-list li .content .inner h4 a:hover,
+        .mini-cart .shopping-cart .footer .total,
+        .mini-cart .shopping-cart .footer .total span,
+        .mini-cart .shopping-cart .shop-inner ul.product-list li .content .inner .quatity span,
+        .post.blog2.dark-version .post-body h5 a:hover,
+        .post.blog2 .post-body h5 a:hover,
+        .tab.tabs-links-dark .nav .nav-link a.active,
+        .tab.tabs-links-dark .nav .nav-link:hover a,
+        .tab.tabs-links .nav .nav-link a.active,
+        .tab.tabs-links .nav .nav-link:hover a,
+        .blog-post .blog-inner .blog-title a:hover,
+        .footer-part.footer-classic .footer-links a:hover,
+        .music_area .music-artist:hover .show-title,
+        .sl-testimonial .description:after,
+        .sl-testimonial .description:before,
+        .rating li i,
+        .btn .gradients-button.hover-bg-white:hover,
+        .sl-list-2 .list-header.with-ckeck .marker::before,
+        #common-footer .footer_menu__list li a:hover,
+        .icon-box.style-5:hover .gradients-button,
+        .icon-box.style-5.active .gradients-button {
+            color: nth($colorList, $i) !important;
+        }
+
+        .tab.tabs-links-dark .nav .nav-link a.active:before,
+        .tab.tabs-links-dark .nav .nav-link:hover a:before,
+        .tab.tabs-links .nav .nav-link a.active:before,
+        .tab.tabs-links .nav .nav-link:hover a:before {
+            background: nth($colorList, $i);
+        }
+
+        .footer-part.footer-classic {
+            .contact-mata {
+                &:hover {
+                    i {
+                        background: nth($colorList, $i);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .comparision-slider .handle {
+
+            &::after {
+                color: nth($colorList, $i);
+            }
+
+            &.bordered {
+                background: nth($colorList, $i);
+
+                &:after {
+                    border: 3px solid nth($colorList, $i);
+                }
+            }
+        }
+
+        .xdsoft_datetimepicker {
+
+            .xdsoft_calendar td.xdsoft_default,
+            .xdsoft_calendar td.xdsoft_current,
+            .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current {
+                background: nth($colorList, $i) !important;
+                box-shadow: nth($colorList, $i) 0 1px 3px 0 inset;
+                color: $white !important;
+            }
+
+            .xdsoft_calendar td.xdsoft_today {
+                color: nth($colorList, $i) !important;
+            }
+
+            .xdsoft_calendar td.xdsoft_current.xdsoft_today {
+                color: $white !important;
+            }
+
+            .xdsoft_calendar td:hover,
+            .xdsoft_calendar td.xdsoft_current.xdsoft_today:hover,
+            .xdsoft_timepicker .xdsoft_time_box>div>div:hover {
+                background: nth($colorList, $i) !important;
+            }
+
+            .xdsoft_datetimepicker.xdsoft_dark .xdsoft_label>.xdsoft_select>div>.xdsoft_option.xdsoft_current {
+                background: nth($colorList, $i) !important;
+                box-shadow: nth($colorList, $i) 0 1px 3px 0 inset;
+                color: $white !important;
+            }
+
+            .xdsoft_label>.xdsoft_select>div>.xdsoft_option.xdsoft_current {
+                background: nth($colorList, $i) !important;
+                box-shadow: nth($colorList, $i) 0 1px 3px 0 inset;
+                color: $white !important;
+            }
+
+            .xdsoft_label>.xdsoft_select>div>.xdsoft_option:hover {
+                color: $white !important;
+                background: nth($colorList, $i) !important;
+            }
+
+            &.xdsoft_dark {
+
+                .xdsoft_calendar td.xdsoft_default,
+                .xdsoft_calendar td.xdsoft_current,
+                .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current {
+                    background: nth($colorList, $i) !important;
+                    box-shadow: nth($colorList, $i) 0 1px 3px 0 inset;
+                    color: $white !important;
+                }
+
+                .xdsoft_calendar td.xdsoft_today {
+                    color: nth($colorList, $i) !important;
+                }
+
+                .xdsoft_calendar td.xdsoft_current.xdsoft_today {
+                    color: $white !important;
+                }
+
+                .xdsoft_calendar td:hover,
+                .xdsoft_calendar td.xdsoft_current.xdsoft_today:hover,
+                .xdsoft_timepicker .xdsoft_time_box>div>div:hover {
+                    background: nth($colorList, $i) !important;
+                }
+            }
+        }
+
+        .mini-cart .shopping-cart .footer a.cart-btn {
+            border-color: nth($colorList, $i) !important;
+            background-color: nth($colorList, $i) !important;
+        }
+
+        .icon-box.style-4 .inner:hover .content h5 {
+            color: nth($colorList, $i) !important;
+        }
+
+        .fancy-box-travel.overlay-color::after {
+            background-image: -webkit-linear-gradient(bottom, nth($colorList, $i) 0%, transparent 100%);
+            background-image: -o-linear-gradient(bottom, nth($colorList, $i) 0%, transparent 100%);
+            background-image: linear-gradient(to top, nth($colorList, $i) 0%, transparent 100%);
+        }
+
+        .widget-category-list ul.category-area li a {
+            &:hover {
+                color: nth($colorList, $i) !important;
+
+                span {
+                    background: nth($colorList, $i) !important;
+                }
+            }
+        }
+
+        .side-menu .bg-overlay {
+            background: rgba(nth($colorList, $i), 0.9);
+        }
+
+        .hue-color,
+        .brand.hue-style:hover a img {
+            filter: hue-rotate(hue(nth($colorList, $i))) !important;
+        }
+
+        .hero-slider .owl-nav .owl-next:hover span,
+        .hero-slider .owl-nav .owl-prev:hover span {
+            background: nth($colorList, $i) !important;
+            border-color: nth($colorList, $i) !important;
+            color: $white;
+        }
+
+        .border-color,
+        .hover-border-color:hover,
+        .sl-pagination-wrapper .sl-pagination li.active a,
+        .sl-pagination-wrapper .sl-pagination li a,
+        .sidebar-wrapper .widget-search .submit-search:hover,
+        .sidebar-wrapper .widget-search .form-group .form-control:focus~.submit-search,
+        .radio input:checked~span,
+        .sl-testimonial .pic img {
+            border-color: nth($colorList, $i) !important;
+        }
+
+        .social-icon.tooltip-layout.theme-color li a.tooltip-theme[aria-label]::before {
+            border-top-color: nth($colorList, $i);
+        }
+
+        /* Light Background Button // Template color wise */
+        .btn .light-color {
+            border-color: nth($colorList, $i);
+            background: rgba(nth($colorList, $i), .11);
+
+            &:hover {
+                background: nth($colorList, $i);
+                color: $white;
+            }
+        }
+
+        .hover-bg-white:hover {
+            background: $white !important;
+        }
+
+        .hover-border-none:hover {
+            border-color: transparent !important;
+        }
+
+        .hover-text-white:hover {
+            color: $white !important;
+        }
+
+        .hover-bg-black:hover {
+            background: $black !important;
+        }
+
+        .hover-bg-none:hover {
+            background: transparent !important;
+        }
+
+        .hover-text-black:hover {
+            color: $black !important;
+        }
+
+        .hover-text-light-blue:hover {
+            color: $color-58 !important;
+        }
+
+        .hover-border-white:hover {
+            border-color: $white !important;
+        }
+    }
+}
+
+.btn .light-color.light-white {
+    border-color: $white !important;
+    background: rgba(255, 255, 255, .08) !important;
+
+    &:hover {
+        background: rgba(255, 255, 255, .08) !important;
+    }
+}
+
+.hover-bg-white:hover {
+    background: $white !important;
+}
+
+.hover-text-white:hover {
+    color: $white !important;
+}
+
+.hover-bg-black:hover {
+    background: $black !important;
+}
+
+.hover-text-black:hover {
+    color: $black !important;
+}

@@ -1,0 +1,79 @@
+/*-------------------------------------------------------------------------------------
+    Text- Animations
+---------------------------------------------------------------------------------------*/
+
+/* Text animation scaleY */
+
+.text-anime-scaleY {
+    position: relative;
+    display: flex;
+
+    .text-wrapper {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .letter {
+        display: inline-block;
+        line-height: 1em;
+        text-transform: lowercase;
+
+        &:first-child {
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* Text Zoom in Out */
+
+.Text-zoom-in {
+    text-transform: uppercase;
+
+    .Text-zoom-word {
+        display: inline-block;
+        line-height: 1em;
+    }
+}
+
+/* Text animation gradiant */
+
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+}
+
+@media #{$lg-layout} {
+    .heading-big {
+        font-size: 40px !important;
+    }
+}
+
+@media #{$tab-layout} {
+    .heading-big {
+        font-size: 30px !important;
+    }
+
+    .heading-area-big.long-area {
+        transform: translate(0%, 0%) !important;
+        width: 100% !important;
+    }
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}

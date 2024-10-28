@@ -1,0 +1,226 @@
+/*-------------------------------------------------------------------------------------
+    Portfolio Details
+---------------------------------------------------------------------------------------*/
+
+.portfolio-details-list {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 62px 30px;
+
+    .details-list {
+        label {
+            color: #222222;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        span {
+            color: #999;
+            font-weight: 500;
+            letter-spacing: 0em;
+            line-height: 1.58;
+            font-size: 14px;
+            display: block;
+
+            a {
+                color: #999;
+                transition: 0.4s;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+
+    &-2 {
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 62px 30px;
+
+        @media #{$sm-layout} {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .details-list {
+            label {
+                color: #222222;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            span {
+                color: #999;
+                font-weight: 500;
+                letter-spacing: 0em;
+                line-height: 1.58;
+                font-size: 1rem;
+                display: block;
+
+                a {
+                    color: #999;
+                    transition: 0.4s;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*==========================
+    Portfolio Nav list
+============================*/
+
+.portfolio-nav-list {
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$sm-layout} {
+        display: block;
+    }
+
+    .portfolio-page {
+        .inner {
+            a {
+                display: block;
+                color: #999;
+                -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+                transition: all .3s cubic-bezier(.645, .045, .355, 1);
+
+                p {
+                    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+                    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+                }
+
+                h3 {
+                    line-height: 1.42;
+                    font-size: 28px;
+                    margin: 22px 0 0;
+                    position: relative;
+                    font-weight: 600;
+                    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+                    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+
+                    @media #{$tab-layout} {
+                        font-size: 28px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        font-size: 24px;
+                        font-family: Font Awesome\ 5 Free;
+                        font-weight: 900;
+                    }
+                }
+
+                &:hover {
+                    p {
+                        color: $theme-color;
+                    }
+
+                    h3 {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+
+        &.prev {
+            padding-left: 100px;
+            text-align: left;
+
+            @media #{$md-layout} {
+                padding-left: 60px;
+            }
+
+            @media #{$sm-layout} {
+                padding-left: 60px;
+            }
+
+            .inner {
+                a {
+
+                    h3 {
+                        &::before {
+                            left: -100px;
+                            content: "\f060";
+
+                            @media #{$md-layout} {
+                                left: -60px;
+                            }
+
+                            @media #{$sm-layout} {
+                                left: -60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.next {
+            padding-right: 100px;
+            text-align: right;
+
+            @media #{$md-layout} {
+                padding-right: 60px;
+            }
+
+            @media #{$sm-layout} {
+                padding-right: 60px;
+            }
+
+            .inner {
+                a {
+                    h3 {
+                        &::before {
+                            right: -100px;
+                            content: "\f061";
+
+                            @media #{$md-layout} {
+                                right: -60px;
+                            }
+
+                            @media #{$sm-layout} {
+                                right: -60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.portfolio-multi-image-slider {
+
+    &.circle-dots .owl-dots {
+        width: 100%;
+        position: absolute;
+        bottom: 75px;
+
+        button.owl-dot {
+            background: $white;
+            width: 15px;
+            height: 15px;
+
+            &.active {
+                background: $theme-color;
+            }
+        }
+    }
+}

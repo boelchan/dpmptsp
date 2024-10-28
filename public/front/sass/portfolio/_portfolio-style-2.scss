@@ -1,0 +1,633 @@
+.port {
+    .btTextIndent .btImage img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        display: block;
+        margin: 0;
+    }
+
+    .btImage,
+    .btTextCenter .bpgPhoto.wIconOver {
+        display: block;
+    }
+
+    .btTextIndent>.rowItemContent {
+
+        .btImage,
+        .bpgPhoto {
+            margin: 0 -15px;
+        }
+    }
+
+    .btTextCenter .bpgPhoto {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .bpgPhoto {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .btTextCenter {
+        text-align: center;
+    }
+
+    .out-bottom:not(.btCircleImage) .captionPane {
+        -webkit-animation: out-bottom 300ms ease 0ms 1 forwards;
+        -moz-animation: out-bottom 300ms ease 0ms 1 forwards;
+        animation: out-bottom 300ms ease 0ms 1 forwards;
+    }
+
+    .btLightSkin .captionPane,
+    .btDarkSkin .btLightSkin .captionPane {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .captionPane {
+            right: -1px;
+        }
+    }
+
+    .captionTable {
+        display: table;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .captionCell {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .btLightSkin .bpgPhoto .captionTxt,
+    .btDarkSkin .btLightSkin .bpgPhoto .captionTxt {
+        color: #444;
+    }
+
+    .captionTxt {
+        display: block;
+        padding: 0 20px;
+
+        &:before {
+            content: "\f002";
+            display: block;
+            font-family: "Font Awesome 5 Free";
+            font-size: 50px;
+            margin: 0px auto;
+        }
+    }
+
+    .captionPane {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        right: 0;
+        -webkit-transition: all 400ms ease;
+        -moz-transition: all 400ms ease;
+        transition: all 400ms ease;
+    }
+
+    .bpgPhoto:hover .captionPane {
+        opacity: 1;
+    }
+
+    .btIconImageRow {
+
+        &.btIconsHalfHoverPosition,
+        &.btIconsFullHoverPosition {
+            overflow: visible;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    .btTextCenter .btIconImageRow {
+        width: auto;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .btIconImageRow.btIconsHalfHoverPosition .btIco.btIcoBigSize {
+        margin-top: -40px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btTextCenter .btIconImageRow {
+
+        &.btIconsHalfHoverPosition .btIco,
+        &.btIconsFullHoverPosition .btIco {
+            margin-left: 50%;
+            float: left;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    .btIconImageRow {
+
+        &.btIconsHalfHoverPosition .btIco,
+        &.btIconsFullHoverPosition .btIco {
+            position: relative;
+            z-index: 2;
+            display: block;
+            overflow: visible;
+        }
+    }
+
+    .btLightSkin .btIcoBigSize.btIcoOutline,
+    .btDarkSkin .btLightSkin .btIcoBigSize.btIcoOutline {
+        -webkit-box-shadow: 0 0 0 10px #fff, 0 0 0 1px #fff inset;
+        box-shadow: 0 0 0 10px #fff, 0 0 0 1px #fff inset;
+    }
+
+    .btIco {
+        &.btIcoBigSize {
+            line-height: 80px;
+        }
+
+        &.btIcoOutline {
+            border-radius: 50%;
+        }
+
+        margin-left: .25em;
+        margin-right: .25em;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        .btIcoHolder {
+            line-height: inherit;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    }
+
+    a:hover {
+        color: #3264f5;
+    }
+
+    .btLightSkin a,
+    .btDarkSkin .btLightSkin a {
+        color: #444;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #3264f5;
+    }
+
+    .btIco {
+        &.btIcoFilledType.btIcoAccentColor:hover .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+
+        &.btIcoOutlineType.btIcoAccentColor .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+
+        &.btIcoFilledType.btIcoAccentColor .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+
+        &.btIcoOutlineType.btIcoAccentColor:hover .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+    }
+
+    .btIcoFromBottom:hover .btIcoHolder:before {
+        -webkit-transform: translate3d(0, -105%, 0);
+        -moz-transform: translate3d(0, -105%, 0);
+        -ms-transform: translate3d(0, -105%, 0);
+        transform: translate3d(0, -105%, 0);
+    }
+
+    .btIco.btIcoBigSize .btIcoHolder {
+
+        &:before,
+        &:after {
+            font-size: 41px;
+        }
+    }
+
+    .btIcoFromBottom .btIcoHolder:before,
+    .btIcoFromLeft .btIcoHolder:before,
+    .btIcoFromTop .btIcoHolder:before,
+    .btIcoFromBottom:hover .btIcoHolder:after,
+    .btIcoFromLeft:hover .btIcoHolder:after,
+    .btIcoFromTop:hover .btIcoHolder:after {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .btIcoFromBottom .btIcoHolder:before,
+    .btIcoFromTop .btIcoHolder:before,
+    .btIcoFromLeft .btIcoHolder:before {
+        display: block;
+    }
+
+    .btIco .btIcoHolder {
+
+        &:before,
+        &:after {
+            color: #3264f5;
+        }
+    }
+
+    .btIcoHolder {
+        &:before {
+            display: none;
+            display: block;
+            position: absolute;
+            line-height: inherit;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            color: inherit;
+            z-index: 1;
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            transition: all 400ms ease;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: translate3d(0.001em, 0.001em, 0);
+            -moz-transform: translate3d(0.001em, 0.001em, 0);
+            -ms-transform: translate3d(0.001em, 0.001em, 0);
+            transform: translate3d(0.001em, 0.001em, 0);
+        }
+
+        &:after {
+            display: block;
+            position: absolute;
+            line-height: inherit;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            color: inherit;
+            z-index: 1;
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            transition: all 400ms ease;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: translate3d(0.001em, 0.001em, 0);
+            -moz-transform: translate3d(0.001em, 0.001em, 0);
+            -ms-transform: translate3d(0.001em, 0.001em, 0);
+            transform: translate3d(0.001em, 0.001em, 0);
+        }
+    }
+
+    .btIco {
+
+        &.btIcoFilledType.btIcoAccentColor.btIcoBigSize:hover .btIcoHolder em,
+        &.btIcoOutlineType.btIcoAccentColor.btIcoBigSize .btIcoHolder em {
+            -webkit-box-shadow: 0 0 0 2px #3264f5 inset;
+            box-shadow: 0 0 0 2px #3264f5 inset;
+        }
+
+        &.btIcoFilledType.btIcoAccentColor:hover .btIcoHolder em,
+        &.btIcoOutlineType.btIcoAccentColor .btIcoHolder em {
+            -webkit-box-shadow: 0 0 0 1px #3264f5 inset;
+            box-shadow: 0 0 0 1px #3264f5 inset;
+        }
+
+        &.btIcoFilledType.btIcoAccentColor .btIcoHolder em {
+            // -webkit-box-shadow: 0 0 0 1em #3264f5 inset;
+            // box-shadow: 0 0 0 1em #3264f5 inset;
+            background: linear-gradient(to right, #3264f5 0%, #7202bb 100%);
+        }
+
+        &.btIcoOutlineType.btIcoAccentColor:hover .btIcoHolder em {
+            background: $white !important;
+        }
+
+        &.btIcoFilledType {
+
+            &.btIcoAccentColor .btIcoHolder em,
+            &.btIcoAlterColor .btIcoHolder em,
+            &.btIcoAlterColor:hover .btIcoHolder em {
+                background-color: #fff;
+            }
+        }
+
+        &.btIcoBigSize .btIcoHolder em {
+            font-size: 40px;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .btIcoHolder em {
+            border-radius: 50%;
+            display: inline-block;
+            float: left;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            transition: all .3s ease;
+            font-weight: 400;
+            -webkit-transform: rotate3d(0, 0, 1, 50deg);
+            -moz-transform: rotate3d(0, 0, 1, 50deg);
+            -ms-transform: rotate3d(0, 0, 1, 50deg);
+            transform: rotate3d(0, 0, 1, 50deg);
+            -webkit-order: 1;
+            -ms-flex-order: 1;
+            order: 1;
+        }
+
+        &.btIcoFilledType.btIcoAccentColor:hover .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+
+        &.btIcoOutlineType.btIcoAccentColor .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+    }
+
+    .btLightSkin .btIcoAccentColor:hover span,
+    .btDarkSkin .btLightSkin .btIcoAccentColor:hover span,
+    .btLightSkin .btIcoAccentColor:hover a.btIcoHolder:after,
+    .btDarkSkin .btLightSkin .btIcoAccentColor:hover a.btIcoHolder:after {
+        color: #444;
+    }
+
+    .btIco {
+        &.btIcoFilledType.btIcoAccentColor .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+
+        &.btIcoOutlineType.btIcoAccentColor:hover .btIcoHolder {
+
+            &:before,
+            &:after {
+                color: #fff;
+            }
+        }
+    }
+
+    .btIcoAccentColor:hover {
+
+        span,
+        a.btIcoHolder:after {
+            color: #fff;
+        }
+    }
+
+    .btIcoFromBottom .btIcoHolder:before,
+    .btIcoFromLeft .btIcoHolder:before,
+    .btIcoFromTop .btIcoHolder:before,
+    .btIcoFromBottom:hover .btIcoHolder:after,
+    .btIcoFromLeft:hover .btIcoHolder:after,
+    .btIcoFromTop:hover .btIcoHolder:after {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .btIco.btIcoBigSize .btIcoHolder {
+
+        &:before,
+        &:after {
+            font-size: 41px;
+        }
+    }
+
+    .btIcoFromBottom .btIcoHolder:after {
+        -webkit-transform: translate3d(0, 105%, 0);
+        -moz-transform: translate3d(0, 105%, 0);
+        -ms-transform: translate3d(0, 105%, 0);
+        transform: translate3d(0, 105%, 0);
+    }
+
+    .btIcoHolder {
+
+        &:after,
+        &:before {
+            content: "\f004";
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+
+    .btIco .btIcoHolder {
+        &:before {
+            color: #3264f5;
+        }
+
+        &:after {
+            color: #3264f5;
+            -webkit-order: 2;
+            -ms-flex-order: 2;
+            order: 2;
+        }
+    }
+
+    .btIcoHolder {
+
+        &:before,
+        &:after {
+            display: block;
+            position: absolute;
+            line-height: inherit;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            color: inherit;
+            z-index: 1;
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            transition: all 400ms ease;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: translate3d(0.001em, 0.001em, 0);
+            -moz-transform: translate3d(0.001em, 0.001em, 0);
+            -ms-transform: translate3d(0.001em, 0.001em, 0);
+            transform: translate3d(0.001em, 0.001em, 0);
+        }
+    }
+
+    .btSeparator,
+    .btClear {
+        clear: both;
+    }
+
+    .topExtraSmallSpaced {
+        padding-top: 5px;
+    }
+
+    .btSeparator {
+        &.noBorder hr {
+            border-bottom: 1px solid transparent !important;
+        }
+
+        hr {
+            clear: both;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .boldRow:after,
+    .btClear:after {
+        content: " ";
+        display: table;
+        width: 100%;
+        clear: both;
+    }
+
+    .header {
+        &.medium {
+            margin: 0 0 5px;
+
+            .btSuperTitle {
+                margin: 0 0 12px;
+                font-size: 16px;
+            }
+
+            .btSubTitle {
+                font-size: 16px;
+            }
+        }
+
+        display: block;
+
+        .btSuperTitle {
+            font-family: 'Muli', sans-serif;
+            font-size: 13px;
+            line-height: 1.55;
+            clear: both;
+            margin: 0 0 .8em;
+        }
+
+        .dash {
+            display: block;
+            margin: 0;
+        }
+
+        &.medium {
+
+            h2,
+            h3 {
+                font-size: 25px;
+                margin: 0 0 11px;
+            }
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.15;
+        }
+    }
+
+    .btLightSkin {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #222;
+        }
+    }
+
+    .btDarkSkin .btLightSkin {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #222;
+        }
+    }
+
+    .header .headline {
+        display: block;
+    }
+
+    .boldRow:after,
+    .btClear:after {
+        content: " ";
+        display: table;
+        width: 100%;
+        clear: both;
+    }
+
+    .sTxt p:last-of-type,
+    .btText p:last-of-type {
+        margin-bottom: 0;
+    }
+}

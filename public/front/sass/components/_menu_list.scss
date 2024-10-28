@@ -1,0 +1,83 @@
+/*-------------------------------------------------------------------------------------
+    Menu list
+---------------------------------------------------------------------------------------*/
+
+.menu-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    line-height: 1;
+}
+
+.menu-name {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding-right: 5px;
+    max-width: calc(100% - 48px);
+}
+
+@media (min-width: 576px) {
+    .menu-name {
+        font-size: 1.2rem;
+    }
+}
+
+.menu-dots {
+    border-bottom: 4px double rgba(255, 255, 255, 0.5);
+    -ms-flex: 100 1 auto;
+    flex: 100 1 auto;
+}
+
+.menu-price {
+    @include transform(scale(0.9));
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-left: 5px;
+}
+
+@media (min-width: 576px) {
+    .menu-price {
+        font-size: 1.35rem;
+    }
+}
+
+.divided-columns--dark p{
+    color: #bfbfbf;
+}
+
+.menu-row {
+    .menu-name {
+        color: $black;
+        font-size: 1.2rem;
+    }
+
+    .menu-price {
+        font-size: 1rem;
+        font-weight: 600;
+        @include transform(scale(1));
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-row .menu-name {
+        font-size: 1.2rem;
+    }
+}
+
+/* Classic Menu List */
+.label-heading-text {
+    font-weight: 500;
+}
+
+.rounded-box {
+    border-radius: 12px;
+}

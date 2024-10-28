@@ -1,0 +1,275 @@
+
+/*===============================================
+
+Template name:  Snail
+Version:        6.0
+Author:         Snail
+Author Email:   vipul@chetsapp.com
+
+NOTE:
+-----
+Please DO NOT EDIT THIS CSS, you may need to use "custom.css" file for writing your custom css.
+We may release future updates so it will overwrite this file. it's better and safer to use "custom.css".
+
+===============================================*/
+
+/*===============================================
+	
+	STYLESHEET INDEXING
+	|
+	|
+	|___ Default Styles
+	|	|
+	|	|___ variables
+	|	|___ mixins
+	|	|___ reset
+	|	|___ typography
+	|	|___ colors
+	|	|___ shortcode
+	|	|___ animations 
+	|
+	|
+	|
+	|___Elements Styles
+	|	|___ section-title
+	|	|___ buttons
+	|	|___ accordions
+	|	|___ deviders
+	|	|___ alertbox
+	|	|___ ison-boxes
+	|	|___ social
+	|	|___ tabs
+	|	|___ deviders
+	|	|___ form
+	|	|___ custom-cursor
+	|	|___ Progress_bar
+	|	|___ Countdown
+	|	|___ Client_logo
+	|	|___ maintenance
+	|	|___ gradation
+	|	|___ pagination
+	|	|___ gallery
+	|	|___ service
+	|	|___ testimonial
+	|	|___ counter
+	|	|___ fancy_box
+	|	|___ modal
+	|	|___ slider
+	|	|___ rating
+	|	|___ icons
+	|	
+	|
+	|
+	|___Template Styles
+	|	|___ banner
+	|	|___ slider
+	|	|___ footer
+	|	|___ header
+	|	|___ header magamenu
+	|	|___ header-broadsheets
+	|	|___ left-vertical-header
+	|	|___ popup
+	|	|___ hamber-menu
+	|	|___ sidebar-mobilemenu
+	|	|___ shopping_cart
+	|	|___ sidebar-header
+	|	|___ Demo options
+	|	|___ toolbar
+	|	|___ particales
+	|	|___ template features
+	|
+	|	
+	|___Blog Styles
+	|	|___ blog
+	|	|___ blog sidebar
+	|	|___ blog part
+	|	|___ blog details
+	|
+	|	
+	|
+	|___Portfolio Styles
+	|	|___ Portfolio grid
+	|	|___ Portfolio details
+	|	
+	|
+	|
+	|___Shop Styles
+	|	|___ Product
+	|	|___ single product
+	|	|___ shop Sidebar
+	|	|___ cart
+	|	|___ Chackout
+	|	|___ my account
+	|	
+	|
+	|
+	|___Components Styles
+	|	|___ subscribe
+	|	|___ join us
+	|	|___ why us
+	|	|___ Quote
+	|	|___ typography
+	|	|___ image group
+	|	|___ Shapes
+	|	|___ tooltip box
+	|	|___ sliders
+	|	|___ layer wrap
+	|	|___ team
+	|	|___ demo option
+	|	|___ toolbar
+	|	|___ image comparision
+	|	|___ menu list
+	|	|___ grid Filter
+	|	|___ Video slider
+	|	|___ instagram
+	|	|___ music area
+	|	|___ portfolio post
+	|	|___ book form
+	|	|___ pricing box
+	|	|___ Lists
+	|	|___ feature slider
+	|	|___ Google maps
+	|	|___ breadcrumb
+	|	|___ preloader
+	|	|___ shadule part
+	|	
+	|
+	|___ END STYLESHEET INDEXING
+
+===============================================*/
+
+/*====================================
+    Default Styles
+====================================*/
+
+	@import "default/variables";
+	@import "default/mixins";
+	@import "default/reset";
+	@import "default/typography";
+	@import "default/colors";
+	@import "default/shortcode";
+	@import "default/animation";
+	@import "default/text-animations";
+
+
+/*====================================
+	Elements Styles
+=====================================*/
+
+	@import "elements/section_title";
+	@import "elements/buttons";
+	@import "elements/accordions";
+	@import "elements/deviders";
+	@import "elements/alert_box";
+	@import "elements/icon-boxes";
+	@import "elements/social";
+	@import "elements/tabs";
+	@import "elements/deviders";
+	@import "elements/form";
+	@import "elements/custom_cursor";
+	@import "elements/progress_bar";
+	@import "elements/countdown";
+	@import "elements/client_logo";
+	@import "elements/maintenance";
+	@import "elements/gradation";
+	@import "elements/pagination";
+	@import "elements/gallery";
+	@import "elements/service";
+	@import "elements/testimonial";
+	@import "elements/counter";
+	@import "elements/fancy_box";
+	@import "elements/modal";
+	@import "elements/slider";
+	@import "elements/rating";
+	@import "elements/elements_icons";
+
+/*=================================
+	Template Styles
+==================================*/
+
+	@import "templates/banner";
+	@import "templates/slider";
+	@import "templates/footer";
+	@import "templates/header_magamenu";
+	@import "templates/header-broadsheets";
+	@import "templates/header";
+	@import "templates/left-vertical-header";
+	@import "templates/search_popup";
+	@import "templates/hamber-menu";
+	@import "templates/sidebar-mobilemenu";
+	@import "templates/shopping_cart";
+	@import "templates/sidebar-header";
+	@import "templates/header-full-details";
+	@import "templates/demo_options";
+	@import "templates/toolbar";
+	@import "templates/particales";	
+	@import "templates/template_features";
+
+/*=====================================
+	Blog Styles
+======================================*/
+
+	@import "blogs/blog";
+	@import "blogs/blog_sidebar";
+	@import "blogs/blog_part";
+	@import "blogs/blog_details";
+
+/*================================
+    Portfolio Style
+=================================*/
+    
+    @import "portfolio/portfolio_grid";
+    @import "portfolio/portfolio-style-2";
+    @import "portfolio/portfolio_details";
+	@import "portfolio/portfolio-style-3";
+/*================================
+    Shop Style
+=================================*/
+    
+    @import "shop/product";
+    @import "shop/single_product";
+    @import "shop/shop_sidebar";
+    @import "shop/cart";
+    @import "shop/chackout";
+    @import "shop/my_account";
+    
+/*================================
+	Components Style
+=================================*/
+
+	@import "components/subscribe";
+	@import "components/join_us";
+	@import "components/why_us";
+	@import "components/quote";
+	@import "components/typography";
+	@import "components/image_group";
+	@import "components/shapes";
+	@import "components/tooltip-box";
+	@import "components/sliders";
+	@import "components/layer_wrap";
+	@import "components/charts";
+	@import "components/team";
+	@import "components/image_comparision";
+	@import "components/menu_list";
+	@import "components/grid_filter";
+	@import "components/video_slider";
+	@import "components/instagram";
+	@import "components/music_area";
+	@import "components/portfolio_post";
+	@import "components/book_form";
+	@import "components/pricing_box";
+	@import "components/lists";
+    @import "components/feature-slider";
+	@import "components/google_maps";
+	@import "components/breadcrumb";
+	@import "components/preloader";
+	@import "components/shadule";
+	@import "components/coming-soon";
+	@import "components/404";
+	@import "components/datepicker";
+	@import "components/scroll_top";
+	@import "components/crypto-table";
+	@import "components/our-process";
+	@import "components/beauty-quote";
+	@import "components/special-offer-box";
+	@import "templates/creative-studio";

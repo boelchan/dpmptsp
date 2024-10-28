@@ -1,0 +1,507 @@
+/*------------------------------------------
+ Cube Portfolio Css Start
+--------------------------------------------*/
+.cube-portfolio-sec {
+    margin-bottom: 30px;
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .heading {
+        color: #223a7b;
+        margin-bottom: 0;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .cbp-wrapper-outer {
+        overflow: visible;
+    }
+
+    .cbp-l-loadMore-button {
+        .cbp-l-loadMore-link {
+            padding: 12px 32px;
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:focus {
+                color: #fff;
+            }
+        }
+
+        .cbp-l-loadMore-button-link {
+            padding: 12px 32px;
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:focus {
+                color: #fff;
+            }
+        }
+    }
+
+    .cbp-l-filters-button {
+        .cbp-filter-item {
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            border: none;
+            font-size: 14px;
+            font-weight: 400;
+            color: #202020;
+            font-family: 'Roboto', sans-serif;
+            margin-right: 15px;
+            border-bottom: solid 2px transparent;
+            -webkit-transition: 300ms all ease;
+            -o-transition: 300ms all ease;
+            transition: 300ms all ease;
+
+            &:hover {
+                color: #202020;
+                border-color: #1f2471 !important;
+            }
+        }
+
+        .cbp-filter-item.cbp-filter-item-active {
+            color: #1f2471 !important;
+            background: transparent;
+            border-bottom: solid 3px #1f2471 !important;
+        }
+    }
+
+    .cbp-item.even {
+        -webkit-transition: 300ms all ease;
+        -o-transition: 300ms all ease;
+        transition: 300ms all ease;
+        margin-top: -190px;
+    }
+
+    .cbp-l-grid-mosaic {
+        .cbp-caption-activeWrap {
+            background: rgba(52, 174, 255, 0.80) !important;
+        }
+    }
+
+    .cbp-l-caption-title {
+        color: #ffffff !important;
+        font-family: 'Roboto', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 15px !important;
+    }
+
+    .portfolio-detail-text {
+        color: #FFFFFF;
+        font-style: italic;
+    }
+
+    .portfolio-hover-effect {
+        .hover-text {
+            padding-left: 3%;
+            padding-bottom: 2%;
+
+            .p-hover-title {
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                color: #FFFFFF;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+
+            .p-hover-des {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                color: #FFFFFF;
+            }
+        }
+
+        .portfolio-inner-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            span {
+                background-color: #FFFFFF;
+                height: 3px;
+                width: 70px;
+                display: block;
+
+                &:nth-child(2) {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        span {
+            &:after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                border: inherit;
+                border-radius: inherit;
+                z-index: -1;
+                opacity: 0;
+                transition: all 0.6s ease 0.3s;
+                -moz-transition: all 0.6s ease 0.3s;
+                -webkit-transition: all 0.6s ease 0.3s;
+                -ms-transition: all 0.6s ease 0.3s;
+                -o-transition: all 0.6s ease 0.3s;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                border: inherit;
+                border-radius: inherit;
+                z-index: -1;
+                opacity: 0;
+                transition: all 0.6s ease 0.3s;
+                -moz-transition: all 0.6s ease 0.3s;
+                -webkit-transition: all 0.6s ease 0.3s;
+                -ms-transition: all 0.6s ease 0.3s;
+                -o-transition: all 0.6s ease 0.3s;
+            }
+
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            color: #fff;
+            right: 0;
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #fff;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 64px;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.6s;
+            -moz-transition: all 0.6s;
+            -webkit-transition: all 0.6s;
+            -ms-transition: all 0.6s;
+            -o-transition: all 0.6s;
+        }
+
+        &:hover {
+            span {
+                transform: translateY(0);
+                -moz-transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                opacity: 1;
+                right: 60px;
+                top: 60px;
+
+                &:after {
+                    transform: scale(1.8);
+                    -moz-transform: scale(1.8);
+                    -webkit-transform: scale(1.8);
+                    -ms-transform: scale(1.8);
+                    -o-transform: scale(1.8);
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    #js-loadMore-lightbox-gallery {
+        margin-top: 45px;
+    }
+
+    #js-loadMore-lightbox-gallery.active {
+        margin-top: -150px;
+        position: relative;
+        z-index: 1000;
+    }
+
+    #js-loadMore-lightbox-gallery.active-outer {
+        margin-top: -250px;
+    }
+
+    .cbp-caption-active {
+        .cbp-caption-activeWrap {
+            width: 94%;
+            position: absolute;
+            z-index: 2;
+            height: 94%;
+
+            &:hover {
+                .text-data {
+                    z-index: -1 !important;
+                }
+            }
+        }
+    }
+
+    .cbp-caption-zoom {
+        .cbp-caption-activeWrap {
+            opacity: 0;
+            top: 3%;
+            left: 3%;
+        }
+    }
+
+    .portfolio-foot-detail {
+        padding-bottom: 3%;
+
+        .p-text {
+            color: #202020;
+            font-size: 13px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            display: inline-block;
+            margin-bottom: 8px;
+            opacity: 0.7;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .p-num {
+            color: #202020;
+            font-size: 50px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .cube-portfolio-sec {
+        .heading {
+            font-size: 60px;
+        }
+
+        #js-loadMore-lightbox-gallery.active {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cbp-popup-lightbox-figure {
+        width: 90% !important;
+        position: relative;
+        padding: 20px 0;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cube-portfolio-sec {
+        .heading {
+            font-size: 45px;
+        }
+
+        #js-loadMore-lightbox-gallery.active {
+            margin-top: 30px;
+        }
+    }
+
+    .blue-and-black-btn {
+        padding: 7px 30px;
+    }
+}
+
+/*------------------------------------------
+ Cube Portfolio Css End
+--------------------------------------------*/
+/*------------------------------------------
+Marketing Portfolio Section Start
+--------------------------------------------*/
+.template-color-60 {
+    .cube-portfolio-sec {
+        .cbp-l-grid-mosaic {
+            .cbp-caption-activeWrap {
+                background: rgba(253, 163, 2, 1) !important;
+            }
+        }
+
+        .cbp-l-filters-button {
+            .cbp-filter-item.cbp-filter-item-active {
+                color: $color-60 !important;
+                background: transparent;
+                border-bottom: solid 3px $color-60 !important;
+            }
+
+            .cbp-filter-item {
+                &:hover {
+                    color: $color-60 !important;
+                    border-color: $color-60 !important;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+Marketing Portfolio Section End
+--------------------------------------------*/
+
+/*---------------
+Portfolio Page Portfolio Section Start
+---------------*/
+.portfolio-sec {
+    .item {
+        .portfolio-overlay {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 100%;
+            transition: .8s ease;
+
+            span {
+                color: $white;
+                font-size: 18px;
+            }
+
+            .overlay-inner-content {
+                opacity: 0;
+            }
+
+            i {
+                color: $white;
+                font-size: 40px;
+                margin-bottom: 10px;
+                display: block;
+                transition: .8s ease;
+            }
+        }
+
+        &:hover {
+            .portfolio-overlay {
+                bottom: 0;
+
+                .overlay-inner-content {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .owl-carousel.owl-drag {
+        .owl-item {
+            margin-right: 0px !important;
+        }
+    }
+}
+
+/*---------------
+Portfolio Page Portfolio Section Start
+---------------*/
+
+/*------------------------------------------
+SEO Portfolio Section Start
+--------------------------------------------*/
+.template-color-62 {
+    .cube-portfolio-sec {
+        .cbp-l-grid-mosaic {
+            .cbp-caption-activeWrap {
+                background: rgba(85, 168, 253, 1) !important;
+            }
+        }
+
+        .cbp-l-filters-button {
+            .cbp-filter-item.cbp-filter-item-active {
+                color: $color-62 !important;
+                background: transparent;
+                border-bottom: solid 3px $color-62 !important;
+            }
+
+            .cbp-filter-item {
+                &:hover {
+                    color: $color-62 !important;
+                    border-color: $color-62 !important;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+SEO Portfolio Section End
+--------------------------------------------*/
+
+/*------------------------------------------
+Running Portfolio Section Start
+--------------------------------------------*/
+.template-color-78 {
+    .cube-portfolio-sec {
+        .cbp-l-grid-mosaic {
+            .cbp-caption-activeWrap {
+                background: rgba(247, 28, 82, 1) !important;
+            }
+        }
+
+        .cbp-l-filters-button {
+            .cbp-filter-item.cbp-filter-item-active {
+                color: $color-77 !important;
+                background: transparent;
+                border-bottom: solid 3px $color-77 !important;
+            }
+
+            .cbp-filter-item {
+                &:hover {
+                    color: $color-77 !important;
+                    border-color: $color-77 !important;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+Running Portfolio Section End
+--------------------------------------------*/
+/*------------------------------------------
+Eyeware Portfolio Section Start
+--------------------------------------------*/
+.template-color-81 {
+    .cube-portfolio-sec {
+        .cbp-l-grid-mosaic {
+            .cbp-caption-activeWrap {
+                background: rgba(22, 24, 41, 1) !important;
+            }
+        }
+
+        .cbp-l-filters-button {
+            .cbp-filter-item.cbp-filter-item-active {
+                color: $color-82 !important;
+                background: transparent;
+                border-bottom: solid 3px $color-82 !important;
+            }
+
+            .cbp-filter-item {
+                &:hover {
+                    color: $color-82 !important;
+                    border-color: $color-82 !important;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+Eyeware Portfolio Section End
+--------------------------------------------*/

@@ -1,0 +1,28 @@
+{
+    "private": true,
+    "name": "snail",
+    "version": "3.0.0",
+    "description": "Snail - Responsive Bootstrap 5 Html5 Multiperpose template",
+    "main": "gulpfile.js",
+    "author": "ChetsApp",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-postcss": "^9.0.1",
+        "postcss": "^8.4.18",
+        "sass": "^1.55.0"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.13",
+        "browser-sync": "^2.27.10",
+        "gulp-beautify": "^3.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-cssmin": "^0.2.0",
+        "gulp-install": "^1.1.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-watch": "^5.0.1",
+        "postcss-import": "^15.0.0"
+    }
+}

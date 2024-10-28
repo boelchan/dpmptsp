@@ -1,0 +1,89 @@
+/*-------------------------------------------------------------------------------------
+    Subscribe form  
+---------------------------------------------------------------------------------------*/
+
+.subscribe-form {
+    .shape-subscribe {
+        position: absolute;
+        top: 0;
+        right: -10px;
+    }
+
+    .sl-newsletter-input-box {
+        position: relative;
+
+        input[type="text"] {
+            background: #ffffff;
+            border: 0;
+            letter-spacing: 0;
+            height: 72px;
+            width: 100%;
+            color: #79879d;
+            font-size: 16px;
+            padding: 0 180px 0 40px;
+            -webkit-box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+
+            @include placeholder {
+                font-size: 20px;
+            }
+
+            @media #{$sm-layout} {
+                padding: 0 40px 0 40px;
+
+                @include placeholder {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        button {
+            color: #ffffff;
+            border: 0;
+            height: 60px;
+            width: 156px;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: .4px;
+
+            @media #{$sm-layout} {
+                position: static;
+                margin: auto;
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            &.wedding-btn {
+                background: -webkit-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+                background: -moz-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+                background: -o-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+                background: -ms-linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+                background: linear-gradient(90deg, #D32C3D 0%, #C40A1E 100%);
+                border-radius: 10px 0 10px 10px;
+            }
+
+            &.real-estate-btn {
+                border: 2px solid #022135;
+                border-radius: 50px;
+                color: $white;
+            }
+        }
+    }
+}
+
+.beauty-subscribe {
+    background: rgba($black, 0.7);
+    text-align: center;
+
+    i {
+        font-size: 40px;
+    }
+
+    input {
+        color: #fff;
+
+        &::placeholder {
+            color: #fff;
+        }
+    }
+}
