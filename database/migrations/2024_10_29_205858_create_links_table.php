@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('links', function (Blueprint $table) {
             $table->id();
-            $table->string('icon')->nullable();
-            $table->string('title');
+            $table->uuid();
+            $table->string('nama');
+            $table->string('slug');
             $table->string('url');
+            $table->string('meta_keywords')->nullable();
+            $table->string('meta_description')->nullable();
+            $table->string('icon')->nullable();
+            $table->text('konten')->nullable();
+            $table->string('publish', 5)->default('ya');
             $table->timestamps();
         });
     }

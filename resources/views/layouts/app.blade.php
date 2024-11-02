@@ -95,8 +95,7 @@
                                 @foreach ($menuData as $m)
                                     @if (Auth::check() && Auth::user()->hasRole($m->role))
                                         <li class="nav-item @isset($m->sub) dropdown @endisset">
-                                            <a href="@if (isset($m->sub)) #navbar-base @else {{ route($m->route) }} @endif"
-                                                class="nav-link @isset($m->sub) dropdown-toggle @endisset 
+                                            <a href="@if (isset($m->sub)) #navbar-base @else {{ route($m->route) }} @endif" class="nav-link @isset($m->sub) dropdown-toggle @endisset 
                                                 @if (isset($m->sub)) @if (Str::startsWith(Route::currentRouteName(),
                                                         collect($m->sub)->pluck('route')->all()))
                                                         active fw-bold @endif
@@ -173,7 +172,7 @@
                     <div class="row text-center align-items-center flex-row-reverse">
                         <div class="col-lg-auto ms-lg-auto">
                             <ul class="list-inline list-inline-dots mb-0">
-                                <li class="list-inline-item">Supported By <a href="mailto:boelchan@live.com" class="link-secondary">BooLEANDEV</a> </li>
+                                <li class="list-inline-item">Supported By <a href="mailto:boelchan@live.com" class="link-secondary">bulyanDEV</a> </li>
                             </ul>
                         </div>
                         <div class="col-12 col-lg-auto mt-3 mt-lg-0">

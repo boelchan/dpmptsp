@@ -38,9 +38,18 @@
         ]
     },
     {
-        "title": "Fasilitas",
+        "title": "Layanan",
         "icon": "layout-2",
         "route": "service.index",
+        "role": [
+            "superadmin",
+            "operator"
+        ]
+    },
+    {
+        "title": "Link",
+        "icon": "list",
+        "route": "link.index",
         "role": [
             "superadmin",
             "operator"

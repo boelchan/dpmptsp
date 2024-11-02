@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Preview
+                            Detail
                         </h3>
                         <div class="card-actions">
                             <a href="javascript:void(0)" class="btn btn-outline-danger delete-data" data-url="{{ route('post.tim.destroy', [$tim->id, 'uuid' => $tim->uuid]) }}" data-token="{{ csrf_token() }}" data-label="{{ $tim->nama }}"> Hapus </a>
@@ -41,7 +41,7 @@
                         @endif
                     </div>
                     <div class="card-body">
-                            <img src="{{ $tim->gambar ? asset('storage/team/' . $tim->gambar) : '' }}" class="">
+                        <img src="{{ $tim->gambar ? asset('storage/team/' . $tim->gambar) : '' }}" class="">
                     </div>
                 </div>
             </div>

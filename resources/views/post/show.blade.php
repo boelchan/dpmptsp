@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Preview
+                            Detail
                         </h3>
                         <div class="card-actions">
                             @if ($post->id != 1)

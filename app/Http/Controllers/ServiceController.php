@@ -13,7 +13,7 @@ class ServiceController extends Controller
 
     public function __construct($title = '')
     {
-        $this->title = 'Fasilitas';
+        $this->title = 'Layanan';
     }
 
     public function index(ServiceDataTable $serviceDatatable)
@@ -51,7 +51,7 @@ class ServiceController extends Controller
     {
         checkUuid($service->uuid);
         $title = $this->title;
-        $breadcrumbs = [['url' => route('service.index'), 'title' => $title], ['url' => '#', 'title' => 'preview']];
+        $breadcrumbs = [['url' => route('service.index'), 'title' => $title], ['url' => '#', 'title' => 'detail']];
 
         return view('service.show', compact('service', 'breadcrumbs', 'title'));
     }

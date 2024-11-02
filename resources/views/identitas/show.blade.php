@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Preview
+                            Detail
                         </h3>
                         <div class="card-actions">
                             <a href="javascript:void(0)" class="btn btn-outline-danger delete-data" data-url="{{ route('post.agenda.destroy', [$agenda->id, 'uuid' => $agenda->uuid]) }}" data-token="{{ csrf_token() }}" data-label="{{ $agenda->judul }}"> Hapus </a>
