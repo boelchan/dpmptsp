@@ -6,7 +6,7 @@
     <div class="container">
         <div class="col-md-12">
 
-            <x-datatable.filter target='post-table' collapsed="true">
+            <x-datatable.filter target='post-table' collapsed="collapsed">
                 <div class="col-md-3">
                     <x-form-input name="judul" id="judul" label="Judul" floating />
                 </div>

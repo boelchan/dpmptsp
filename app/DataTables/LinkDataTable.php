@@ -35,12 +35,15 @@ class LinkDataTable extends DataTable
                 return '<span class="badge bg-secondary">Pending</span>';
             }
         })
+            ->editColumn('url', function ($query) {
+                return '<a href="https://'.$query->url.'" target="_blank">https://'.$query->url.' <i class="ti ti-external-link"></i></a>';
+            })
             ->editColumn('action', function ($query) {
                 return view('components.button.show', ['action' => route('link.show', [$query->id, 'uuid' => $query->uuid])]).
                     view('components.button.edit', ['action' => route('link.edit', [$query->id, 'uuid' => $query->uuid])]).
                     view('components.button.destroy', ['action' => route('link.destroy', [$query->id, 'uuid' => $query->uuid]), 'label' => $query->nama, 'target' => 'link-table']);
             })
-            ->rawColumns(['publish', 'action']);
+            ->rawColumns(['publish', 'action', 'url']);
     }
 
     public function query(Link $model)
@@ -70,6 +73,7 @@ class LinkDataTable extends DataTable
         return [
             Column::computed('id')->title('no')->data('DT_RowIndex'),
             Column::make('nama'),
+            Column::make('url'),
             Column::make('publish')->title('status'),
             Column::computed('action')->addClass('text-center'),
         ];

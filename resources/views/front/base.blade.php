@@ -170,6 +170,7 @@
                                 </ul>
                             </li>
                         @endif
+                        <li class="lavel-1"><a href="/#section-layanan"><span>Data</span></a></li>
                         <li class="lavel-1"><a href="/#section-layanan"><span>Layanan</span></a></li>
                         <li class="lavel-1"><a href="/#section-pengaduan"><span>Pengaduan</span></a></li>
                         <li class="lavel-1"><a href="{{ route('cari') }}"><span><i class="ti ti-search"></i> Pencarian</span></a></li>
@@ -213,7 +214,7 @@
                                     <li class="p-0 pb-1"><a class="text-white" href="{{ $menu->url }}">{{ $menu->nama }}</a> </li>
                                 @endforeach
                                 <li class="p-0 pb-1"><a class="text-white" href="{{ route('cari') }}">Pencarian</a> </li>
-                                <li class="p-0 pb-1"><a class="text-white" href="{{ route('index').'#section-pengaduan' }}">Pengaduan</a> </li>
+                                <li class="p-0 pb-1"><a class="text-white" href="{{ route('index') . '#section-pengaduan' }}">Pengaduan</a> </li>
                             </ul>
                         </div>
                         <div class="col-6 col-lg-2 wow fadeInRight" data-wow-duration="1s">

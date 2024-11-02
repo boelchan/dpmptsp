@@ -1,5 +1,5 @@
-{{-- <div class="collapse mb-2 {{ $collapsed }}" id="collapse-datatable-filter"> --}}
-<div class="collapse mb-2" id="collapse-datatable-filter">
+<div class="collapse mb-2 {{ $collapsed }}" id="collapse-datatable-filter">
+    {{-- <div class="collapse mb-2" id="collapse-datatable-filter"> --}}
     <div class="card shadow-sm">
         <div class="card-header p-0">
             <h3 class="card-title px-3 py-2">Pencarian</h3>
