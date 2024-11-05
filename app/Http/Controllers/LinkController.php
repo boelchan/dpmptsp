@@ -13,7 +13,7 @@ class LinkController extends Controller
 
     public function __construct($title = '')
     {
-        $this->title = 'Link Terkait';
+        $this->title = 'Link Aplikasi Online';
     }
 
     public function index(LinkDataTable $linkDatatable)

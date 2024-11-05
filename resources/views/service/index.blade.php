@@ -6,7 +6,7 @@
     <div class="container">
         <div class="col-md-12">
 
-            <x-datatable.filter target='service-table' collapsed="true">
+            <x-datatable.filter target='service-table'>
                 <div class="col-md-3">
                     <x-form-input name="nama" id="nama" label="Nama Fasilitas" floating />
                 </div>

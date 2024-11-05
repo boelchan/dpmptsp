@@ -47,7 +47,16 @@
         ]
     },
     {
-        "title": "Link",
+        "title": "Dokumen",
+        "icon": "book",
+        "route": "document.index",
+        "role": [
+            "superadmin",
+            "operator"
+        ]
+    },
+    {
+        "title": "Aplikasi Online",
         "icon": "list",
         "route": "link.index",
         "role": [

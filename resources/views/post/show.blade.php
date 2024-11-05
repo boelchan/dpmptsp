@@ -26,7 +26,7 @@
                                 <span class="badge bg-info mt-1">Ditampilkan di Banner</span>
                             @endif
                         @else
-                            <span class="badge bg-secondary-lt ">Pending</span>
+                            <span class="badge bg-secondary ">Pending</span>
                         @endif
                         @if ($post->add_to_submenu == 'ya')
                             <span class="badge bg-purple mt-1">Tampil di Submenu</span>

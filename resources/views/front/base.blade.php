@@ -109,6 +109,7 @@
                                                     </li>
                                                 @endif
                                                 <li class="lavel-1 p-0 ps-2"><a class="p-2 text-white" href="/#section-layanan"><span>Layanan</span></a></li>
+                                                <li class="lavel-1 p-0 ps-2"><a class="p-2 text-white" href="/#section-layanan"><span>Data</span></a></li>
                                                 <li class="lavel-1 p-0 ps-2"><a class="p-2 text-white" href="/#section-pengaduan"><span>Pengaduan</span></a></li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('cari') }}" title="pencarian"><span><i class="ti ti-search fs-4"></i></span></a></li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('login') }}" title="login"><span><i class="ti ti-login fs-4"></i></span></a></li>

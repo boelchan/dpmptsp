@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IdentitasController;
@@ -42,6 +43,7 @@ Route::prefix('admin')->middleware(['auth', 'role:superadmin|operator'])->group(
     Route::resource('category', CategoryController::class);
     Route::resource('service', ServiceController::class);
     Route::resource('link', LinkController::class);
+    Route::resource('document', DocumentController::class);
 });
 
 // profile akun

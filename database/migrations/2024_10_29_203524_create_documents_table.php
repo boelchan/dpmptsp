@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->uuid();
             $table->foreignId('document_category_id')->references('id')->on('document_categories');
             $table->string('slug');
             $table->string('title');
