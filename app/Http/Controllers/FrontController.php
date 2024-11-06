@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Enum\CategoryEnum;
 use App\Models\AntrianDetail;
 use App\Models\Category;
+use App\Models\Link;
 use App\Models\Pengaduan;
 use App\Models\Post;
-use App\Models\Profile;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -37,8 +37,9 @@ class FrontController extends Controller
         $lastestPost = Post::where('publish', 'ya')->whereNotIn('kategori_id', [1, 2, 3])->orderBy('publish_at', 'desc')->orderBy('updated_at', 'desc')->limit(10)->get();
 
         $pamflet = Post::where('kategori_id', CategoryEnum::PAMFLET)->where('publish', 'ya')->orderBy('publish_at', 'desc')->orderBy('updated_at', 'desc')->get()->take(6);
-        $tentangKami = Profile::find(1);
-        $fasilitas = Service::where('publish', 'ya')->get();
+        $sambutan = Post::find(3);
+        $layanan = Service::where('publish', 'ya')->get();
+        $link = Link::where('publish', 'ya')->get();
 
         $meta = [
             'title' => 'Beranda',
@@ -48,7 +49,7 @@ class FrontController extends Controller
             'image' => setting('logo'),
         ];
 
-        return view('front.index', compact('navbarMenu', 'slider', 'tentangKami', 'pamflet', 'meta', 'fasilitas', 'lastestPost'));
+        return view('front.index', compact('navbarMenu', 'slider', 'sambutan', 'pamflet', 'meta', 'layanan', 'lastestPost', 'link'));
     }
 
     public function post($slug = '')

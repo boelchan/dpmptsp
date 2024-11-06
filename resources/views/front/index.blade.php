@@ -14,7 +14,7 @@
                 @forelse ($slider as $b)
                     <div class="carousel-item @if ($loop->first) active @endif">
                         <a href="{{ $b->url }}">
-                            <img src="{{ $b->gambar_url }}" class="d-block mx-auto" alt="..." style="max-height:600px">
+                            <img src="{{ $b->gambar_url }}" class="d-block w-100" alt="..." style="object-fit: cover; max-height:600px">
                             <div class="carousel-caption d-none d-md-block">
                                 <label class="blur rounded-pill px-3 py-1">
                                     {{ $b->judul }}
@@ -42,12 +42,42 @@
     <section class="position-relative ptb-80 ptb-sm-40 ptb-md-60 wow fadeInUp" id="section-layanan">
         <div class="services-area">
             <div class="container">
-                <div class="row justify-content-center">
+                {{-- <div class="row justify-content-center">
                     <div class="text-center mb-4">
-                        <h2 class="main-color d-inline-block">Layanan</h2>
+                        <h2 class="main-color d-inline-block">APLIKASI ONLINE</h2>
+                    </div>
+                </div> --}}
+                <div class="row">
+                    @foreach ($link as $l)
+                        <div class="col-md-3 col-6 p-4">
+                            <a class="wow gallery fadeInUp box shadow-medium" href="https://{{ $l->url }}">
+                                <div class="thumb">
+                                    <img class="rounded-3 " src="{{ $l->icon_url }}" alt="pamflet Images">
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="position-relative w-100  ptb-sm-50 ptb-md-50 overflow-hidden z-index-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-6">
+                    <div class="position-relative image-block bg-cover bg-center text-center fadeInLeft wow">
+                        <img src="{{ $sambutan->gambar_url }}" alt="madical-image">
                     </div>
                 </div>
-                <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="section-title text-center text-lg-start section-heading">
+                        <h2 class="fs-3">Selamat Datang di Website DPMPTSP Kab. Sumenep</h2>
+                        {!! Str::take($sambutan->konten, 500) !!} ... <br>
+                        <a href="{{ route('front.post.baca', $sambutan->slug) }}" class="btn p-0 mt-25">
+                            <span class="gradients-button btn-small grad-btn-6">Baca Selengkapnya</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,7 +158,7 @@
             </div>
         </div>
     </section>
-    <section class="position-relative z-index-3 ptb-80 ptb-sm-40 ptb-md-60 gray-bg" id="section-pengaduan">
+    <section class="position-relative z-index-3 ptb-80 ptb-sm-40 ptb-md-60 gray-bg d-none" id="section-pengaduan">
         <div class="container">
             <div class="row  justify-content-center">
                 <div class="col-md-6 col-offset-3 position-relative">

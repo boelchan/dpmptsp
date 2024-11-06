@@ -109,9 +109,15 @@
                                                     </li>
                                                 @endif
                                                 <li class="lavel-1 p-0 ps-2"><a class="p-2 text-white" href="/#section-layanan"><span>Layanan</span></a></li>
-                                                <li class="lavel-1 p-0 ps-2"><a class="p-2 text-white" href="/#section-layanan"><span>Data</span></a></li>
-                                                <li class="lavel-1 p-0 ps-2"><a class="p-2 text-white" href="/#section-pengaduan"><span>Pengaduan</span></a></li>
-                                                <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('cari') }}" title="pencarian"><span><i class="ti ti-search fs-4"></i></span></a></li>
+                                                <li class="lavel-1 p-0 with--drop slide-dropdown">
+                                                    <a class="p-1 text-white" href="#"><span>Data</span></a>
+                                                    <ul class="dropdown__menu p-1">
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>SAKIP</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>LAKIP</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>RENSTRA</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>RKPD</span></a>
+                                                    </ul>
+                                                </li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('login') }}" title="login"><span><i class="ti ti-login fs-4"></i></span></a></li>
                                             </ul>
                                         </nav>
@@ -173,7 +179,6 @@
                         @endif
                         <li class="lavel-1"><a href="/#section-layanan"><span>Data</span></a></li>
                         <li class="lavel-1"><a href="/#section-layanan"><span>Layanan</span></a></li>
-                        <li class="lavel-1"><a href="/#section-pengaduan"><span>Pengaduan</span></a></li>
                         <li class="lavel-1"><a href="{{ route('cari') }}"><span><i class="ti ti-search"></i> Pencarian</span></a></li>
                         <li class="lavel-1"><a href="{{ route('login') }}"><span><i class="ti ti-login"></i> Login</span></a></li>
                     </ul>
@@ -194,7 +199,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-4 wow fadeInLeft" data-wow-duration="1s">
-                            <iframe class="mb-2" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.0011233458158!2d113.86110734722139!3d-7.00822395952422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e57b6b906da7%3A0x154ee44a292c40e3!2sMal%20Pelayanan%20Publik%20Sumenep!5e0!3m2!1sid!2sid!4v1698132287514!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe class="mb-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1906.7741375365551!2d113.86309983292344!3d-7.0144678261372855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e428d48915f5%3A0x6e3ffe518f991e2b!2sBadan%20Pelayanan%20Perizinan%20Terpadu%20Sumenep!5e0!3m2!1sen!2sid!4v1730902283964!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="col-6 col-lg-3 wow fadeInUp mb-3" data-wow-duration="1s">
                             <h3 class="text-white">Kontak Kami</h3>
@@ -214,8 +219,6 @@
                                 @foreach ($navbarMenu['addToFooter'] as $menu)
                                     <li class="p-0 pb-1"><a class="text-white" href="{{ $menu->url }}">{{ $menu->nama }}</a> </li>
                                 @endforeach
-                                <li class="p-0 pb-1"><a class="text-white" href="{{ route('cari') }}">Pencarian</a> </li>
-                                <li class="p-0 pb-1"><a class="text-white" href="{{ route('index') . '#section-pengaduan' }}">Pengaduan</a> </li>
                             </ul>
                         </div>
                         <div class="col-6 col-lg-2 wow fadeInRight" data-wow-duration="1s">

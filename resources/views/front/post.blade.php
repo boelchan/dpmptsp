@@ -15,11 +15,11 @@
                                 </a>
                             </div>
                             <div class="blog-inner p-3" style="height: 150px">
-                                <div class="m-0 mb-3">
-                                    <a class="text-black d-block m-0" style="font-size: 0.7rem" href="{{ $p->instansi_id ? $p->instansi->url : '#' }}">{{ $p->instansi_label }}</a>
-                                    <i class="" style="font-size: 0.8rem">{{ $p->publish_at_label }}</i>
+                                <div class="m-0 p-0">
+                                    <a class="text-black d-block m-0" href="{{ $p->instansi_id ? $p->instansi->url : '#' }}">{{ $p->instansi_label }}</a>
+                                    <span class="">{{ $p->publish_at_label }}</span>
                                 </div>
-                                <span class="blog-title"><a class="fw-normal fs-6" href="{{ $p->url }}">{{ Str::limit($p->judul, 55, '...') }}</a></span>
+                                <span class="blog-title"><a class="fs-5" href="{{ $p->url }}">{{ Str::limit($p->judul, 55, '...') }}</a></span>
                             </div>
                         </div>
                     </div>

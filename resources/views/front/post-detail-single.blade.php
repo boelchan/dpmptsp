@@ -1,7 +1,7 @@
 @extends('front.base')
 
 @section('content')
-    @include('front.breadcrumb', ['title' => $meta["category"]])
+    @include('front.breadcrumb', ['title' => $meta['category']])
 
     <div class="sl-blog-details-area ptb-80 ptb-sm-40 ptb-md-60">
         <div class="container">
@@ -21,7 +21,7 @@
                     <div class="blog-details-wrapper">
                         <article class="blog-post blog-modern-layout">
                             <div class="header mb-40 text-center">
-                                <h3 class="fw-normal">{{ $meta["title"] }}</h3>
+                                <h3 class="fw-normal">{{ $meta['title'] }}</h3>
                                 <div class="post-meta mt-20 justify-content-center">
                                     <div class="post-date">{{ $post->publish_date }}</div>
                                 </div>
