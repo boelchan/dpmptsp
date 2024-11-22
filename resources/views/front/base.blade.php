@@ -100,7 +100,7 @@
                                                 @endforeach
                                                 @if ($navbarMenu['kategori']->count() > 0)
                                                     <li class="lavel-1 p-0 with--drop slide-dropdown">
-                                                        <a class="p-1 text-white" href="#"><span>Kategori</span></a>
+                                                        <a class="p-1 text-white" href="#"><span>Informasi</span></a>
                                                         <ul class="dropdown__menu p-1">
                                                             @foreach ($navbarMenu['kategori'] as $p)
                                                                 <li class="text-black px-3"><a href="{{ $p->url }}"><span>{{ $p->nama }}</span></a> </li>
@@ -108,14 +108,23 @@
                                                         </ul>
                                                     </li>
                                                 @endif
-                                                <li class="lavel-1 p-0 ps-2"><a class="p-2 text-white" href="/#section-layanan"><span>Layanan</span></a></li>
                                                 <li class="lavel-1 p-0 with--drop slide-dropdown">
-                                                    <a class="p-1 text-white" href="#"><span>Data</span></a>
+                                                    <a class="p-1 text-white" href="#"><span>Layanan</span></a>
                                                     <ul class="dropdown__menu p-1">
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>SAKIP</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>LAKIP</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>RENSTRA</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>RKPD</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Standar Operasional Prosedur</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Standar Pelayanan Publik</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Maklumat Pelayanan</span></a>
+                                                    </ul>
+                                                </li>
+                                                <li class="lavel-1 p-0 with--drop slide-dropdown">
+                                                    <a class="p-1 text-white" href="#"><span>SAKIP</span></a>
+                                                    <ul class="dropdown__menu p-1">
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Rencana Strategis</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Rencana Kerja</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Indikator Kinerja Utama</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Indikator Kinerja Individu</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Perjanjian Kerja</span></a>
+                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
                                                     </ul>
                                                 </li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('login') }}" title="login"><span><i class="ti ti-login fs-4"></i></span></a></li>
