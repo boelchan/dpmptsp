@@ -116,7 +116,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="text-center mb-4">
-                    <h2 class="main-color d-inline-block">Kabar Terbaru</h2>
+                    <h2 class="main-color d-inline-block">Informasi Terbaru</h2>
                 </div>
             </div>
             <div class="row justify-content-center">

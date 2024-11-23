@@ -127,14 +127,13 @@
                                                         <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
                                                     </ul>
                                                 </li>
+                                                <li class="lavel-1 p-0"><a class="p-2 text-white" href="/"><span>Staf & Pimpinan</span></a></li>
+                                                <li class="lavel-1 p-0"><a class="p-2 text-white" href="/"><span>Pengaduan</span></a></li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('login') }}" title="login"><span><i class="ti ti-login fs-4"></i></span></a></li>
                                             </ul>
                                         </nav>
                                     </div>
 
-                                </div>
-                                <div class="d-block d-lg-none dark-version text-white d-block d-xl-none pl_md--10 pl_sm--10 mt-2 me-2">
-                                    <a href="{{ route('cari') }}" class="text-white"><i class="ti ti-search fs-2"></i></a>
                                 </div>
                                 <div class="manu-hamber popup-mobile-click d-block d-lg-none dark-version text-white d-block d-xl-none pl_md--10 pl_sm--10">
                                     <div>
