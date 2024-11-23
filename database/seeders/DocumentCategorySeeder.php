@@ -13,10 +13,12 @@ class DocumentCategorySeeder extends Seeder
     public function run(): void
     {
         DocumentCategory::insert([
-            ['nama' => 'Sakip', 'slug' => 'sakip'],
-            ['nama' => 'Lakip', 'slug' => 'lakip'],
-            ['nama' => 'RKU', 'slug' => 'rku'],
-            ['nama' => 'RKA', 'slug' => 'rka'],
+            ['nama' => 'Rencana Stratgis', 'slug' => 'renstra'],
+            ['nama' => 'Rencana Kerja', 'slug' => 'renja'],
+            ['nama' => 'Indikator Kinerja Utama', 'slug' => 'indikator-kinerja-utama'],
+            ['nama' => 'Indikator Kinerja Individu', 'slug' => 'indikator-kinerja-individu'],
+            ['nama' => 'Perjanjian Kerja', 'slug' => 'penjanjian-kerja'],
+            ['nama' => 'Laporan Akuntabilitas Kinerja Instansi Pemerintahan', 'slug' => 'laporan-kinerja'],
         ]);
     }
 }

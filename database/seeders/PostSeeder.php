@@ -47,15 +47,6 @@ class PostSeeder extends Seeder
             [
                 'uuid' => $faker->uuid(),
                 'kategori_id' => '3',
-                'judul' => 'Visi Misi',
-                'slug' => Str::slug('Visi Misi'),
-                'konten' => $faker->paragraph(50),
-                'publish_at' => now(),
-                'add_to_submenu' => 'ya',
-            ],
-            [
-                'uuid' => $faker->uuid(),
-                'kategori_id' => '3',
                 'judul' => 'Struktur Organisasi',
                 'slug' => Str::slug('Struktur Organisasi'),
                 'konten' => $faker->paragraph(50),
