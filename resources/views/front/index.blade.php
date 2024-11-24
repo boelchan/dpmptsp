@@ -45,7 +45,7 @@
                     <div class="row mb-3 text-center g-0">
                         @foreach ($link as $l)
                             <div class="col-md-3 col-6 ">
-                                <div class="brand border py-2 rounded">
+                                <div class="brand py-2">
                                     <a href="https://{{ $l->url }}"><img src="{{ $l->icon_url }}" alt="client"></a>
                                 </div>
                             </div>
@@ -180,4 +180,34 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-welcome" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content pt-0">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    @if ($welcome_post->gambar)
+                        <div class="mb-60 text-center">
+                            <img src="{{ $welcome_post->gambar_url }}" alt="gambar" style="max-height: 500px">
+                        </div>
+                    @endif
+                    {!! $welcome_post->konten !!}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('page-script')
+    <script>
+        setTimeout(() => {
+            $('#modal-welcome').modal('show')
+        }, 1000);
+    </script>
 @endsection

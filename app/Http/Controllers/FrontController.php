@@ -41,6 +41,11 @@ class FrontController extends Controller
         $layanan = Service::where('publish', 'ya')->get();
         $link = Link::where('publish', 'ya')->get();
 
+        $welcome_post = Post::where('publish', 'ya')->where('set_welcome_message', 'ya')->first();
+        if (! $welcome_post) {
+            $welcome_post = $sambutan;
+        }
+
         $meta = [
             'title' => 'Beranda',
             'category' => 'Beranda',
@@ -49,7 +54,7 @@ class FrontController extends Controller
             'image' => setting('logo'),
         ];
 
-        return view('front.index', compact('navbarMenu', 'slider', 'sambutan', 'pamflet', 'meta', 'layanan', 'lastestPost', 'link'));
+        return view('front.index', compact('navbarMenu', 'slider', 'sambutan', 'pamflet', 'meta', 'layanan', 'lastestPost', 'link', 'welcome_post'));
     }
 
     public function post($slug = '')
@@ -137,6 +142,8 @@ class FrontController extends Controller
             'keywords' => 'pencarian, search, cari',
             'image' => setting('logo'),
         ];
+
+        $searchResults = Post::where('judul', 'like', '%'.$request->cari.'%');
 
         return view('front.pencarian', compact('navbarMenu', 'q', 'searchResults', 'meta'));
     }
