@@ -6,25 +6,12 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Spatie\Searchable\Searchable;
-use Spatie\Searchable\SearchResult;
 
-class Post extends Model implements Searchable
+class Post extends Model
 {
     use HasFactory;
 
-    public $searchableType = 'Post';
-
     protected $guarded = ['id'];
-
-    public function getSearchResult(): SearchResult
-    {
-        return new \Spatie\Searchable\SearchResult(
-            $this,
-            $this->judul,
-            $this->url
-        );
-    }
 
     protected static function boot()
     {
@@ -58,6 +45,14 @@ class Post extends Model implements Searchable
 
     public function getPublishAtLabelAttribute()
     {
-        return Carbon::parse($this->publish_at)->diffForHumans();
+        $post_at = Carbon::parse($this->publish_at);
+
+        $post_day = $post_at->diffInDays(Carbon::now());
+
+        if ($post_day < 10) {
+            return Carbon::parse($this->publish_at)->diffForHumans();
+        }
+
+        return tanggal($this->publish_at);
     }
 }

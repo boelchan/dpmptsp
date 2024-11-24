@@ -33,7 +33,7 @@
                                             <x-form-radio name="publish" value="tidak" label="Pending" x-on:click="open = false" />
                                         </x-form-group>
                                         <div x-show="open">
-                                            <x-form-input name="publish_at" label="Tanggal Publish <required>" type="datetime-local" class="mb-2" />
+                                            <x-form-input name="publish_at" label="Tanggal Publish <required>" type="datetime-local" value="{{ now() }}" class="mb-2" />
                                         </div>
                                         @role('superadmin|operator')
                                             <x-form-group name="tampil_banner" label="Tampilkan di Banner" inline>
@@ -43,6 +43,10 @@
                                             <x-form-group name="add_to_submenu" label="Jadikan Sub Menu" inline class="mb-2">
                                                 <x-form-radio name="add_to_submenu" value="ya" label="Ya" />
                                                 <x-form-radio name="add_to_submenu" value="tidak" label="Tidak" checked />
+                                            </x-form-group>
+                                            <x-form-group name="set_welcome_message" label="Tampilkan di awal buka website" inline class="mb-2">
+                                                <x-form-radio name="set_welcome_message" value="ya" label="Ya" />
+                                                <x-form-radio name="set_welcome_message" value="tidak" label="Tidak" checked />
                                             </x-form-group>
                                         @endrole
                                     </div>

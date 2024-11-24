@@ -31,8 +31,7 @@
                             <div class="post-meta post-meta-two">
                                 <div class="sh-columns post-meta-comments">
                                     <span class="post-meta-categories">
-                                        <a class="badge rounded-pill bg-secondary mt-1" href="{{ route('front.post.kategori', $post->kategori->slug) }}" rel="category tag">{{ $post->kategori->nama }}</a>
-                                        <a class="badge rounded-pill bg-danger mt-1" href="{{ $post->instansi_id ? $post->instansi->url : '#' }}">{{ $post->instansi_label }}</a>
+                                        <a class="btn btn-outline-primary py-0" href="{{ route('front.post.kategori', $post->kategori->slug) }}" rel="category tag">{{ $post->kategori->nama }}</a>
                                     </span>
                                 </div>
                             </div>

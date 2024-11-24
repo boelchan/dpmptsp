@@ -3,7 +3,6 @@
 namespace App\DataTables;
 
 use App\Models\Post;
-use Carbon\Carbon;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Services\DataTable;
 
@@ -37,12 +36,15 @@ class PostDataTable extends DataTable
 
         return $dataTable->editColumn('publish_at', function ($query) {
             if ($query->publish == 'ya') {
-                $status = ' <span class="badge bg-lime mb-1">Publish '.Carbon::parse($query->publish_at)->diffForHumans().'</span> ';
+                $status = ' <span class="badge bg-lime mb-1">Publish '.$query->publish_at_label.'</span> <br>';
                 if ($query->tampil_banner == 'ya') {
-                    $status .= '<span class="badge bg-info mb-1">Tampil di Banner</span> ';
+                    $status .= '<span class="badge bg-info mb-1">Tampil di Banner</span> <br> ';
                 }
                 if ($query->add_to_submenu == 'ya') {
-                    $status .= '<span class="badge bg-purple mb-1">Jadi Sub Menu</span> ';
+                    $status .= '<span class="badge bg-purple mb-1">Tampil di Sub Menu</span><br> ';
+                }
+                if ($query->set_welcome_message == 'ya') {
+                    $status .= '<span class="badge bg-yellow mb-1">Tampil di awal buka website </span> ';
                 }
 
                 return $status;

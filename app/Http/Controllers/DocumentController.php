@@ -14,7 +14,7 @@ class DocumentController extends Controller
 
     public function __construct($title = '')
     {
-        $this->title = 'Dokumen';
+        $this->title = 'Layanan & SAKIP';
     }
 
     public function index(DocumentDataTable $documentDataTable)
@@ -38,12 +38,12 @@ class DocumentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'file' => 'mimes:pdf|max:10000',
+            'file' => 'mimes:pdf|max:8000|required',
             'title' => 'required|max:250',
             'document_category_id' => 'required',
             'meta_keywords' => 'max:250',
             'meta_description' => 'max:250',
-        ]);
+        ], ['required' => 'Wajib diisi']);
 
         $uuid = (string) Str::uuid();
         $id = Document::create($request->all() + ['uuid' => $uuid]);
@@ -73,12 +73,12 @@ class DocumentController extends Controller
     public function update(Request $request, Document $document)
     {
         $request->validate([
-            'file' => 'mimes:pdf|max:10000',
+            'file' => 'mimes:pdf|max:8000',
             'title' => 'required|max:250',
             'document_category_id' => 'required',
             'meta_keywords' => 'max:250',
             'meta_description' => 'max:250',
-        ]);
+        ], ['required' => 'Wajib diisi']);
 
         $document->update($request->all());
 

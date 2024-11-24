@@ -42,6 +42,10 @@ class PostController extends Controller
             return to_route('post.create')->withErrors($validator)->withInput();
         }
 
+        if ($request->set_welcome_message == 'ya') {
+            Post::where('set_welcome_message', 'ya')->update(['set_welcome_message' => 'tidak']);
+        }
+
         $uuid = (string) Str::uuid();
         $id = Post::create($request->all() + ['uuid' => $uuid, 'instansi_id' => auth()->user()->instansi_id]);
 
@@ -77,6 +81,10 @@ class PostController extends Controller
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
             return to_route('post.edit', [$post->id, 'uuid' => $post->uuid])->withErrors($validator)->withInput();
+        }
+
+        if ($request->set_welcome_message == 'ya' && $post->set_welcome_message == 'tidak') {
+            Post::where('set_welcome_message', 'ya')->update(['set_welcome_message' => 'tidak']);
         }
 
         $post->update($request->all());

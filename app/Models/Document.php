@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -50,5 +51,18 @@ class Document extends Model
     public function urlBerkas(): Attribute
     {
         return Attribute::get(fn ($value) => asset('storage/document/'.$this->file));
+    }
+
+    public function getPublishAtLabelAttribute()
+    {
+        $post_at = Carbon::parse($this->publish_at);
+
+        $post_day = $post_at->diffInDays(Carbon::now());
+
+        if ($post_day < 10) {
+            return Carbon::parse($this->created_at)->diffForHumans();
+        }
+
+        return tanggal($this->created_at);
     }
 }

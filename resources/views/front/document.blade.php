@@ -7,23 +7,20 @@
         <div class="container">
             <div class="row gallery-wrapper masonry-wrap justify-content-center masonary-row m-0 w-100">
                 @forelse ($post as $p)
-                    <div class="col-lg-4 col-md-4 mb-30 masonary-item wow fadeInUp">
-                        <div class="blog-post blog-classic common-blog-post border shadow">
-                            <div class="blog-imgs" style="height: 200px">
-                                <a class="blog-img" href="{{ $p->url }}">
-                                    <img src="{{ $p->gambar_url }}" alt="Blog imgs" style="height: 200px!important; object-fit: cover; ">
-                                </a>
-                            </div>
-                            <div class="blog-inner p-3" style="height: 150px">
+                    <div class="col-lg-6 col-md-6 mb-30 masonary-item wow fadeInUp">
+                        <div class="blog-post blog-classic common-blog-post border rounded shadow-sm">
+                            <div class="blog-inner p-3">
                                 <div class="m-0 p-0">
                                     <span class=""><i class="ti ti-calendar"></i> {{ $p->publish_at_label }}</span>
                                 </div>
-                                <span class="blog-title"><a class="fs-5" href="{{ $p->url }}">{{ Str::limit($p->judul, 55, '...') }}</a></span>
+                                <span class="blog-title fs-5 text-capitalize">{{ Str::limit($p->title, 55, '...') }}</span>
+                                <br>
+                                <a href="{{ asset('storage/document/' . $p->file) }}" class="btn btn-outline-primary py-0 " target="_blank" rel="noopener noreferrer"> <i class="ti ti-download"></i> Download File</a>
                             </div>
                         </div>
                     </div>
                 @empty
-                    Tidak ada data
+                    <span>Tidak ada dokumen</span>
                 @endforelse
             </div>
             {{ $post->links('vendor.pagination.bootstrap-5') }}

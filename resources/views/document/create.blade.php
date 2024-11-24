@@ -19,8 +19,8 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <x-form-select name="document_category_id" id="document_category_id" :options="$kategoriOption" label="Kategori <required>" placeholder="Pilih Kategori" />
-                                    <x-form-textarea name="title" label="Nama Dokumen <required>" class="mb-2 h-auto" rows="3" />
-                                    <x-form-input type="file" name="file" label="Berkas <required>" />
+                                    <x-form-textarea name="title" label="Nama Layanan / SAKIP <required>" class="mb-2 h-auto" rows="3" />
+                                    <x-form-input type="file" name="file" label="Berkas <required>" accept="application/pdf" />
 
                                     <div class="bg-secondary-lt card-body my-2">
                                         <x-form-group name="publish" label="Publish" inline class="mb-2">
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <label for="">Konten</label>
-                                    <x-form-textarea name="konten" floating class="mb-2 h-auto summernote" />
+                                    <x-form-textarea name="content" floating class="mb-2 h-auto summernote" />
                                 </div>
                             </div>
                             <x-form-submit class="mt-3 w-100">Simpan</x-form-submit>

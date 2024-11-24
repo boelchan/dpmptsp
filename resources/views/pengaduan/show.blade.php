@@ -39,10 +39,6 @@
                             <div>{{ $pengaduan->nama_pemohon }}</div>
                         </div>
                         <div class="mb-3">
-                            <div class="fw-bold">No Identitas</div>
-                            <div>{{ $pengaduan->no_identitas }}</div>
-                        </div>
-                        <div class="mb-3">
                             <div class="fw-bold">Telepon</div>
                             <div>{{ $pengaduan->telepon }}</div>
                         </div>
@@ -69,7 +65,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Tanggapan Instansi
+                            Tanggapan
                         </h3>
                     </div>
                     <div class="card-body">

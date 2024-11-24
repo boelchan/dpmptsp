@@ -38,31 +38,25 @@
             </button>
         </div>
     </section>
-
-    <section class="position-relative ptb-80 ptb-sm-40 ptb-md-60 wow fadeInUp" id="section-layanan">
-        <div class="services-area">
-            <div class="container">
-                {{-- <div class="row justify-content-center">
-                    <div class="text-center mb-4">
-                        <h2 class="main-color d-inline-block">APLIKASI ONLINE</h2>
-                    </div>
-                </div> --}}
-                <div class="row">
-                    @foreach ($link as $l)
-                        <div class="col-md-3 col-6 p-4">
-                            <a class="wow gallery fadeInUp box shadow-medium" href="https://{{ $l->url }}">
-                                <div class="thumb">
-                                    <img class="rounded-3 " src="{{ $l->icon_url }}" alt="pamflet Images">
+    <div class="position-relative ptb-80 ptb-md-60 ptb-sm-40 gray-bg">
+        <div class="container" data-wow-duration="1.5s">
+            <div class="brand-area grid-style position-relative">
+                <div data-wow-duration="1.5s">
+                    <div class="row mb-3 text-center g-0">
+                        @foreach ($link as $l)
+                            <div class="col-md-3 col-6 ">
+                                <div class="brand border py-2 rounded">
+                                    <a href="https://{{ $l->url }}"><img src="{{ $l->icon_url }}" alt="client"></a>
                                 </div>
-                            </a>
-                        </div>
-                    @endforeach
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="position-relative w-100  ptb-sm-50 ptb-md-50 overflow-hidden z-index-2">
+    <section class="position-relative w-100 ptb-80 ptb-sm-40 ptb-md-50 overflow-hidden z-index-2">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-12 col-lg-6">
@@ -72,10 +66,10 @@
                 </div>
                 <div class="col-md-12 col-lg-6">
                     <div class="section-title text-center text-lg-start section-heading">
-                        <h2 class="fs-3">Selamat Datang di Website DPMPTSP Kab. Sumenep</h2>
+                        <h2 class="fs-3 text-primary">Selamat Datang di Website DPMPTSP Kab. Sumenep</h2>
                         {!! Str::take($sambutan->konten, 500) !!} ... <br>
                         <a href="{{ route('front.post.baca', $sambutan->slug) }}" class="btn p-0 mt-25">
-                            <span class="gradients-button btn-small grad-btn-6">Baca Selengkapnya</span>
+                            <span class="gradients-button btn-small grad-btn-5">Baca Selengkapnya</span>
                         </a>
                     </div>
                 </div>
@@ -87,7 +81,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="text-center mb-4">
-                    <h2 class="main-color d-inline-block">Pamflet</h2>
+                    <h2 class="text-primary d-inline-block">Pamflet</h2>
                 </div>
             </div>
             <div class="row ">
@@ -116,7 +110,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="text-center mb-4">
-                    <h2 class="main-color d-inline-block">Informasi Terbaru</h2>
+                    <h2 class="text-primary d-inline-block">Informasi Terbaru</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -133,18 +127,17 @@
                                         </div>
                                         <div class="blog-inner pt-2 px-4">
                                             <div class="blog-meta m-0">
-                                                <a href="{{ $post->url }}"> {{ tanggal($post->approved_at) }} </a>
+                                                <a href="{{ $post->url }}"> {{ $post->publish_at_label }} </a>
                                             </div>
                                             <span class="blog-title">
-                                                <a class="fw-normal m-0" href="{{ $post->url }}" style="font-size: 0.9rem">
+                                                <a class="" href="{{ $post->url }}">
                                                     {{ Str::limit($post->judul, 55, '...') }}
                                                 </a>
                                             </span>
                                             <div class="post-meta my-3">
                                                 <div class="sh-columns">
                                                     <span class="post-meta-categories">
-                                                        <a class="text-black d-block" href="{{ route('front.post.kategori', $post->kategori->slug) }}" rel="category tag">{{ $post->kategori->nama }}</a>
-                                                        <a class="text-black" href="{{ $post->instansi_id ? $post->instansi->url : '#' }}">{{ $post->instansi_label }}</a>
+                                                        <a class="btn btn-outline-primary py-0" href="{{ route('front.post.kategori', $post->kategori->slug) }}" rel="category tag">{{ $post->kategori->nama }}</a>
                                                     </span>
                                                 </div>
                                             </div>
@@ -158,28 +151,28 @@
             </div>
         </div>
     </section>
-    <section class="position-relative z-index-3 ptb-80 ptb-sm-40 ptb-md-60 gray-bg d-none" id="section-pengaduan">
+    <section class="position-relative z-index-3 ptb-80 ptb-sm-40 ptb-md-60 gray-bg" id="section-pengaduan">
         <div class="container">
             <div class="row  justify-content-center">
                 <div class="col-md-6 col-offset-3 position-relative">
                     <img src="{{ asset('front/img/shape/square-dots.png') }}" data-parallax='{"y": -30,"x":30}' class="square-dot-4 d-none d-sm-block" alt="shapes">
                     <div class="card p-0 p-md-4 p-lg-5 border-0 shadow-default mt-5 mt-md-0">
                         <x-form action="{{ route('front.pengaduan') }}" id="form-x">
-                            <h3 class="mb-4 text-center main-color">Kotak Pengaduan</h3>
+                            <h3 class="mb-4 text-center text-primary">Kotak Pengaduan</h3>
                             <div class="mb-4">
                                 <x-form-input name="nama_pemohon" label="Nama Pemohon" required maxLength="50" floating />
                             </div>
                             <div class="mb-4">
-                                <x-form-input type="text" name="no_identitas" label="No Identitas (No. KTP / No. SIM / No. Passport)" required maxlength="20" floating />
+                                <x-form-input type="number" name="telepon" label="No Telepon" required maxlength="13" floating />
                             </div>
                             <div class="mb-4">
-                                <x-form-input type="number" name="telepon" label="Telepon" required maxlength="13" floating />
+                                <x-form-input type="email" name="email" label="Email" required floating />
                             </div>
                             <div class="mb-4">
-                                <x-form-textarea name="pengaduan" label="Pengaduan" class="h-auto" rows="5" required maxlength="1000" floating />
+                                <x-form-textarea name="pengaduan" label="Isi Pengaduan" class="h-auto" rows="5" required maxlength="1000" floating />
                             </div>
                             <button class="btn p-0 mt-20 w-100" type="submit">
-                                <span class="gradients-button grad-btn-6 btn-small w-100">Kirim</span>
+                                <span class="gradients-button grad-btn-5 btn-small w-100">Kirim</span>
                             </button>
                         </x-form>
                     </div>

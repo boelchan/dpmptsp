@@ -23,13 +23,16 @@
                         @if ($post->publish == 'ya')
                             <span class="badge bg-lime">Publish {{ tanggalJam($post->publish_at) }}</span>
                             @if ($post->tampil_banner == 'ya')
-                                <span class="badge bg-info mt-1">Ditampilkan di Banner</span>
+                                <span class="badge bg-info mt-1">Tampil di Banner</span>
                             @endif
                         @else
                             <span class="badge bg-secondary ">Pending</span>
                         @endif
                         @if ($post->add_to_submenu == 'ya')
                             <span class="badge bg-purple mt-1">Tampil di Submenu</span>
+                        @endif
+                        @if ($post->set_welcome_message == 'ya')
+                            <span class="badge bg-yellow mt-1"> Tampil di awal buka website </span>
                         @endif
                     </div>
                     <div class="card-body">

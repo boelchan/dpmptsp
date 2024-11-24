@@ -38,16 +38,7 @@
         ]
     },
     {
-        "title": "Layanan",
-        "icon": "layout-2",
-        "route": "service.index",
-        "role": [
-            "superadmin",
-            "operator"
-        ]
-    },
-    {
-        "title": "Dokumen",
+        "title": "Layanan & SAKIP",
         "icon": "book",
         "route": "document.index",
         "role": [

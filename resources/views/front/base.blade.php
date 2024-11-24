@@ -64,7 +64,8 @@
     <div id="wrapper" class="wrapper">
         <!-- Header magamenu dark -->
         <div class="header-menu">
-            <header class="sl_header header-default header-black-version header-fixed-width header-fixed-150 header-sticky header-mega-menu clearfix" style="background-image: linear-gradient(to right, #ff1201 0%, #c70032 100%, #ff1201 60%)">
+            <header class="sl_header header-default header-black-version header-fixed-width header-fixed-150 header-sticky header-mega-menu clearfix" style="background-image: linear-gradient(to right, #038ce2 10%, #038ce2 40%, #0e087c 100%)">
+
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -111,24 +112,25 @@
                                                 <li class="lavel-1 p-0 with--drop slide-dropdown">
                                                     <a class="p-1 text-white" href="#"><span>Layanan</span></a>
                                                     <ul class="dropdown__menu p-1">
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Standar Operasional Prosedur</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Standar Pelayanan Publik</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Maklumat Pelayanan</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'standar-operasional-prosedur') }}"><span>Standar Operasional Prosedur</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'standar-pelayanan-publik') }}"><span>Standar Pelayanan Publik</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'maklumat-pelayanan') }}"><span>Maklumat Pelayanan</span></a>
                                                     </ul>
                                                 </li>
                                                 <li class="lavel-1 p-0 with--drop slide-dropdown">
                                                     <a class="p-1 text-white" href="#"><span>SAKIP</span></a>
                                                     <ul class="dropdown__menu p-1">
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Rencana Strategis</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Rencana Kerja</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Indikator Kinerja Utama</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Indikator Kinerja Individu</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Perjanjian Kerja</span></a>
-                                                        <li class="text-white px-3"><a href="https://dpmptsp.test/post/visi-misi"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'rencana-strategis') }}"><span>Rencana Strategis</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'rencana-kerja') }}"><span>Rencana Kerja</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'indikator-kinerja-utama') }}"><span>Indikator Kinerja Utama</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'indikator-kinerja-individu') }}"><span>Indikator Kinerja Individu</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'perjanjian-kerja') }}"><span>Perjanjian Kerja</span></a>
+                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'laporan-kinerja') }}"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
                                                     </ul>
                                                 </li>
                                                 <li class="lavel-1 p-0"><a class="p-2 text-white" href="/"><span>Staf & Pimpinan</span></a></li>
-                                                <li class="lavel-1 p-0"><a class="p-2 text-white" href="/"><span>Pengaduan</span></a></li>
+                                                <li class="lavel-1 p-0"><a class="p-2 text-white" href="/#section-pengaduan"><span>Pengaduan</span></a></li>
+                                                <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('cari') }}" title="pencarian"><span><i class="ti ti-search fs-4"></i></span></a></li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('login') }}" title="login"><span><i class="ti ti-login fs-4"></i></span></a></li>
                                             </ul>
                                         </nav>
@@ -177,7 +179,7 @@
                             @endif
                         @endforeach
                         @if ($navbarMenu['kategori']->count() > 0)
-                            <li class="has-mega-menu"><a href=""><span>Kategori</span></a>
+                            <li class="has-mega-menu"><a href=""><span>Informasi</span></a>
                                 <ul class="object-submenu">
                                     @foreach ($navbarMenu['kategori'] as $p)
                                         <li><a href="{{ $p->url }}"><span>{{ $p->nama }}</span></a> </li>
@@ -185,8 +187,27 @@
                                 </ul>
                             </li>
                         @endif
-                        <li class="lavel-1"><a href="/#section-layanan"><span>Data</span></a></li>
-                        <li class="lavel-1"><a href="/#section-layanan"><span>Layanan</span></a></li>
+                        <li class="has-mega-menu">
+                            <a class="" href="#"><span>Layanan</span></a>
+                            <ul class="object-submenu">
+                                <li><a href="{{ route('front.document.kategori', 'standar-operasional-prosedur') }}"><span>Standar Operasional Prosedur</span></a>
+                                <li><a href="{{ route('front.document.kategori', 'standar-pelayanan-publik') }}"><span>Standar Pelayanan Publik</span></a>
+                                <li><a href="{{ route('front.document.kategori', 'maklumat-pelayanan') }}"><span>Maklumat Pelayanan</span></a>
+                            </ul>
+                        </li>
+                        <li class="has-mega-menu">
+                            <a class="" href="#"><span>SAKIP</span></a>
+                            <ul class="object-submenu">
+                                <li><a href="{{ route('front.document.kategori', 'rencana-strategis') }}"><span>Rencana Strategis</span></a>
+                                <li><a href="{{ route('front.document.kategori', 'rencana-kerja') }}"><span>Rencana Kerja</span></a>
+                                <li><a href="{{ route('front.document.kategori', 'indikator-kinerja-utama') }}"><span>Indikator Kinerja Utama</span></a>
+                                <li><a href="{{ route('front.document.kategori', 'indikator-kinerja-individu') }}"><span>Indikator Kinerja Individu</span></a>
+                                <li><a href="{{ route('front.document.kategori', 'perjanjian-kerja') }}"><span>Perjanjian Kerja</span></a>
+                                <li><a href="{{ route('front.document.kategori', 'laporan-kinerja') }}"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
+                            </ul>
+                        </li>
+                        <li class="lavel-1"><a href="/"><span>Staf & Pimpinan</span></a></li>
+                        <li class="lavel-1"><a href="/#section-pengaduan"><span>Pengaduan</span></a></li>
                         <li class="lavel-1"><a href="{{ route('cari') }}"><span><i class="ti ti-search"></i> Pencarian</span></a></li>
                         <li class="lavel-1"><a href="{{ route('login') }}"><span><i class="ti ti-login"></i> Login</span></a></li>
                     </ul>
@@ -201,13 +222,13 @@
         @yield('content')
 
         <!-- footer part start -->
-        <footer class="footer-part pt-100 single_image-wrapper text-white">
+        <footer class="footer-part pt-250 single_image-wrapper text-white">
             <div class="image-wrapper  wow fadeInUp" data-wow-duration="1.5s" data-bg-image="{{ setting('footer') }}"></div>
             <div class="inner text-style-light text-style-light-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-4 wow fadeInLeft" data-wow-duration="1s">
-                            <iframe class="mb-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1906.7741375365551!2d113.86309983292344!3d-7.0144678261372855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e428d48915f5%3A0x6e3ffe518f991e2b!2sBadan%20Pelayanan%20Perizinan%20Terpadu%20Sumenep!5e0!3m2!1sen!2sid!4v1730902283964!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe class="mb-2 rounded shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1906.7741375365551!2d113.86309983292344!3d-7.0144678261372855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e428d48915f5%3A0x6e3ffe518f991e2b!2sBadan%20Pelayanan%20Perizinan%20Terpadu%20Sumenep!5e0!3m2!1sen!2sid!4v1730902283964!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="col-6 col-lg-3 wow fadeInUp mb-3" data-wow-duration="1s">
                             <h3 class="text-white">Kontak Kami</h3>

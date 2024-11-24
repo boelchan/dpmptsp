@@ -49,6 +49,10 @@
                                                     <x-form-radio name="add_to_submenu" value="ya" label="Ya" />
                                                     <x-form-radio name="add_to_submenu" value="tidak" label="Tidak" />
                                                 </x-form-group>
+                                                <x-form-group name="set_welcome_message" label="Tampilkan di awal buka website" inline class="mb-2">
+                                                    <x-form-radio name="set_welcome_message" value="ya" label="Ya" />
+                                                    <x-form-radio name="set_welcome_message" value="tidak" label="Tidak" />
+                                                </x-form-group>
                                             @endrole
                                         </div>
                                         <div class="card">

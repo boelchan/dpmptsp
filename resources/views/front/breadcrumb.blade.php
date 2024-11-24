@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-inner text-center">
-                    <label class="fs-4 text-white blur rounded-pill px-3">
+                    <label class="fs-4 text-black blur rounded-pill px-3">
                         {{ $title }}
                     </label>
                 </div>

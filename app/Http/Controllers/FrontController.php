@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Enum\CategoryEnum;
-use App\Models\AntrianDetail;
 use App\Models\Category;
+use App\Models\Document;
+use App\Models\DocumentCategory;
 use App\Models\Link;
 use App\Models\Pengaduan;
 use App\Models\Post;
@@ -12,7 +13,6 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Spatie\Searchable\Search;
 
 class FrontController extends Controller
 {
@@ -100,25 +100,30 @@ class FrontController extends Controller
         return view('front.post', compact('navbarMenu', 'post', 'meta'));
     }
 
-    public function fasilitas($slug = '')
+    public function documentCategory($kategoriSlug)
     {
         $navbarMenu = $this->navbarMenu();
 
-        $post = Service::where('slug', $slug)->where('publish', 'ya')->first();
+        $kategori = DocumentCategory::firstWhere('slug', $kategoriSlug);
 
-        if (! $post) {
+        if (! $kategori) {
             return to_route('index');
         }
 
+        $post = Document::where('document_category_id', $kategori->id)
+            ->where('publish', 'ya')
+            ->orderBy('updated_at', 'desc')
+            ->paginate(15);
+
         $meta = [
-            'title' => $post->nama,
-            'category' => 'Fasilitas',
-            'description' => ($post->meta_description != '' ? $post->meta_description : Str::limit($post->konten, 250)),
-            'keywords' => $post->meta_keywords,
-            'image' => $post->icon_url,
+            'title' => 'Dokumen',
+            'category' => $kategori->nama,
+            'description' => $kategori->nama,
+            'keywords' => 'Agenda, Kegiatan, '.$kategori->nama,
+            'image' => setting('logo'),
         ];
 
-        return view('front.fasilitas-detail', compact('navbarMenu', 'post', 'meta'));
+        return view('front.document', compact('navbarMenu', 'post', 'meta'));
     }
 
     public function cari(Request $request)
@@ -133,51 +138,14 @@ class FrontController extends Controller
             'image' => setting('logo'),
         ];
 
-        $q = $request->search;
-
-        $searchResults = (new Search)
-            ->registerModel(InstansiLayanan::class, 'nama', 'konten')
-            ->registerModel(Instansi::class, 'nama', 'konten')
-            // ->registerModel(Post::class, 'judul', 'konten')
-            // ->registerModel(Service::class, 'nama', 'konten')
-            ->limitAspectResults(10)
-            ->search(trim($q));
-
         return view('front.pencarian', compact('navbarMenu', 'q', 'searchResults', 'meta'));
-    }
-
-    public function instansi($slug)
-    {
-        $navbarMenu = $this->navbarMenu();
-        $post = Instansi::firstWhere('slug', $slug);
-
-        if (! $post) {
-            return to_route('index');
-        }
-
-        $meta = [
-            'title' => $post->nama,
-            'category' => 'Instansi',
-            'description' => 'instansi '.$post->nama,
-            'keywords' => 'Layanan instansi '.$post->nama,
-            'image' => $post->icon_url,
-        ];
-
-        return view('front.instansi', compact('navbarMenu', 'meta', 'post'));
-    }
-
-    public function layanan($slug)
-    {
-        $layanan = InstansiLayanan::firstWhere('slug', $slug);
-
-        return response()->json(['layanan' => $layanan]);
     }
 
     public function pengaduan(Request $request)
     {
         $rules = [
             'nama_pemohon' => 'required|max:50',
-            'no_identitas' => 'required|max:20',
+            'email' => 'required',
             'telepon' => 'required|max:13',
             'pengaduan' => 'required',
         ];
@@ -189,71 +157,5 @@ class FrontController extends Controller
         Pengaduan::create($request->all());
 
         return response()->json(['success' => true, 'message' => 'Pengaduan Anda berhasil diajukan. Terima kasih', 'redirect' => route('index')]);
-    }
-
-    // SKM
-    public function skmCreate(Instansi $instansi)
-    {
-        checkUuid($instansi->uuid);
-
-        $navbarMenu = $this->navbarMenu();
-        $ikm = IndeksKepuasanMasyarakat::get();
-
-        $meta = [
-            'title' => 'SKM',
-            'category' => 'SKM',
-            'description' => '',
-            'keywords' => '',
-            'image' => '',
-        ];
-
-        return view('front.kepuasan', compact('navbarMenu', 'meta', 'instansi', 'ikm'));
-    }
-
-    public function skmStore(Request $request, Instansi $instansi)
-    {
-        checkUuid($instansi->uuid);
-
-        $skm = KepuasanMasyarakat::create(
-            [
-                'instansi_id' => $instansi->id,
-                'layanan_id' => $request->layanan_id,
-                'ulasan' => $request->ulasan,
-            ]
-        );
-
-        $unsur = $request->unsur_id;
-        $bobot = $request->bobot;
-        foreach ($unsur as $key => $value) {
-            SKMDetail::create(
-                [
-                    'skm_id' => $skm->id,
-                    'ikm_id' => $value,
-                    'bobot' => $bobot[$key],
-                ]
-            );
-        }
-
-        return response()->json(['success' => true, 'message' => 'Pengaduan Anda berhasil diajukan. Terima kasih', 'redirect' => route('index')]);
-    }
-
-    public function skmQrCreate()
-    {
-        $antrian = AntrianDetail::firstWhere(['id' => request()->id, 'uuid' => request()->uuid]);
-        abort_if(! $antrian, 404);
-
-        return view('front.kepuasan-qr-simple', compact('antrian'));
-    }
-
-    public function skmQrStore()
-    {
-        $antrian = AntrianDetail::firstWhere(['id' => request()->id, 'uuid' => request()->uuid]);
-        abort_if(! $antrian, 404);
-
-        $antrian->kepuasan = request()->kepuasan;
-        $antrian->masukan = request()->masukan;
-        $antrian->save();
-
-        return back();
     }
 }

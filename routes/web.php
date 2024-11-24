@@ -25,10 +25,10 @@ Route::as('front.')->group(function () {
     Route::get('/post', [FrontController::class, 'post'])->name('post.index');
     Route::get('/post/{slug}', [FrontController::class, 'post'])->name('post.baca');
     Route::get('/kategori/{slug}', [FrontController::class, 'kategori'])->name('post.kategori');
-    Route::get('/fasilitas/{slug}', [FrontController::class, 'fasilitas'])->name('fasilitas.baca');
-    Route::get('/instansi/{slug}', [FrontController::class, 'instansi'])->name('instansi');
-    Route::get('/layanan/{slug}', [FrontController::class, 'layanan'])->name('layanan');
+    Route::get('/document-kategori/{slug}', [FrontController::class, 'documentCategory'])->name('document.kategori');
+    Route::get('/document/{slug}', [FrontController::class, 'document'])->name('document.baca');
     Route::post('/pengaduan', [FrontController::class, 'pengaduan'])->name('pengaduan');
+    Route::post('/pencarian', [FrontController::class, 'cari'])->name('pencarian');
 });
 
 // administrator
