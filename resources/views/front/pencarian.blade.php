@@ -10,39 +10,34 @@
                     <div class="blog-details-wrapper">
                         <article class="blog-post standard-post">
                             {{-- <div class="alert alert-secondary" role="alert"> --}}
-                                <form action="{{ route('cari') }}" method="get">
-                                    <div class="input-group ">
-                                        <input type="text" maxlength="200" name="search" value="{{ $q }}" class="form-control border-primary" placeholder="cari layanan apa ? KTP, perizinan">
-                                        <button type="submit" class="btn btn-primary btn-sm" aria-label="Search"><i class="ti ti-search"></i> Cari</button>
-                                    </div>
-                                </form>
+                            <form action="{{ route('cari') }}" method="get">
+                                <div class="input-group ">
+                                    <input type="text" maxlength="200" name="search" value="{{ $q }}" class="form-control border-primary" placeholder="cari layanan apa ? KTP, perizinan">
+                                    <button type="submit" class="btn btn-primary btn-sm" aria-label="Search"><i class="ti ti-search"></i> Cari</button>
+                                </div>
+                            </form>
                             {{-- </div> --}}
                             <div class="col-12 p-2">
                                 @if ($q)
                                     Hasil pencarian Anda<br><br>
                                 @endif
-                                @forelse ($searchResults->groupByType() as $type => $modelSearchResults)
-                                    <div class="mt-3">
-                                        <span class="fw-bold fs-5">{{ $type }}</span>
-                                        <div class="row col-12 m-0">
-                                            @foreach ($modelSearchResults as $searchResult)
-                                                @if ($type == 'Poli')
-                                                    <a class="link-dark col-md-4 col-5 m-1 alert-box bg_cat-2 p-1 ps-2 rounded" href="{{ $searchResult->url }}">{{ ucwords(strtolower($searchResult->title)) }}</a>
-                                                @elseif ($type == 'Ruangan')
-                                                    <a class="link-dark col-md-4 col-5 m-1 alert-box bg_cat-3 p-1 ps-2 rounded" href="{{ $searchResult->url }}">{{ ucwords(strtolower($searchResult->title)) }}</a>
-                                                @elseif ($type == 'Pelayanan')
-                                                    <a class="link-dark col-md-4 col-5 m-1 alert-box bg_cat-1 p-1 ps-2 rounded" href="{{ $searchResult->url }}">{{ ucwords(strtolower($searchResult->title)) }}</a>
-                                                @elseif ($type == 'Dokter')
-                                                    <a class="link-dark col-md-5 col-5 m-1 alert-box bg_cat-1 p-1 ps-2 rounded" href="{{ $searchResult->url }}">{{ ucwords(strtolower($searchResult->title)) }}</a>
-                                                @else
-                                                    <a class="link-dark  m-1 alert-box bg_cat-1 p-1 ps-2 rounded" href="{{ $searchResult->url }}">{{ ucwords(strtolower($searchResult->title)) }}</a>
-                                                @endif
-                                            @endforeach
-                                        </div>
+
+                                @foreach ($searchResults['post'] as $value)
+                                    <div class="mb-2">
+                                        <span>{{ $value->publish_at_label }}</span>
+                                        <a class="link-dark col-md-4 col-5 m-1 alert-box bg_cat-1 p-1 ps-2 rounded" href="{{ $value->url }}">{{ ucwords(strtolower($value->judul)) }}</a>
                                     </div>
-                                @empty
+                                @endforeach
+                                @foreach ($searchResults['document'] as $value)
+                                    <div class="mb-2">
+                                        <span>{{ $value->publish_at_label }}</span>
+                                        <a class="link-dark col-md-4 col-5 m-1 alert-box bg_cat-1 p-1 ps-2 rounded" href="{{ $value->url }}">{{ ucwords(strtolower($value->title)) }}</a>
+                                    </div>
+                                @endforeach
+
+                                @if ($searchResults['post']->count() == 0 && $searchResults['document']->count() == 0)
                                     <i>Informasi yang Anda cari tidak ditemukan. Silahkan gunakan kata kunci yang lebih spesifik untuk pencarian Anda.</i>
-                                @endforelse
+                                @endif
                             </div>
                         </article>
                     </div>

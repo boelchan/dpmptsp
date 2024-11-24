@@ -143,7 +143,10 @@ class FrontController extends Controller
             'image' => setting('logo'),
         ];
 
-        $searchResults = Post::where('judul', 'like', '%'.$request->cari.'%');
+        $q = $request->search;
+
+        $searchResults['post'] = Post::where('judul', 'like', '%'.$q.'%')->whereNotIn('kategori_id', [1, 2])->where('publish', 'ya')->orderBy('publish_at', 'desc')->limit(15)->get();
+        $searchResults['document'] = Document::where('title', 'like', '%'.$q.'%')->where('publish', 'ya')->orderBy('created_at', 'desc')->limit(15)->get();
 
         return view('front.pencarian', compact('navbarMenu', 'q', 'searchResults', 'meta'));
     }
