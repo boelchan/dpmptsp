@@ -35,7 +35,7 @@ class IdentitasController extends Controller
         $identitas = Identity::findOrFail($identitas);
 
         if ($identitas->tipe == 'website') {
-            $request->validate(['value' => 'required|mimes:jpg,jpeg,png|max:300']);
+            $request->validate(['value' => 'required|mimes:jpg,jpeg,png|max:500']);
             if ($file = request()->file('value')) {
                 $fileName = $identitas->slug.'-'.microtime().'.'.$file->extension();
                 $file->move('storage/static/', $fileName);
