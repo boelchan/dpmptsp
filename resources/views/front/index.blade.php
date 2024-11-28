@@ -90,7 +90,7 @@
                     <div class="col-md-4 col-6 p-1">
                         <a class="gallery wow fadeInUp" data-fancybox="gallery" href="{{ $pf->gambar_url }}">
                             <div class="thumb">
-                                <img class="rounded-3" src="{{ $pf->gambar_url }}" alt="pamflet Images">
+                                <img class="rounded-3" src="{{ $pf->gambar_url }}" alt="pamflet Images" style="max-height: 250px; object-fit: cover;">
                             </div>
                             <div class="hover-overlay">
                                 <div class="inner">
