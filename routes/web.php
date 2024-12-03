@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IdentitasController;
 use App\Http\Controllers\LinkController;
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
@@ -27,6 +28,7 @@ Route::as('front.')->group(function () {
     Route::get('/kategori/{slug}', [FrontController::class, 'kategori'])->name('post.kategori');
     Route::get('/document-kategori/{slug}', [FrontController::class, 'documentCategory'])->name('document.kategori');
     Route::get('/document/{slug}', [FrontController::class, 'document'])->name('document.baca');
+    Route::get('/staf-dan-pimpinan', [FrontController::class, 'pegawai'])->name('pegawai');
     Route::post('/pengaduan', [FrontController::class, 'pengaduan'])->name('pengaduan');
     Route::post('/pencarian', [FrontController::class, 'cari'])->name('pencarian');
 });
@@ -39,11 +41,12 @@ Route::prefix('admin')->middleware(['auth', 'role:superadmin|operator'])->group(
     Route::post('pengaduan/{pengaduan}/tanggapan', [PengaduanController::class, 'tanggapan'])->name('pengaduan.tanggapan');
     Route::delete('pengaduan/{pengaduan}/destroy', [PengaduanController::class, 'destroy'])->name('pengaduan.destroy');
 
-    Route::resource('post', PostController::class)->middleware(['auth', 'role:superadmin|operator']);
+    Route::resource('post', PostController::class);
     Route::resource('category', CategoryController::class);
     Route::resource('service', ServiceController::class);
     Route::resource('link', LinkController::class);
     Route::resource('document', DocumentController::class);
+    Route::resource('pegawai', PegawaiController::class);
 });
 
 // profile akun

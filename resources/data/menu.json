@@ -56,6 +56,15 @@
         ]
     },
     {
+        "title": "Staff dan Pimpinan",
+        "icon": "users",
+        "route": "pegawai.index",
+        "role": [
+            "superadmin",
+            "operator"
+        ]
+    },
+    {
         "title": "Pengaduan",
         "icon": "speakerphone",
         "route": "pengaduan.index",

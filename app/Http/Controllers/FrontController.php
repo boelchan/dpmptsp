@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enum\CategoryEnum;
+use App\Models\Bidang;
 use App\Models\Category;
 use App\Models\Document;
 use App\Models\DocumentCategory;
@@ -167,5 +168,22 @@ class FrontController extends Controller
         Pengaduan::create($request->all());
 
         return response()->json(['success' => true, 'message' => 'Pengaduan Anda berhasil diajukan. Terima kasih', 'redirect' => route('index')]);
+    }
+
+    public function pegawai()
+    {
+        $navbarMenu = $this->navbarMenu();
+
+        $meta = [
+            'title' => 'Staff dan Pimpinan',
+            'category' => 'Staff dan Pimpinan',
+            'description' => 'Staff dan Pimpinan',
+            'keywords' => 'Staff dan Pimpinan',
+            'image' => setting('logo'),
+        ];
+
+        $bidang = Bidang::get();
+
+        return view('front.pegawai', compact('bidang', 'navbarMenu', 'meta'));
     }
 }

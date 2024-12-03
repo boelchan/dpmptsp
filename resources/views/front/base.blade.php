@@ -64,7 +64,7 @@
     <div id="wrapper" class="wrapper">
         <!-- Header magamenu dark -->
         <div class="header-menu">
-            <header class="sl_header header-default header-black-version header-fixed-width header-fixed-150 header-sticky header-mega-menu clearfix" style="background-image: linear-gradient(to right, #038ce2 10%, #038ce2 40%, #0e087c 100%)">
+            <header class="sl_header header-default header-black-version header-fixed-width header-fixed-150 header-sticky header-mega-menu clearfix gradient-style" style="background-image: linear-gradient(to right, #09aafd 10%, #0c7de6 40%, #1041c6 100%);">
 
                 <div class="container">
                     <div class="row">
@@ -128,7 +128,7 @@
                                                         <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'laporan-kinerja') }}"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
                                                     </ul>
                                                 </li>
-                                                <li class="lavel-1 p-0"><a class="p-2 text-white" href="/"><span>Staf & Pimpinan</span></a></li>
+                                                <li class="lavel-1 p-0"><a class="p-2 text-white" href="{{ route('front.pegawai') }}"><span>Staf & Pimpinan</span></a></li>
                                                 <li class="lavel-1 p-0"><a class="p-2 text-white" href="/#section-pengaduan"><span>Pengaduan</span></a></li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('cari') }}" title="pencarian"><span><i class="ti ti-search fs-4"></i></span></a></li>
                                                 <li class="lavel-1 p-0"><a class="pe-0 text-white" href="{{ route('login') }}" title="login"><span><i class="ti ti-login fs-4"></i></span></a></li>
@@ -206,7 +206,7 @@
                                 <li><a href="{{ route('front.document.kategori', 'laporan-kinerja') }}"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
                             </ul>
                         </li>
-                        <li class="lavel-1"><a href="/"><span>Staf & Pimpinan</span></a></li>
+                        <li class="lavel-1"><a href="{{ route('front.pegawai') }}"><span>Staf & Pimpinan</span></a></li>
                         <li class="lavel-1"><a href="/#section-pengaduan"><span>Pengaduan</span></a></li>
                         <li class="lavel-1"><a href="{{ route('cari') }}"><span><i class="ti ti-search"></i> Pencarian</span></a></li>
                         <li class="lavel-1"><a href="{{ route('login') }}"><span><i class="ti ti-login"></i> Login</span></a></li>
