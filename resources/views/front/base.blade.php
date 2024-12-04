@@ -222,16 +222,16 @@
         @yield('content')
 
         <!-- footer part start -->
-        <footer class="footer-part pt-250 single_image-wrapper text-white">
+        <footer class="footer-part pt-250 single_image-wrapper text-dark">
             <div class="image-wrapper  wow fadeInUp" data-wow-duration="1.5s" data-bg-image="{{ setting('footer') }}"></div>
             <div class="inner text-style-light text-style-light-2">
-                <div class="container">
+                <div class="container" style="background-color:rgba(255, 255, 255, 0.585); padding:20px; border-radius: 25px;">
                     <div class="row">
                         <div class="col-12 col-lg-4 wow fadeInLeft" data-wow-duration="1s">
-                            <iframe class="mb-2 rounded shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1906.7741375365551!2d113.86309983292344!3d-7.0144678261372855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e428d48915f5%3A0x6e3ffe518f991e2b!2sBadan%20Pelayanan%20Perizinan%20Terpadu%20Sumenep!5e0!3m2!1sen!2sid!4v1730902283964!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe style="border-radius: 20px;" class="mb-2 shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1906.7741375365551!2d113.86309983292344!3d-7.0144678261372855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e428d48915f5%3A0x6e3ffe518f991e2b!2sBadan%20Pelayanan%20Perizinan%20Terpadu%20Sumenep!5e0!3m2!1sen!2sid!4v1730902283964!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="col-6 col-lg-3 wow fadeInUp mb-3" data-wow-duration="1s">
-                            <h3 class="text-white">Kontak Kami</h3>
+                            <h3 class="text-dark">Kontak Kami</h3>
                             <div class="">
                                 <i class="ti ti-home"></i> {{ setting('alamat') }}
                             </div>
@@ -243,28 +243,28 @@
                             </div>
                         </div>
                         <div class="col-6 col-lg-3 wow fadeInUp mb-3" data-wow-duration="1s">
-                            <h3 class="text-white">Tentang Kami</h3>
+                            <h3 class="text-dark">Tentang Kami</h3>
                             <ul class="list-unstyled">
                                 @foreach ($navbarMenu['addToFooter'] as $menu)
-                                    <li class="p-0 pb-1"><a class="text-white" href="{{ $menu->url }}">{{ $menu->nama }}</a> </li>
+                                    <li class="p-0 pb-1"><a class="text-dark" href="{{ $menu->url }}">{{ $menu->nama }}</a> </li>
                                 @endforeach
                             </ul>
                         </div>
                         <div class="col-6 col-lg-2 wow fadeInRight" data-wow-duration="1s">
-                            <h3 class="text-white">Ikuti kami</h3>
+                            <h3 class="text-dark">Ikuti kami</h3>
                             <ul class="social-icon style-solid-rounded-icon icon-size-medium text-start mt-2">
                                 @if (setting('instagram'))
-                                    <li class="instagram"><a href="{{ setting('instagram') }}" class="link hover-text-color text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="instagram"><a href="{{ setting('instagram') }}" class="link hover-text-color text-dark" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                                 @endif
                                 @if (setting('facebook'))
-                                    <li class="facebook"><a href="{{ setting('facebook') }}" class="link hover-text-color text-white" aria-label="facebook"><i class="fab fa-facebook"></i></a> </li>
+                                    <li class="facebook"><a href="{{ setting('facebook') }}" class="link hover-text-color text-dark" aria-label="facebook"><i class="fab fa-facebook"></i></a> </li>
                                 @endif
                                 @if (setting('youtube'))
-                                    <li class="youtube"><a href="{{ setting('youtube') }}" class="link hover-text-color text-white" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
+                                    <li class="youtube"><a href="{{ setting('youtube') }}" class="link hover-text-color text-dark" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
                                 @endif
                                 @if (setting('tiktok'))
                                     <li class="tiktok">
-                                        <a href="{{ setting('tiktok') }}" class="link hover-text-color text-white" aria-label="tiktok">
+                                        <a href="{{ setting('tiktok') }}" class="link hover-text-color text-dark" aria-label="tiktok">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tikto-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M16.083 2h-4.083a1 1 0 0 0 -1 1v11.5a1.5 1.5 0 1 1 -2.519 -1.1l.12 -.1a1 1 0 0 0 .399 -.8v-4.326a1 1 0 0 0 -1.23 -.974a7.5 7.5 0 0 0 1.73 14.8l.243 -.005a7.5 7.5 0 0 0 7.257 -7.495v-2.7l.311 .153c1.122 .53 2.333 .868 3.59 .993a1 1 0 0 0 1.099 -.996v-4.033a1 1 0 0 0 -.834 -.986a5.005 5.005 0 0 1 -4.097 -4.096a1 1 0 0 0 -.986 -.835z" stroke-width="0" fill="currentColor"></path>

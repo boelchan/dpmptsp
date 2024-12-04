@@ -207,7 +207,7 @@
 @section('page-script')
     <script>
         setTimeout(() => {
-            $('#modal-welcome').modal('show')
+            //$('#modal-welcome').modal('show')
         }, 1000);
     </script>
 @endsection
