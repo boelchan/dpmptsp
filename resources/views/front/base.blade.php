@@ -225,7 +225,7 @@
         <footer class="footer-part pt-250 single_image-wrapper text-dark">
             <div class="image-wrapper  wow fadeInUp" data-wow-duration="1.5s" data-bg-image="{{ setting('footer') }}"></div>
             <div class="inner text-style-light text-style-light-2">
-                <div class="container blur" style="background-color:rgba(255, 255, 255, 0.585); padding:20px; border-radius: 25px;">
+                <div class="container" style="background-color:rgba(255, 255, 255, 0.585); padding:20px; border-radius: 25px;">
                     <div class="row">
                         <div class="col-12 col-lg-4 wow fadeInLeft" data-wow-duration="1s">
                             <iframe style="border-radius: 20px;" class="mb-2 shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1906.7741375365551!2d113.86309983292344!3d-7.0144678261372855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e428d48915f5%3A0x6e3ffe518f991e2b!2sBadan%20Pelayanan%20Perizinan%20Terpadu%20Sumenep!5e0!3m2!1sen!2sid!4v1730902283964!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
