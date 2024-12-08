@@ -50,8 +50,8 @@ class FrontController extends Controller
         $meta = [
             'title' => 'Beranda',
             'category' => 'Beranda',
-            'description' => 'mall pelayanan publik kab sumenep',
-            'keywords' => 'mall pelayanan publik kab sumenep',
+            'description' => 'dpmptsp kab sumenep',
+            'keywords' => 'dpmptsp kab sumenep',
             'image' => setting('logo'),
         ];
 

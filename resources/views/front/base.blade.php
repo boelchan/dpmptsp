@@ -30,7 +30,7 @@
     <meta property="twitter:image" content="{{ $meta['image'] ?? '' }}" />
 
     <!-- Title -->
-    <title>{{ $meta['title'] }} - Mal Pelayanan Publik</title>
+    <title>{{ $meta['title'] }} - DPMPTSP Sumenep</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('static/favicon.png') }}" type="image/x-icon">
 
