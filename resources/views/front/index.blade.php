@@ -110,7 +110,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="text-center mb-4">
-                    <h2 class="text-primary d-inline-block">Informasi Terbaru</h2>
+                    <h2 class="text-primary d-inline-block">Tajuk Berita</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -207,7 +207,7 @@
 @section('page-script')
     <script>
         setTimeout(() => {
-            //$('#modal-welcome').modal('show')
+            $('#modal-welcome').modal('show')
         }, 1000);
     </script>
 @endsection
