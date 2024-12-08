@@ -112,20 +112,17 @@
                                                 <li class="lavel-1 p-0 with--drop slide-dropdown">
                                                     <a class="p-1 text-white" href="#"><span>Layanan</span></a>
                                                     <ul class="dropdown__menu p-1">
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'standar-operasional-prosedur') }}"><span>Standar Operasional Prosedur</span></a>
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'standar-pelayanan-publik') }}"><span>Standar Pelayanan Publik</span></a>
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'maklumat-pelayanan') }}"><span>Maklumat Pelayanan</span></a>
+                                                        @foreach ($navbarMenu['layananMenu'] as $layanan)
+                                                            <li class="text-white px-3"><a href="{{ route('front.document.kategori', $layanan->slug) }}"><span>{{ $layanan->nama }}</span></a>
+                                                        @endforeach
                                                     </ul>
                                                 </li>
                                                 <li class="lavel-1 p-0 with--drop slide-dropdown">
                                                     <a class="p-1 text-white" href="#"><span>SAKIP</span></a>
                                                     <ul class="dropdown__menu p-1">
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'rencana-strategis') }}"><span>Rencana Strategis</span></a>
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'rencana-kerja') }}"><span>Rencana Kerja</span></a>
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'indikator-kinerja-utama') }}"><span>Indikator Kinerja Utama</span></a>
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'indikator-kinerja-individu') }}"><span>Indikator Kinerja Individu</span></a>
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'perjanjian-kerja') }}"><span>Perjanjian Kerja</span></a>
-                                                        <li class="text-white px-3"><a href="{{ route('front.document.kategori', 'laporan-kinerja') }}"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
+                                                        @foreach ($navbarMenu['sakipMenu'] as $sakip)
+                                                            <li class="text-white px-3"><a href="{{ route('front.document.kategori', $sakip->slug) }}"><span>{{ $sakip->nama }}</span></a>
+                                                        @endforeach
                                                     </ul>
                                                 </li>
                                                 <li class="lavel-1 p-0"><a class="p-2 text-white" href="{{ route('front.pegawai') }}"><span>Staf & Pimpinan</span></a></li>
@@ -190,20 +187,17 @@
                         <li class="has-mega-menu">
                             <a class="" href="#"><span>Layanan</span></a>
                             <ul class="object-submenu">
-                                <li><a href="{{ route('front.document.kategori', 'standar-operasional-prosedur') }}"><span>Standar Operasional Prosedur</span></a>
-                                <li><a href="{{ route('front.document.kategori', 'standar-pelayanan-publik') }}"><span>Standar Pelayanan Publik</span></a>
-                                <li><a href="{{ route('front.document.kategori', 'maklumat-pelayanan') }}"><span>Maklumat Pelayanan</span></a>
+                                @foreach ($navbarMenu['layananMenu'] as $layanan)
+                                    <li><a href="{{ route('front.document.kategori', $layanan->slug) }}"><span>{{ $layanan->nama }}</span></a>
+                                @endforeach
                             </ul>
                         </li>
                         <li class="has-mega-menu">
                             <a class="" href="#"><span>SAKIP</span></a>
                             <ul class="object-submenu">
-                                <li><a href="{{ route('front.document.kategori', 'rencana-strategis') }}"><span>Rencana Strategis</span></a>
-                                <li><a href="{{ route('front.document.kategori', 'rencana-kerja') }}"><span>Rencana Kerja</span></a>
-                                <li><a href="{{ route('front.document.kategori', 'indikator-kinerja-utama') }}"><span>Indikator Kinerja Utama</span></a>
-                                <li><a href="{{ route('front.document.kategori', 'indikator-kinerja-individu') }}"><span>Indikator Kinerja Individu</span></a>
-                                <li><a href="{{ route('front.document.kategori', 'perjanjian-kerja') }}"><span>Perjanjian Kerja</span></a>
-                                <li><a href="{{ route('front.document.kategori', 'laporan-kinerja') }}"><span>Laporan Akuntabilitas Kinerja Instansi Pemerintahan</span></a>
+                                @foreach ($navbarMenu['sakipMenu'] as $sakip)
+                                    <li><a href="{{ route('front.document.kategori', $sakip->slug) }}"><span>{{ $sakip->nama }}</span></a>
+                                @endforeach
                             </ul>
                         </li>
                         <li class="lavel-1"><a href="{{ route('front.pegawai') }}"><span>Staf & Pimpinan</span></a></li>

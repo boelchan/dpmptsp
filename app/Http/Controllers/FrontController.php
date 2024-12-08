@@ -23,8 +23,10 @@ class FrontController extends Controller
         $addToHeader = Category::whereNotIn('id', [1, 2])->where('add_to_header_menu', 'ya')->get();
         $addToSidebar = Category::whereNotIn('id', [1, 2])->where('add_to_sidebar_menu', 'ya')->get();
         $addToFooter = Category::whereNotIn('id', [1, 2])->where('add_to_footer_menu', 'ya')->get();
+        $sakipMenu = DocumentCategory::where('tipe', 'sakip')->get();
+        $layananMenu = DocumentCategory::where('tipe', 'layanan')->get();
 
-        return ['kategori' => $kategori, 'addToHeader' => $addToHeader, 'addToSidebar' => $addToSidebar, 'addToFooter' => $addToFooter];
+        return ['kategori' => $kategori, 'addToHeader' => $addToHeader, 'addToSidebar' => $addToSidebar, 'addToFooter' => $addToFooter, 'sakipMenu' => $sakipMenu, 'layananMenu' => $layananMenu];
     }
 
     public function index()
