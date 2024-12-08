@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             PostSeeder::class,
             IdentitySeeder::class,
             DocumentCategorySeeder::class,
+            BidangSeeder::class,
         ]);
     }
 }
