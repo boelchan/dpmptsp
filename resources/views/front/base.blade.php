@@ -216,7 +216,7 @@
         @yield('content')
 
         <!-- footer part start -->
-        <footer class="footer-part pt-250 single_image-wrapper text-dark">
+        <footer class="footer-part pt-50 single_image-wrapper text-dark">
             <div class="image-wrapper  wow fadeInUp" data-wow-duration="1.5s" data-bg-image="{{ setting('footer') }}"></div>
             <div class="inner text-style-light text-style-light-2">
                 <div class="container" style="background-color:rgba(255, 255, 255, 0.585); padding:20px; border-radius: 25px;">

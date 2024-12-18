@@ -7,6 +7,7 @@ use App\Enum\StatusPengaduanEnum;
 use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Spatie\SimpleExcel\SimpleExcelWriter;
 
 class PengaduanController extends Controller
 {
@@ -67,5 +68,30 @@ class PengaduanController extends Controller
         }
 
         return response()->json(['message' => 'Gagal menghapus data'], 400);
+    }
+
+    public function cetak()
+    {
+        $data = [];
+        $pengaduan = Pengaduan::orderBy('created_at', 'desc')->get();
+
+        foreach ($pengaduan as $key => $value) {
+            $data[] = [
+                $key + 1,
+                $value->nama_pemohon,
+                $value->telepon,
+                $value->email,
+                $value->pengaduan,
+                $value->tanggapan,
+                $value->status,
+                str($value->created_at),
+                $value->validasi_at,
+                $value->tanggapan_at,
+            ];
+        }
+
+        SimpleExcelWriter::streamDownload('rekap_pengaduan.xlsx')
+            ->addHeader(['No', 'Pemohon', 'No HP', 'Email', 'Pengaduan', 'Tanggapan', 'Status', 'Tgl Pengaduan', 'Tgl Validasi', 'Tgl Tanggapan'])
+            ->addRows($data);
     }
 }

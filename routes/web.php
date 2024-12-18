@@ -36,6 +36,7 @@ Route::as('front.')->group(function () {
 // administrator
 Route::prefix('admin')->middleware(['auth', 'role:superadmin|operator'])->group(function () {
     Route::get('pengaduan', [PengaduanController::class, 'index'])->name('pengaduan.index');
+    Route::get('pengaduan/excel', [PengaduanController::class, 'cetak'])->name('pengaduan.cetak');
     Route::get('pengaduan/{pengaduan}/show', [PengaduanController::class, 'show'])->name('pengaduan.show');
     Route::post('pengaduan/{pengaduan}/validasi', [PengaduanController::class, 'validasi'])->name('pengaduan.validasi');
     Route::post('pengaduan/{pengaduan}/tanggapan', [PengaduanController::class, 'tanggapan'])->name('pengaduan.tanggapan');

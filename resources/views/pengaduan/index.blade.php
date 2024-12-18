@@ -13,6 +13,9 @@
             </x-datatable.filter>
 
             <div class="card">
+                <div class="card-body">
+                    <a class="btn btn-outline-warning" title="download excel" href="{{ route('pengaduan.cetak') }}" target="_blank"> <i class="ti ti-download"> </i> Download Excel</a>
+                </div>
                 <div class="card-table">
                     {{ $dataTable->table(['class' => 'table table-hover table-sm w-100 border-bottom']) }}
                 </div>
