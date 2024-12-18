@@ -84,7 +84,7 @@ class PegawaiController extends Controller
 
     public function destroy(Pegawai $pegawai)
     {
-        checkUuid($pegawai->uuid);
+        // checkUuid($pegawai->uuid);
 
         if ($pegawai->delete()) {
             return response()->json(['success' => true, 'redirect' => route('pegawai.index')]);
