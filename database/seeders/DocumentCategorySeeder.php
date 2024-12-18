@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Document;
 use App\Models\DocumentCategory;
 use Illuminate\Database\Seeder;
 
@@ -12,16 +13,18 @@ class DocumentCategorySeeder extends Seeder
      */
     public function run(): void
     {
+        Document::whereNotNull('id')->delete();
+        DocumentCategory::whereNotNull('id')->delete();
         DocumentCategory::insert([
-            ['nama' => 'Standar Operasional Prosedur', 'slug' => 'standar-operasional-prosedur'],
-            ['nama' => 'Standar Pelayanan Publik', 'slug' => 'standar-pelayanan-publik'],
-            ['nama' => 'Maklumat Pelayanan', 'slug' => 'maklumat-pelayanan'],
-            ['nama' => 'Rencana Strategis', 'slug' => 'rencana-strategis'],
-            ['nama' => 'Rencana Kerja', 'slug' => 'rencana-kerja'],
-            ['nama' => 'Indikator Kinerja Utama', 'slug' => 'indikator-kinerja-utama'],
-            ['nama' => 'Indikator Kinerja Individu', 'slug' => 'indikator-kinerja-individu'],
-            ['nama' => 'Perjanjian Kerja', 'slug' => 'penjanjian-kerja'],
-            ['nama' => 'Laporan Akuntabilitas Kinerja Instansi Pemerintahan', 'slug' => 'laporan-kinerja'],
+            ['nama' => 'Standar Operasional Prosedur', 'tipe' => 'layanan', 'slug' => 'standar-operasional-prosedur'],
+            ['nama' => 'Standar Pelayanan Publik', 'tipe' => 'layanan', 'slug' => 'standar-pelayanan-publik'],
+            ['nama' => 'Maklumat Pelayanan', 'tipe' => 'layanan', 'slug' => 'maklumat-pelayanan'],
+            ['nama' => 'Rencana Strategis', 'tipe' => 'sakip', 'slug' => 'rencana-strategis'],
+            ['nama' => 'Rencana Kerja', 'tipe' => 'sakip', 'slug' => 'rencana-kerja'],
+            ['nama' => 'Indikator Kinerja Utama', 'tipe' => 'sakip', 'slug' => 'indikator-kinerja-utama'],
+            ['nama' => 'Indikator Kinerja Individu', 'tipe' => 'sakip', 'slug' => 'indikator-kinerja-individu'],
+            ['nama' => 'Perjanjian Kerja', 'tipe' => 'sakip', 'slug' => 'penjanjian-kerja'],
+            ['nama' => 'Laporan Akuntabilitas Kinerja Instansi Pemerintahan', 'tipe' => 'sakip', 'slug' => 'laporan-kinerja'],
         ]);
     }
 }
