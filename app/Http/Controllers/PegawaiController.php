@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\DataTables\PegawaiDataTable;
 use App\Models\Bidang;
-use App\Models\Link;
 use App\Models\Pegawai;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -83,11 +82,11 @@ class PegawaiController extends Controller
         return redirect()->route('pegawai.show', [$pegawai->id, 'uuid' => $pegawai->uuid]);
     }
 
-    public function destroy(Link $link)
+    public function destroy(Pegawai $pegawai)
     {
-        checkUuid($link->uuid);
+        checkUuid($pegawai->uuid);
 
-        if ($link->delete()) {
+        if ($pegawai->delete()) {
             return response()->json(['success' => true, 'redirect' => route('pegawai.index')]);
         }
 
