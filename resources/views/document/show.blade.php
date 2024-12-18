@@ -6,7 +6,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center row-cards">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
@@ -43,30 +43,6 @@
                                 -
                             @endif
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    META DATA
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <div class="fw-bold">Meta Keywords</div>
-                                    <div>{{ $document->meta_keywords ?? '-' }}</div>
-                                </div>
-                                <div class="">
-                                    <div class="fw-bold">Meta Description</div>
-                                    <div>{{ $document->meta_description ?? '-' }}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        {!! $document->content ?? 'Belum ada konten' !!}
                     </div>
                 </div>
             </div>
