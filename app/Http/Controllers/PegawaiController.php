@@ -37,7 +37,7 @@ class PegawaiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'foto' => 'mimes:jpg,jpeg,png,gif|max:1000',
+            'foto' => 'mimes:jpg,jpeg,png,gif|max:2000',
             'nama' => 'required|max:250|unique:pegawais',
             'bidang_id' => 'required',
             'jabatan' => 'required|max:250',
@@ -51,7 +51,7 @@ class PegawaiController extends Controller
 
     public function show(Pegawai $pegawai)
     {
-        checkUuid($pegawai->uuid);
+        // checkUuid($pegawai->uuid);
         $title = $this->title;
         $breadcrumbs = [['url' => route('pegawai.index'), 'title' => $title], ['url' => '#', 'title' => 'detail']];
 
@@ -71,7 +71,7 @@ class PegawaiController extends Controller
     public function update(Request $request, Pegawai $pegawai)
     {
         $request->validate([
-            'foto' => 'mimes:jpg,jpeg,png,gif|max:1000',
+            'foto' => 'mimes:jpg,jpeg,png,gif|max:2000',
             'nama' => 'required|max:250|unique:pegawais,nama,'.$pegawai->id,
             'jabatan' => 'required|max:250',
             'bidang_id' => 'required',
