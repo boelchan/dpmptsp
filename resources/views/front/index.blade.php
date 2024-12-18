@@ -157,7 +157,7 @@
                 <div class="col-md-6 col-offset-3 position-relative">
                     <img src="{{ asset('front/img/shape/square-dots.png') }}" data-parallax='{"y": -30,"x":30}' class="square-dot-4 d-none d-sm-block" alt="shapes">
                     <div class="card p-0 p-md-4 p-lg-5 border-0 shadow-default mt-5 mt-md-0">
-                        <x-form action="{{ route('front.pengaduan') }}" id="form-x">
+                        <x-form action="{{ route('front.pengaduan') }}" class="p-2" id="form-x">
                             <h3 class="mb-4 text-center text-primary">Kotak Pengaduan</h3>
                             <div class="mb-4">
                                 <x-form-input name="nama_pemohon" label="Nama Pemohon" required maxLength="50" floating />
@@ -184,11 +184,11 @@
     <!-- Modal -->
     <div class="modal fade" id="modal-welcome" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-md">
-            <div class="modal-content pt-0">
-                <div class="modal-header">
+            <div class="modal-content p-1">
+                <div class="modal-header p-1">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body p-1">
                     @if ($welcome_post->gambar)
                         <div class="mb-60 text-center">
                             <img src="{{ $welcome_post->gambar_url }}" alt="gambar" style="max-height: 500px">
@@ -196,8 +196,8 @@
                     @endif
                     {!! $welcome_post->konten !!}
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <div class="modal-footer p-0">
+                    <button type="button" class="btn btn-secondary py-0" data-bs-dismiss="modal">Tutup</button>
                 </div>
             </div>
         </div>

@@ -150,7 +150,7 @@
         <!-- Start Popup Menu -->
         <div class="popup-mobile-manu popup-mobile-visiable">
             <div class="inner">
-                <div class="mobileheader" style="background-image: linear-gradient(to right, #FF9456 0, #FE2B60 100%, #FF9456 50%)">
+                <div class="mobileheader" style="background-image: linear-gradient(to right, #09aafd 10%, #0c7de6 40%, #1041c6 100%)">
                     <div class="logo">
                         <a href="/">
                             <img src="{{ setting('logo') }}" alt="Multipurpose" style="height: 70px">
