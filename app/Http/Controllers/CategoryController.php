@@ -55,6 +55,11 @@ class CategoryController extends Controller
         if (in_array($category->id, [1, 2])) {
             return response()->json(['message' => 'Kategori ini tidak dapat dihapus'], 400);
         }
+
+        if ($category->post->count() > 0) {
+            return response()->json(['message' => 'Kategori sudah digunakan. Tidak dapat dihapus'], 400);
+        }
+
         if ($category->delete()) {
             return response()->json(['success' => true, 'redirect' => route('category.index')]);
         }

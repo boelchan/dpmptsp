@@ -21,6 +21,11 @@ class Category extends Model
         });
     }
 
+    public function post()
+    {
+        return $this->hasMany(Post::class, 'kategori_id');
+    }
+
     public function subMenu()
     {
         return $this->hasMany(Post::class, 'kategori_id')->where('add_to_submenu', 'ya')->orderBy('publish_at', 'desc')->limit(10);
