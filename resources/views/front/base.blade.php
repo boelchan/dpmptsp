@@ -321,7 +321,18 @@
     <script src="https://kit.fontawesome.com/3ccf20f6c6.js" crossorigin="anonymous"></script>
 
     @yield('page-script')
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCK78BHT70"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KCK78BHT70');
+    </script>
 
 </body>
 
