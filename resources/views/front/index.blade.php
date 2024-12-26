@@ -67,7 +67,7 @@
                 </div>
                 <div class="col-md-12 col-lg-6">
                     <div class="section-title text-center text-lg-start section-heading">
-                        <h2 class="fs-3 text-primary">Selamat Datang di Website DPMPTSP Kab. Sumenep</h2>
+                        <h2 class="fs-1 text-primary">Selamat Datang di Website DPMPTSP Kab. Sumenep</h2>
                         {!! Str::take($sambutan->konten, 500) !!} ... <br>
                         <a href="{{ route('front.post.baca', $sambutan->slug) }}" class="btn p-0 mt-25">
                             <span class="gradients-button btn-small grad-btn-5">Baca Selengkapnya</span>
@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="text-center mb-4">
-                    <h2 class="text-primary d-inline-block">Pamflet</h2>
+                    <h2 class="text-primary d-inline-block fs-1">Pamflet</h2>
                 </div>
             </div>
             <div class="row ">
@@ -111,7 +111,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="text-center mb-4">
-                    <h2 class="text-primary d-inline-block">Tajuk Berita</h2>
+                    <h2 class="text-primary d-inline-block fs-1">Tajuk Berita</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -159,7 +159,7 @@
                     <img src="{{ asset('front/img/shape/square-dots.png') }}" data-parallax='{"y": -30,"x":30}' class="square-dot-4 d-none d-sm-block" alt="shapes">
                     <div class="card p-0 p-md-4 p-lg-5 border-0 shadow-default mt-5 mt-md-0">
                         <x-form action="{{ route('front.pengaduan') }}" class="p-2" id="form-x">
-                            <h3 class="mb-4 text-center text-primary">Kotak Pengaduan</h3>
+                            <h3 class="mb-4 text-center text-primary fs-1">Kotak Pengaduan</h3>
                             <div class="mb-4">
                                 <x-form-input name="nama_pemohon" label="Nama Pemohon" required maxLength="50" floating />
                             </div>
