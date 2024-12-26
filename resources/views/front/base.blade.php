@@ -226,7 +226,7 @@
                         <div class="col-lg-4 wow fadeInLeft" data-wow-duration="1s">
                             <iframe style="border-radius: 10px; min-height: 200px;" class="mb-2 shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1906.7741375365551!2d113.86309983292344!3d-7.0144678261372855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e428d48915f5%3A0x6e3ffe518f991e2b!2sBadan%20Pelayanan%20Perizinan%20Terpadu%20Sumenep!5e0!3m2!1sen!2sid!4v1730902283964!5m2!1sen!2sid" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <div class="col-6 col-lg-3 wow fadeInUp mb-3 p-3" data-wow-duration="1s">
+                        <div class="col-12 col-lg-3 wow fadeInUp mb-3 p-3" data-wow-duration="1s">
                             <h3 class="text-dark">Kontak Kami</h3>
                             <div class="">
                                 <i class="ti ti-home"></i> {{ setting('alamat') }}
@@ -238,7 +238,7 @@
                                 <i class="ti ti-mail"></i> {{ setting('email') }}
                             </div>
                         </div>
-                        <div class="col-6 col-lg-3 wow fadeInUp mb-3 p-3" data-wow-duration="1s">
+                        <div class="col-12 col-lg-3 wow fadeInUp mb-3 p-3" data-wow-duration="1s">
                             <h3 class="text-dark">Tentang Kami</h3>
                             <ul class="list-unstyled">
                                 @foreach ($navbarMenu['addToFooter'] as $menu)
