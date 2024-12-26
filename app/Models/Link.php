@@ -37,4 +37,9 @@ class Link extends Model
     {
         return $this->icon != '' ? asset("storage/link/$this->icon") : false;
     }
+
+    public function getFullUrlAttribute()
+    {
+        return Str::contains($this->url, ['https://', 'https://']) ? $this->url : 'https://'.$this->url;
+    }
 }

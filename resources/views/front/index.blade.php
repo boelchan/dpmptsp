@@ -43,11 +43,11 @@
         <div class="container" data-wow-duration="1.5s">
             <div class="brand-area grid-style position-relative">
                 <div data-wow-duration="1.5s">
-                    <div class="row mb-3 text-center g-0">
+                    <div class="row mb-3 text-center g-0 justify-content-center">
                         @foreach ($link as $l)
-                            <div class="col-md-3 col-6 ">
+                            <div class="col-md-3 col-6 d-flex justify-content-center">
                                 <div class="brand py-2">
-                                    <a href="https://{{ $l->url }}"><img src="{{ $l->icon_url }}" alt="client"></a>
+                                    <a href="{{ $l->full_url }}"><img src="{{ $l->icon_url }}" alt="client"></a>
                                 </div>
                             </div>
                         @endforeach
