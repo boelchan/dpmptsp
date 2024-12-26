@@ -14,7 +14,8 @@
                 @forelse ($slider as $b)
                     <div class="carousel-item @if ($loop->first) active @endif">
                         <a href="{{ $b->url }}">
-                            <img src="{{ $b->gambar_url }}" class="d-block w-100" alt="..." style="object-fit: cover; max-height:600px">
+                            <img src="{{ $b->gambar_url }}" class="d-block w-100 d-md-none" alt="..." style="object-fit: cover; max-height: 220px;">
+                            <img src="{{ $b->gambar_url }}" class="d-none d-md-block w-100" alt="..." style="object-fit: cover; max-height: 600px;">
                             <div class="carousel-caption d-none d-md-block">
                                 <label class="blur rounded-pill px-3 py-1">
                                     {{ $b->judul }}
@@ -38,7 +39,7 @@
             </button>
         </div>
     </section>
-    <div class="position-relative ptb-80 ptb-md-60 ptb-sm-40 gray-bg" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('{{ setting('footer')  }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <div class="position-relative ptb-80 ptb-md-60 ptb-sm-40 gray-bg" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('{{ setting('footer') }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="container" data-wow-duration="1.5s">
             <div class="brand-area grid-style position-relative">
                 <div data-wow-duration="1.5s">

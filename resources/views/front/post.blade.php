@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 @empty
-                    Tidak ada data
+                    <span class="text-center">Tidak ada data</span>
                 @endforelse
             </div>
             {{ $post->links('vendor.pagination.bootstrap-5') }}
