@@ -38,7 +38,7 @@
             </button>
         </div>
     </section>
-    <div class="position-relative ptb-80 ptb-md-60 ptb-sm-40 gray-bg" style="background-image: url('{{ setting('footer')  }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <div class="position-relative ptb-80 ptb-md-60 ptb-sm-40 gray-bg" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('{{ setting('footer')  }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="container" data-wow-duration="1.5s">
             <div class="brand-area grid-style position-relative">
                 <div data-wow-duration="1.5s">
