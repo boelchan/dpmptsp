@@ -31,8 +31,8 @@
                                                                             <img src="{{ $p->foto_url }}" alt="team" class="img-responsive">
                                                                         </div>
                                                                         <div class="text-center">
-                                                                            <h4 class="color-black fw-normal mt-4 text-capitalize">{{ $p->nama }}</h4>
-                                                                            <p class="color-light-grey font-weight-500 designation text-capitalize mb-0">
+                                                                            <h5 class="color-black fw-normal mt-4 text-capitalize">{{ $p->nama }}</h5>
+                                                                            <p class="color-light-grey font-weight-500 designation text-capitalize mb-0" style="line-height: 1;">
                                                                                 {{ $p->jabatan }}
                                                                             </p>
                                                                         </div>
