@@ -64,7 +64,7 @@
     <div id="wrapper" class="wrapper">
         <!-- Header magamenu dark -->
         <div class="header-menu">
-            <header class="sl_header header-default header-black-version header-fixed-width header-fixed-150 header-sticky header-mega-menu clearfix gradient-style" style="background-image: linear-gradient(to right, #09aafd 10%, #0c7de6 40%, #1041c6 100%);">
+            <header class="sl_header header-default header-black-version header-fixed-width header-fixed-150 header-sticky header-mega-menu clearfix gradient-style" style="background-image: linear-gradient(to right, #0c7de6 10%, #0c7de6 40%, #1041c6 100%);">
 
                 <div class="container">
                     <div class="row">
