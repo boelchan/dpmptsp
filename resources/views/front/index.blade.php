@@ -46,8 +46,10 @@
                     <div class="row mb-3 text-center g-0 justify-content-center">
                         @foreach ($link as $l)
                             <div class="col-md-3 col-6 d-flex justify-content-center">
-                                <div class="brand py-2">
-                                    <a href="{{ $l->full_url }}"><img src="{{ $l->icon_url }}" alt="client"></a>
+                                <div class="brand py-2 d-flex align-items-center">
+                                    <a href="{{ $l->full_url }}" class="d-flex align-items-center justify-content-center w-100">
+                                        <img src="{{ $l->icon_url }}" alt="client" class="mx-auto my-auto">
+                                    </a>
                                 </div>
                             </div>
                         @endforeach
